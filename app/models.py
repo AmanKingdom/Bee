@@ -6,7 +6,3 @@ class Navigation(models.Model):
 
     def __str__(self):
         return self.industry
-
-# class Industry(models.Model):
-#     sub_industry = models.CharField(max_length=20)
-#
