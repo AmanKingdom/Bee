@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1977cf5-f1b6-44d8-bad8-ae469d815f77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1977cf5-f1b6-44d8-bad8-ae469d815f77.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bee/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20181104_0957.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20181104_1027.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20181104_1443.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20181104_1649.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bee/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,12 +166,12 @@
         <counts>
           <entry key="meta" value="1" />
           <entry key="py" value="22" />
-          <entry key="txt" value="242" />
+          <entry key="txt" value="292" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="243" />
+          <entry key="PLAIN_TEXT" value="293" />
           <entry key="Python" value="22" />
         </counts>
       </usages-collector>
@@ -273,8 +266,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bee/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="567">
+              <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -429,7 +422,7 @@
       <path value="$PROJECT_DIR$/static/assets/js/kindeditor_source/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-131" />
     <option name="y" value="-21" />
     <option name="width" value="1616" />
@@ -452,6 +445,11 @@
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="bee" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -672,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541378770093</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="听说项目被克隆后无法运行，我这边重新编译和检查了一遍，再次提交，看看能不能为你排忧解难。">
+      <created>1541381095732</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541381095732</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -687,12 +692,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.19151671" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.19151671" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2240216" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.34008098" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -721,7 +726,8 @@
     <MESSAGE value="本提交去掉了之前没有虚拟环境的项目，现在项目支持的功能为：用户登录、注册、搜索文章(仅对标题搜索)、发表博客文章（但文章未绑定用户）、发表的文章支持图片、视频，均以HTML格式保存至数据库，数据库目前使用MySQL，建议使用MySQL8.0方便我们同步，后续我写个使用流程提交，现在你想使项目在你本地运行起来可能比较费劲。" />
     <MESSAGE value="??" />
     <MESSAGE value="删掉了一点点密码" />
-    <option name="LAST_COMMIT_MESSAGE" value="删掉了一点点密码" />
+    <MESSAGE value="听说项目被克隆后无法运行，我这边重新编译和检查了一遍，再次提交，看看能不能为你排忧解难。" />
+    <option name="LAST_COMMIT_MESSAGE" value="听说项目被克隆后无法运行，我这边重新编译和检查了一遍，再次提交，看看能不能为你排忧解难。" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/spider/search.py">
@@ -1052,8 +1058,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bee/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="567">
+          <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
         </state>
       </provider>
     </entry>
