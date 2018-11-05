@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bee_database',
         'USER': 'root',
-        'PASSWORD': '密码需要你的填写',
+        'PASSWORD': 'dgut520!',
         'HOST': 'localhost',
         'PORT': '3306',
 
