@@ -1,0 +1,71 @@
+﻿{% extends "users-window/base.html" %}
+{% load staticfiles %}
+{% block title %}BEE | 搜索结果{% endblock %}
+{% block base_body %}
+    <section class="top-md-menu">
+        <div class="container">
+            <div class="col-sm-3">
+                <!--<div class="logo">-->
+                <!--<h6><img src="{% static 'assets/images/logo.png' %}" alt="logo" /></h6>-->
+                <!--</div>-->
+            </div>
+            <div class="col-sm-6">
+                <!-- Search box Start -->
+                <form name="searchForm" action="{% url 'search' %}" method="get">
+                    <div class="searchBox">
+                        <div class="btn-group">
+                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">检索条件 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">最新</a></li>
+                                <li><a href="#">最热</a></li>
+                                <li><a href="#">最高质量</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">综合</a></li>
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <input type="text" id="search-text" name="search-text" placeholder="搜索您想看的……" />
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" id="searchBtn" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Search box End -->
+            </div>
+
+            <div class="main-menu">
+                <!--  nav  -->
+                <nav class="navbar navbar-inverse navbar-default">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">标准</a></li>
+                            <li><a href="#">短小精悍</a></li>
+                            <li><a href="#">含视频</a></li>
+                            <li><a href="#">含音乐</a></li>
+                            <li><a href="#">图片多</a></li>
+                            <li><a href="#">无广告</a></li>
+                        </ul>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                </nav>
+                <!-- /nav end -->
+            </div>
+        </div>
+    </section>
+
+<div class="col-sm-1"></div>
+
+<div class="col-sm-10">
+    {%  for article in wechat_articles %}
+        <div>
+            <a href = "{% url 'article_content_page' article.article_id %}">{{ article.keyword_content | safe }}</a>
+        <hr>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="col-sm-1"></div>
+
+{% endblock %}

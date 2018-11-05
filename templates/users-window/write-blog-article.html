@@ -1,0 +1,23 @@
+{% extends "users-window/user-homepage.html" %}
+{% load staticfiles %}
+{% block user_homepage_block %}
+
+<section class="exhibition">
+    <!-- .grid -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <form name="articleForm" action="{% url 'write-blog-article' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="panel-body">
+                        {{ article_form.as_p }}
+                        <input type="submit" value="完成编辑">
+                        <input type="reset" value="重新填写">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /.grid -->
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'users-window/user-homepage.html' %}
+{% block user_homepage_block %}
+    <h4>我的文章</h4><hr>
+    {% for article in blog_articles %}
+        <div>
+            <h4><a href="{% url 'blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
+        </div>
+    {% endfor %}
+{% endblock %}
