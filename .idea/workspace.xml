@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="" />
+    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bee/urls.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,13 +155,42 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="1073276838">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="meta" value="1" />
+          <entry key="txt" value="228" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="229" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="pyc" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/users-window/user-homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="432">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
@@ -185,7 +217,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="297">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -200,43 +232,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/spider2.0.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="675">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="216">
+              <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#194#356#0" />
-                <element signature="e#379#651#0" />
-                <element signature="e#685#1327#0" />
-                <element signature="e#1387#1527#0" />
-                <element signature="e#1637#1726#0" />
-                <element signature="e#1709#1770#0" />
-                <element signature="e#1683#3147#0" />
-                <element signature="e#3710#4289#0" />
-                <element signature="e#4384#4732#0" />
                 <marker date="1541342572747" expanded="true" signature="1644:1722" ph="..." />
-                <marker date="1541342572747" expanded="true" signature="1798:1964" ph="..." />
-                <marker date="1541342572747" expanded="true" signature="4127:4201" ph="..." />
-                <marker date="1541342572747" expanded="true" signature="5479:5545" ph="..." />
-                <marker date="1541342572747" expanded="true" signature="6025:6325" ph="..." />
-                <marker date="1541342572747" expanded="true" signature="6377:6378" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bee/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="945">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
@@ -254,7 +272,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1350">
               <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
@@ -316,7 +334,13 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="AmanKingdom &lt;1424675162@qq.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -402,34 +426,18 @@
         <subPane>
           <expand>
             <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="bee" type="462c0819:PsiDirectoryNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bee" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users-window" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -649,14 +657,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.18894601" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.19151671" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2240216" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.21997301" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -664,7 +671,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.35849056" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" visible="true" weight="0.21997301" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.14439946" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.0" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32884097" />
@@ -681,12 +688,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="本提交去掉了之前没有虚拟环境的项目，现在项目支持的功能为：用户登录、注册、搜索文章(仅对标题搜索)、发表博客文章（但文章未绑定用户）、发表的文章支持图片、视频，均以HTML格式保存至数据库，数据库目前使用MySQL，建议使用MySQL8.0方便我们同步，后续我写个使用流程提交，现在你想使项目在你本地运行起来可能比较费劲。" />
+    <option name="LAST_COMMIT_MESSAGE" value="本提交去掉了之前没有虚拟环境的项目，现在项目支持的功能为：用户登录、注册、搜索文章(仅对标题搜索)、发表博客文章（但文章未绑定用户）、发表的文章支持图片、视频，均以HTML格式保存至数据库，数据库目前使用MySQL，建议使用MySQL8.0方便我们同步，后续我写个使用流程提交，现在你想使项目在你本地运行起来可能比较费劲。" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider/sougou.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1134" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -930,16 +936,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/my-fans.html">
+    <entry file="file://$PROJECT_DIR$/static/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/user-homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="432">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
@@ -951,9 +957,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/my-fans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="297">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -964,13 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
+    <entry file="file://$PROJECT_DIR$/spider/spider2.0.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="675">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -981,49 +991,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bee/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/spider2.0.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="1350">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="216">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#194#356#0" />
-            <element signature="e#379#651#0" />
-            <element signature="e#685#1327#0" />
-            <element signature="e#1387#1527#0" />
-            <element signature="e#1637#1726#0" />
-            <element signature="e#1709#1770#0" />
-            <element signature="e#1683#3147#0" />
-            <element signature="e#3710#4289#0" />
-            <element signature="e#4384#4732#0" />
             <marker date="1541342572747" expanded="true" signature="1644:1722" ph="..." />
-            <marker date="1541342572747" expanded="true" signature="1798:1964" ph="..." />
-            <marker date="1541342572747" expanded="true" signature="4127:4201" ph="..." />
-            <marker date="1541342572747" expanded="true" signature="5479:5545" ph="..." />
-            <marker date="1541342572747" expanded="true" signature="6025:6325" ph="..." />
-            <marker date="1541342572747" expanded="true" signature="6377:6378" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/__pycache__/wsgi.cpython-37.pyc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
