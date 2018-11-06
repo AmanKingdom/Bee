@@ -157,6 +157,7 @@ class Spider:
                         html = re.sub(pattern='=gif"', repl='=gif？"', string=html)
                         html = re.sub(pattern='=png"', repl='=png？"', string=html)
                         html = re.sub(pattern='=jpeg"', repl='=jpeg？"', string=html)
+                        html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=html)
 
                         # html写入项目当前目录的HTML文件夹，文件名为标题前10个字，需要使用可删除注释
                         # f = open('HTML/'+title[:10]+'.html', 'a+')
