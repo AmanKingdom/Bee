@@ -52,16 +52,36 @@ def logout(request):
     request.session['user_id'] = None
     return HttpResponseRedirect('/')
 
+def user_information(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
+    user = User.objects.get(user_id=user_id)
+    return render(request, 'users-window/user-iformation.html', locals())
 
 def my_blog_articles(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
     blog_articles = BlogArticle.objects.all()
     return render(request, 'users-window/my-blog-article.html', locals())
 
+def my_attentions(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
+    return render(request, 'users-window/my-attentions.html', locals())
+
+def my_collections(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
+    return render(request, 'users-window/my-collections.html', locals())
 
 def my_fans(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
     return render(request, 'users-window/my-fans.html', locals())
 
 def write_blog_article(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
     article_form = BlogArticleForm()
     if request.method == 'POST':
         print("提交方式为POST。")
@@ -93,6 +113,8 @@ def write_blog_article(request):
     return render(request, 'users-window/write-blog-article.html', locals())
 
 def show_blog_article_page(request, article_id):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
     blog_article = BlogArticle.objects.get(id=int(article_id))
     return render(request, 'users-window/blog-article-page.html', locals())
 
@@ -103,7 +125,6 @@ def blog_article_delete(request, article_title):
 def user_homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
-        print('收到user_id:',user_id)
     return render(request, 'users-window/user-homepage.html', locals())
 
 def login(request):

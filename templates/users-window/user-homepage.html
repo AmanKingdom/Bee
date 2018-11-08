@@ -4,22 +4,39 @@
 {% block title %}用户个人主页{% endblock %}
 
 {% block base_body %}
-    <div class="col-sm-1"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
 
-    <div class="col-sm-2">
-        <ul>
-            <li><a href="#">个人资料</a></li>
-            <li><a href="{% url 'write-blog-article' %}">写文章</a></li>
-            <li><a href="{% url 'my-blog-articles' %}">我的文章</a></li>
-            <li><a href="#">我的收藏</a></li>
-            <li><a href="{% url 'my-fans' %}">我的粉丝</a></li>
-            <li><a href="#">我的关注</a></li>
-        </ul>
+            <div class="col-sm-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>个人中心</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="{% url 'user-information' %}" class="list-group-item">个人资料</a>
+                            <a href="{% url 'write-blog-article' %}" class="list-group-item">写文章</a>
+                            <a href="{% url 'my-blog-articles' %}" class="list-group-item">我的文章</a>
+                            <a href="{% url 'my-collections' %}" class="list-group-item">我的收藏</a>
+                            <a href="{% url 'my-fans' %}" class="list-group-item">我的粉丝</a>
+                            <a href="{% url 'my-attentions' %}" class="list-group-item">我的关注</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>{% block user_homepage_block_title %}{% endblock %}</h3>
+                    </div>
+                    <div class="panel-body">
+                        {% block user_homepage_block %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4"></div>
+        </div>
     </div>
-
-    <div class="col-sm-8">
-    {% block user_homepage_block %}{% endblock %}
-    </div>
-
-    <div class="col-sm-4"></div>
 {% endblock %}

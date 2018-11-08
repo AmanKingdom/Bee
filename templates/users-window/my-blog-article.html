@@ -1,9 +1,14 @@
 {% extends 'users-window/user-homepage.html' %}
+{% block user_homepage_block_title %}我的文章{% endblock %}
 {% block user_homepage_block %}
-    <h4>我的文章</h4><hr>
-    {% for article in blog_articles %}
-        <div>
-            <h4><a href="{% url 'blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
-        </div>
-    {% endfor %}
+    {% if blog_articles %}
+        {% for article in blog_articles %}
+            <div>
+                <h4><a href="{% url 'blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>这里空空如也，赶紧去写文章吧~</p>
+        <a href="{% url 'write-blog-article' %}">点我写文章</a>
+    {% endif %}
 {% endblock %}

@@ -36,6 +36,9 @@ urlpatterns = [
     url(r'^user-homepage/$', user_homepage, name='user-homepage'),
     url(r'^my-blog-articles/$', my_blog_articles, name='my-blog-articles'),
     url(r'^my-fans/$', my_fans, name='my-fans'),
+    url(r'^user-information/$', user_information, name='user-information'),
+    url(r'^my-collections/$', my_collections, name='my-collections'),
+    url(r'^my-attentions/$', my_attentions, name='my-attentions'),
 
     url(r'^admin/', admin.site.urls),
 
