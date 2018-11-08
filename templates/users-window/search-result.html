@@ -55,17 +55,30 @@
         </div>
     </section>
 
-<div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
 
-<div class="col-sm-10">
-    {%  for article in wechat_articles %}
-        <div>
-            <a href = "{% url 'article_content_page' article.article_id %}">{{ article.keyword_content | safe }}</a>
-        <hr>
-        </div>
-    {% endfor %}
-</div>
+    <div class="col-sm-10">
+        <ul>
+            {%  for article in wechat_articles %}
+                <li>
+                    <h4>
+                        <a href = "{% url 'wechat-article-content' article.article_id %}">{{ article.article_title | safe }}</a>
+                    </h4>
+                    <div>
+                        {% for item in article.article_content %}
+                            {{ item | safe}}
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <div align="left">{{ article.publish_date }}</div>
+                        <div align="right">文章来源：{{ article.wechat_id }}</div>
+                    </div>
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 
-<div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
 
 {% endblock %}

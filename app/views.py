@@ -1,19 +1,18 @@
 import os
 import re
-import time
 
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from app.forms import *
-from spider.search import Search
+from spider.Wechat_SQLite.search_sqlite import Search
 
 
 def homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
     blog_articles = BlogArticle.objects.all()
-    wechat_articles = WeChatArticle.objects.all()[0:10]
+    wechat_articles = WeChatArticle.objects.all()[0:15]
 
     return render(request, 'users-window/index.html', locals())
 
@@ -32,15 +31,10 @@ def search(request):
 def search_result(request):
     if 'search_key' in request.session:
         search_text = request.session['search_key']
-        print(search_text)
+        print('正在搜索：', search_text, '……')
 
-        search_tool = Search(search_text)
-        temp_dict = {}
-        wechat_articles = []
-        for item in search_tool.search_infos():
-            temp_dict['article_id'] = item[0]
-            temp_dict['keyword_content'] = item[1]
-            wechat_articles.append(temp_dict.copy())
+        wechat_articles = Search(search_text).search_infos()
+        print('\n\n\n\n\n wechat_article的内容：', wechat_articles)
 
         if len(wechat_articles) == 0:
             print('没有找到什么')

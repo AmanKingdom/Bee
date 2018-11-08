@@ -27,7 +27,7 @@ class Spider:
         self.session = requests.Session()
 
         # 连接数据库
-        self.db = pymysql.connect(host='localhost', user='root', password='dgut520!', port=3306, db='bee_database')
+        self.db = pymysql.connect(host='localhost', user='root', password='12345678', port=3306, db='bee_database')
         self.cursor = self.db.cursor()
 
 
@@ -43,7 +43,7 @@ class Spider:
 
         for wechat_id in self.wechat_ids:
 
-
+            print('\n')
             self.log(u'公众号为：%s' % wechat_id)
 
             # 搜索url
@@ -150,15 +150,23 @@ class Spider:
                         # print(imgs)
 
                         # 获取html代码
-                        html = requests.get(article_url)
-                        html.encoding = 'utf-8'
+                        temp_html = requests.get(article_url)
+                        temp_html.encoding = 'utf-8'
+                        data = temp_html.text
+                        html = re.sub(pattern='data-src', repl='src', string=data)
+                        html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=html)
+
+                        # html写入项目当前目录的HTML文件夹，文件名为标题前10个字，需要使用可删除注释
+                        # f = open('HTML/'+title[:10]+'.html', 'a+')
+                        # f.write(html)
+                        # f.close()
 
                         # 保存数据到数据库
                         sql = 'INSERT INTO wechat_article(publish_date,article_title,wechat_id,article_url,cover_img,article_content,article_img,article_html) values(%s, %s, %s, %s, %s, %s, %s, %s)'
                         # 推文为分享其他文章则不入库
                         if content != 'null':
                             try:
-                                self.cursor.execute(sql,(date, title, wechat_id, article_url, pic, content, imgs[0], html.text))
+                                self.cursor.execute(sql,(date, title, wechat_id, article_url, pic, content, imgs[0], html))
                                 self.db.commit()
                                 self.log(u'入库成功')
                             except:
@@ -168,7 +176,7 @@ class Spider:
                         #time.sleep(1)
 
         self.db.close()
-        Spider.log("爬虫已完成任务 %s" % wechat_id[-1])
+        Spider.log("%s",'\n爬虫已完成任务 ')
 
     def get_atticle_info(self,url):
         '''
@@ -179,6 +187,7 @@ class Spider:
         html = requests.get(url,headers=self.headers)
         soup = BeautifulSoup(html.text,"lxml")
         content = soup.find('div', id='img-content')
+
         temp_contents = re.findall('此(.*?)无法查看', html.text, re.S)
 
         if len(temp_contents) > 0:
@@ -187,14 +196,17 @@ class Spider:
 
         p_list = []
 
-        ps = content.find_all('p')
-        for i in ps:
-            x = i.get_text()
-            if '分享一篇文章' in x:       # 判断文章是否为分享其他文章的类型
-                return 'null'
-            p_list.append(x)
+        try:
+            ps = content.find_all('p')
+            for i in ps:
+                x = i.get_text()
+                # if '分享一篇文章' in x:       # 判断文章是否为分享其他文章的类型
+                #     return 'null'
+                p_list.append(x)
 
-        main_content = '\n'.join(p_list)
+            main_content = '\n'.join(p_list)
+        except:
+            return "null"                   #异常则返回null
 
         return main_content
 
@@ -216,7 +228,7 @@ class Spider:
 
 if __name__ == '__main__':
 
-    ids = [ 'AppSo', '互联网思维', '腾讯科技', '运营商头条', '新智元', '大数据文摘', '科技最前线', '最黑科技', '钱皓频道', '制造原理']
+    ids = [ '莞工青年','Appso', '差评', '腾讯科技', '运营商头条']
 
     Spider(ids).get_infos()
 
