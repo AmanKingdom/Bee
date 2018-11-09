@@ -16,7 +16,7 @@ class Search:
         self.words = words
 
         # 连接数据库
-        self.db = sqlite3.connect('bee-database.db')
+        self.db = sqlite3.connect('../../bee-database.db')
         self.cursor = self.db.cursor()
 
     def log(self,msg):
@@ -91,7 +91,7 @@ class Search:
                             if word_num >= 100:     # 字数够100字后退出此关键字的匹配
                                 break
                             else:
-                                if index > 1 and index < 3:         # 匹配行数够两行而字数不够100就添加其他行作为内容
+                                if index > 1 and index < 2:         # 匹配行数够两行而字数不够100就添加其他行作为内容
                                     index += 1
                                     content.append(line)
 
@@ -115,6 +115,6 @@ class Search:
 
 if __name__ == '__main__':
 
-    words = '谷歌'
+    words = '占座'
 
-    print('\n\n\n', Search(words).search_infos())
+    Search(words).search_infos()

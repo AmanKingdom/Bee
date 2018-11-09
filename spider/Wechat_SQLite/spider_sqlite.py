@@ -28,7 +28,7 @@ class Spider:
         self.session = requests.Session()
 
         # 连接数据库
-        self.db = sqlite3.connect('bee-database.db')
+        self.db = sqlite3.connect('../../bee-database.db')
         self.cursor = self.db.cursor()
 
 
@@ -229,7 +229,7 @@ class Spider:
 
 if __name__ == '__main__':
 
-    ids = [ '莞工青年','Appso', '差评', '腾讯科技', '运营商头条']
+    ids = [ '莞工青年','Appso', '差评', '腾讯科技']
 
     Spider(ids).get_infos()
 
