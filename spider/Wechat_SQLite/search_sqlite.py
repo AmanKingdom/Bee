@@ -16,7 +16,7 @@ class Search:
         self.words = words
 
         # 连接数据库
-        self.db = sqlite3.connect('../../bee-database.db')
+        self.db = sqlite3.connect('bee-database.db')
         self.cursor = self.db.cursor()
 
     def log(self,msg):
