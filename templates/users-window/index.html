@@ -165,11 +165,11 @@
                     <!-- .pro-text -->
                     <div class="pro-text text-center">
                         <div class="title">
-                            <h5>好友推荐</h5>
+                            <h5>博客文章</h5>
                         </div>
                         {% for blog_article in blog_articles %}
                             <div class="pro-text text-left">
-                                <h5><a href="{% url 'blog-article-content' blog_article.id %}"><font color="red">{{blog_article.article_title | safe}}</font></a></h5>
+                                <h5><a href="{% url 'public-blog-article-content' blog_article.id %}"><font color="red">{{blog_article.article_title | safe}}</font></a></h5>
                             </div>
                         {% endfor %}
                     </div>

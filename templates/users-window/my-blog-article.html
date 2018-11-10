@@ -4,7 +4,7 @@
     {% if blog_articles %}
         {% for article in blog_articles %}
             <div>
-                <h4><a href="{% url 'blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
+                <h4><a href="{% url 'my-blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
             </div>
         {% endfor %}
     {% else %}

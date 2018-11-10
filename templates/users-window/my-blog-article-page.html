@@ -1,0 +1,13 @@
+<!--my-blog-article-page.html-->
+{% extends "users-window/user-homepage.html" %}
+{% load staticfiles %}
+{% block user_homepage_block %}
+    <div class="col-sm-1"></div>
+    <p>发表时间：{{ blog_article.publish_date | date:"Y-m-d H:i:s" }}</p>
+    <div class="col-sm-10">
+        <h3 align="center">{{ blog_article.article_title | safe }}</h3>
+        {{ blog_article.article_content | safe }}
+    </div>
+    <a href="{% url 'delete-blog-article' blog_article.article_title %}">删除该文章</a>
+    <div class="col-sm-1"></div>
+{%  endblock %}

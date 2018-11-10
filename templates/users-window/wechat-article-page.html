@@ -1,16 +1,18 @@
 {% extends "users-window/base.html" %}
 {% block title %}BEE | 微信文章{% endblock %}
 {% block base_body %}
-<div class="col-sm-1"></div>
+    <div class="row">
+        <div class="col-sm-1"></div>
 
-<div class="col-sm-10">
-    <div>
-        <div>
-            {{ wechat_article.article_html | safe}}
+        <div class="col-sm-10">
+            <div>
+                <div>
+                    {{ wechat_article.article_html | safe}}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>
+    </div>
 {% endblock %}
 

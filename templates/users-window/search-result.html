@@ -58,40 +58,28 @@
     <div class="col-sm-1"></div>
 
     <div class="col-sm-10">
-        {#        <ul>#}
-        {#            {%  for article in wechat_articles %}#}
-        {#                <li class="wechat-articles-list">#}
-        {#                    <h4>#}
-        {#                        <a href = "{% url 'wechat-article-content' article.article_id %}">{{ article.article_title | safe }}</a>#}
-        {#                    </h4>#}
-        {#                    <p>#}
-        {#                        {% for item in article.article_content %}#}
-        {#                            {{ item | safe}}#}
-        {#                        {% endfor %}#}
-        {#                    </p>#}
-        {#                    <p>#}
-        {#                        {{ article.publish_date }} 文章来源：{{ article.wechat_id }}#}
-        {#                    </p>#}
-        {#                </li>#}
-        {#            {% endfor %}#}
-        {#        </ul>#}
-
-        {%  for article in wechat_articles %}
-            <div class="wechat-articles-list">
-                <h4>
-                    <a href = "{% url 'wechat-article-content' article.article_id %}">{{ article.article_title | safe }}</a>
-                </h4>
-                <p>
-                    {% for item in article.article_content %}
-                        {{ item | safe}}
-                    {% endfor %}
-                </p>
-                <div class="row">
-                    <div class="col-sm-6">{{ article.publish_date }}</div>
-                    <div class="col-sm-6">文章来源：{{ article.wechat_id }}</div>
+        {% if wechat_articles %}
+            {%  for article in wechat_articles %}
+                <div class="wechat-articles-list">
+                    <h4>
+                        <a href = "{% url 'wechat-article-content' article.article_id %}">{{ article.article_title | safe }}</a>
+                    </h4>
+                    <p>
+                        {% for item in article.article_content %}
+                            {{ item | safe}}
+                        {% endfor %}
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-6">{{ article.publish_date }}</div>
+                        <div class="col-sm-6">文章来源：{{ article.wechat_id }}</div>
+                    </div>
                 </div>
+            {% endfor %}
+        {% else %}
+            <div>
+                <h3 align="center">噢！我什么都没找到。。。</h3>
             </div>
-        {% endfor %}
+        {% endif %}
     </div>
 
     <div class="col-sm-1"></div>
