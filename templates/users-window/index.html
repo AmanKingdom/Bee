@@ -16,7 +16,7 @@
                 <!-- Search box Start -->
                 <form name="searchForm" action="{% url 'search' %}" method="get">
                     <div class="searchBox">
-                        <div class="btn-group">
+                        <span class="btn-group">
                             <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">检索条件 </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">最新</a></li>
@@ -25,13 +25,13 @@
                                 <li class="divider"></li>
                                 <li><a href="#">综合</a></li>
                             </ul>
-                        </div>
-                        <div class="search">
+                        </span>
+                        <span class="search">
                             <input type="text" id="search-text" name="search-text" placeholder="搜索您想看的……" />
-                        </div>
-                        <div class="btn-group">
+                        </span>
+                        <span class="btn-group">
                             <button type="submit" id="searchBtn" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </div>
+                        </span>
                     </div>
                 </form>
                 <!-- Search box End -->
@@ -154,7 +154,7 @@
                         <ul>
                             {% for wechat_article in wechat_articles %}
                                 <li>
-                                    <a href="{% url 'wechat-article-content' wechat_article.id %}">{{ wechat_article.article_title }}</a>
+                                    <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
                                 </li><hr>
                             {% endfor %}
                         </ul>
@@ -169,7 +169,7 @@
                         </div>
                         {% for blog_article in blog_articles %}
                             <div class="pro-text text-left">
-                                <h5><a href="{% url 'public-blog-article-content' blog_article.id %}"><font color="red">{{blog_article.article_title | safe}}</font></a></h5>
+                                <h5><a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank"><font color="red">{{blog_article.article_title | safe}}</font></a></h5>
                             </div>
                         {% endfor %}
                     </div>

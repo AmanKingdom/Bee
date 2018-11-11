@@ -3,33 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20181105_0919.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/uploads.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/uploads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bee/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bee/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/bee-database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/media/upload/2018/11/e48afb12-dffe-11e8-ad33-488ad23c33a1.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/media/upload/2018/11/f86ce594-dffe-11e8-94c8-488ad23c33a1.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/media/upload/2018/11/f9a2b6ca-e00a-11e8-b4c5-488ad23c33a1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/blog-article-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/checkout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/my-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/my-blog-article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users-window/search-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/search-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/shop-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/shopping-cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/user-iformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/user-information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/wechat-article-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/wechat-article-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -233,8 +214,8 @@
     <session id="1073276838">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.35" value="1" />
@@ -243,51 +224,51 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="168" />
-          <entry key="html" value="1784" />
+          <entry key="css" value="215" />
+          <entry key="html" value="2048" />
           <entry key="js" value="24" />
           <entry key="meta" value="1" />
           <entry key="py" value="2384" />
-          <entry key="txt" value="771" />
+          <entry key="txt" value="801" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="168" />
-          <entry key="HTML" value="1784" />
+          <entry key="CSS" value="215" />
+          <entry key="HTML" value="2048" />
           <entry key="JavaScript" value="24" />
-          <entry key="PLAIN_TEXT" value="772" />
+          <entry key="PLAIN_TEXT" value="802" />
           <entry key="Python" value="2384" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="app_blogarticle" value="1" />
-          <entry key="css" value="6" />
-          <entry key="html" value="55" />
+          <entry key="css" value="7" />
+          <entry key="html" value="66" />
           <entry key="js" value="2" />
           <entry key="md" value="1" />
-          <entry key="py" value="43" />
+          <entry key="py" value="44" />
           <entry key="pyc" value="1" />
           <entry key="sqlite_sequence" value="1" />
           <entry key="txt" value="1" />
-          <entry key="wechat_article" value="4" />
+          <entry key="wechat_article" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="6" />
-          <entry key="Database Element" value="6" />
-          <entry key="HTML" value="55" />
+          <entry key="CSS" value="7" />
+          <entry key="Database Element" value="7" />
+          <entry key="HTML" value="66" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="44" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -297,19 +278,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459">
-              <caret line="126" column="47" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="47" />
+            <state relative-caret-position="459">
+              <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
               <folding>
                 <marker date="1541854472126" expanded="true" signature="7663:7777" ph="..." />
               </folding>
@@ -318,34 +290,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/uploads.py">
+        <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/manage-window/wechat_accounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="174" column="26" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
+            <state relative-caret-position="54">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -414,7 +371,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spider/database.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/bee/wsgi.py" />
         <option value="$PROJECT_DIR$/app/migrations/0005_auto_20181102_0909.py" />
@@ -438,7 +394,6 @@
         <option value="$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
         <option value="$PROJECT_DIR$/templates/users-window/my-fans.html" />
         <option value="$PROJECT_DIR$/templates/users-window/user-iformations.html" />
-        <option value="$PROJECT_DIR$/static/assets/css/style.css" />
         <option value="$PROJECT_DIR$/templates/users-window/user-iformation.html" />
         <option value="$PROJECT_DIR$/templates/users-window/user-homepage.html" />
         <option value="$PROJECT_DIR$/templates/users-window/my-collections.html" />
@@ -448,8 +403,6 @@
         <option value="$PROJECT_DIR$/templates/users-window/my-blog-article.html" />
         <option value="$PROJECT_DIR$/templates/users-window/wechat-article-page.html" />
         <option value="$PROJECT_DIR$/templates/users-window/not-found.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/base.html" />
         <option value="$PROJECT_DIR$/templates/users-window/login.html" />
         <option value="$PROJECT_DIR$/templates/users-window/forget-password.html" />
         <option value="$PROJECT_DIR$/templates/users-window/register.html" />
@@ -463,8 +416,12 @@
         <option value="$PROJECT_DIR$/templates/users-window/footer.html" />
         <option value="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" />
         <option value="$PROJECT_DIR$/templates/users-window/public-blog-article-content.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/index.html" />
         <option value="$PROJECT_DIR$/app/uploads.py" />
+        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
+        <option value="$PROJECT_DIR$/static/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/users-window/index.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/base.html" />
+        <option value="$PROJECT_DIR$/templates/manage-window/wechat_accounts.html" />
       </list>
     </option>
   </component>
@@ -513,24 +470,13 @@
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users-window" type="462c0819:PsiDirectoryNode" />
+              <item name="manage-window" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -574,7 +520,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spider_sqlite">
+  <component name="RunManager" selected="Django server.bee">
     <configuration name="search_sqlite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bee" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -801,7 +747,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541822984044</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完善了博客文章的作者绑定。">
+      <created>1541861194262</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1541861194262</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -816,16 +769,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.18123393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.18316196" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.37921727" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3169399" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.31578946" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23481782" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
@@ -857,23 +810,10 @@
     <MESSAGE value="补全了上个版本中缺失的部分个人信息页面文件。" />
     <MESSAGE value="search_sqlite.py中的数据库引用在Django中运行和其单独运行是不一样的，在Django中由于我增加了数据库的环境变量，所以直接用bee-database.db就OK了，但单独运行才需要../../bee-database.db，由于在这个项目中它不需要单独的运行，所以我还是让它适应这个项目为宜。" />
     <MESSAGE value="现在把一个小的数据库上传，是用来测试服务器的，以后的版本会删除这个数据库。" />
-    <option name="LAST_COMMIT_MESSAGE" value="现在把一个小的数据库上传，是用来测试服务器的，以后的版本会删除这个数据库。" />
+    <MESSAGE value="完善了博客文章的作者绑定。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了博客文章的作者绑定。" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bee/__pycache__/wsgi.cpython-37.pyc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/temp.html" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/temp2.html" />
     <entry file="file://$PROJECT_DIR$/spider/spider2.0.py" />
@@ -955,20 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/user-information.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1004,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1018,30 +937,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/wechat-article-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/not-found.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4131" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/not-found.html" />
+    <entry file="file://$PROJECT_DIR$/templates/users-window/checkout.html" />
+    <entry file="file://$PROJECT_DIR$/templates/users-window/contact.html" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1070,13 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1091,24 +982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1123,13 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/user-homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1150,10 +1020,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
+    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="81">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/wechat-article-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1167,6 +1051,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="58" column="46" lean-forward="true" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/user-homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/uploads.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1177,20 +1089,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="174" column="26" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
+        <state relative-caret-position="272">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="126" column="47" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="47" />
+        <state relative-caret-position="459">
+          <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
           <folding>
             <marker date="1541854472126" expanded="true" signature="7663:7777" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/wechat_accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
