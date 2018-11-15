@@ -61,7 +61,7 @@ class BlogArticleForm(forms.ModelForm):
     class Meta:
         model = BlogArticle
         fields = '__all__'
-        exclude = ['publish_date']
+        exclude = ['publish_date', 'author']
 
     def __init__(self, *args, **kwargs):
         super(BlogArticleForm, self).__init__(*args, **kwargs)

@@ -23,7 +23,7 @@ def upload_image(request):
     files = request.FILES.get("imgFile", None)  #input type="file" 中name属性对应的值为imgFile
     if files:
         result = process_upload(files, type)
-        print(result)
+        print('提交了文件：', result)
     else:
         result = {"error": 1, "message": u"上传失败"}
     #结果以json形式返回

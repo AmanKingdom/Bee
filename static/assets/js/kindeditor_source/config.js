@@ -5,7 +5,7 @@ KindEditor.ready(function(K) {
         minHeight: 100,
         uploadJson:'/uploads/',
         items:[
-            'preview', 'undo', 'redo', 'formatblock', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'strikethrough', 'justifyleft',
+            'preview', 'undo', 'redo', 'formatblock', 'fontname', 'fontsize', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'strikethrough', 'justifyleft',
             'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', 'subscript', 'superscript', 'removeformat', '|',
             'image', 'flash', 'media', 'table', 'hr', 'emoticons', 'baidumap', 'link', 'fullscreen'],
         themeType : 'simple',

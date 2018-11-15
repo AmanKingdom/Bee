@@ -1,9 +1,7 @@
 from django.db import models
+import datetime
 
 # 文章所属行业和子行业的类
-from django.utils import timezone
-
-
 class Industry(models.Model):
     # 行业名称，不能为空，其对应的子行业可以为空
     industry_name = models.CharField(max_length=10)
@@ -16,7 +14,7 @@ class Industry(models.Model):
 # 用户类
 class User(models.Model):
     # 用户账号ID就是邮箱，不是Django自创建的id
-    user_id = models.EmailField(unique=True)
+    user_id = models.EmailField(unique=True, null=False)
     # 姓名，昵称
     name = models.CharField(max_length=20, unique=True)
     # 密码
@@ -65,12 +63,15 @@ class WeChatArticle(models.Model):
 class BlogArticle(models.Model):
     class Meta:
         ordering = ('-publish_date',)
+
     # 标题
     article_title = models.CharField(max_length=100, unique=True)
     # 文章内容
     article_content = models.TextField(null=False)
     # 发表时间
-    publish_date = models.DateTimeField(default=timezone.now)
+    publish_date = models.DateTimeField(default=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    # 作者
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
 
     def __str__(self):
         return self.article_title

@@ -238,7 +238,7 @@ class Spider:
 
 if __name__ == '__main__':
 
-    ids = [ '莞工青年','Appso', '差评', '腾讯科技']
+    ids = ['莞工青年', 'Appso', '差评', '腾讯科技']
 
     Spider(ids).get_infos()
 

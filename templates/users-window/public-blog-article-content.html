@@ -1,0 +1,24 @@
+{% extends "users-window/base.html" %}
+{% block title %}BEE | 博客文章{% endblock %}
+{% block base_body %}
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <div class="row">
+                <h3 align="center">{{ blog_article.article_title | safe }}</h3><hr><br>
+                <div>
+                    <div>
+                        {{ blog_article.article_content | safe }}
+                    </div>
+                </div>
+                <div class="col-sm-2">发表时间：{{ blog_article.publish_date | date:"Y-m-d H:i:s" }}</div>
+                <div class="col-sm-8"> </div>
+                <div class="col-sm-2">文章作者：{{ blog_article.author.name | safe }}</div>
+            </div>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+{% endblock %}
+
