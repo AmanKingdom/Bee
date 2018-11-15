@@ -162,6 +162,7 @@ class Spider:
                                         </div>
                                     </div>
                                 </div>'''
+
                         html = re.sub(pattern='data-src', repl='src', string=data)
                         html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=html)
                         html = re.sub(pattern=delete, repl='', string=html)
