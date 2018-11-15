@@ -154,8 +154,17 @@ class Spider:
                         temp_html = requests.get(article_url)
                         temp_html.encoding = 'utf-8'
                         data = temp_html.text
+                        delete = '''<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+                                    <div class="qr_code_pc_inner">
+                                        <div class="qr_code_pc">
+                                            <img id="js_pc_qr_code_img" class="qr_code_pc_img">
+                                            <p>微信扫一扫<br>关注该公众号</p>
+                                        </div>
+                                    </div>
+                                </div>'''
                         html = re.sub(pattern='data-src', repl='src', string=data)
                         html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=html)
+                        html = re.sub(pattern=delete, repl='', string=html)
 
                         # html写入项目当前目录的HTML文件夹，文件名为标题前10个字，需要使用可删除注释
                         # f = open('HTML/'+title[:10]+'.html', 'a+')
