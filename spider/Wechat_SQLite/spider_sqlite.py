@@ -1,7 +1,8 @@
 # coding: utf-8
-
+import random
 import re
 import os
+import string
 import time
 import sqlite3
 import pymysql
@@ -99,10 +100,12 @@ class Spider:
                         # date = article('p[class="weui_media_extra_info"]').text().strip()
                         temp_date = article('p[class="weui_media_extra_info"]').text().strip()
                         if temp_date.endswith("原创"):
-                            date = temp_date.replace('原创','')
+                            pdate = temp_date.replace('原创','')
                         else:
-                            date = temp_date
-                        self.log(u'发表时间： %s' % date)
+                            pdate = temp_date
+                        self.log(u'发表时间： %s' % pdate)
+
+
 
                         # 获取标题对应的地址
                         temp_url = article('h4[class="weui_media_title"]').attr('hrefs')
@@ -112,6 +115,15 @@ class Spider:
                         else:
                             article_url = 'http://mp.weixin.qq.com' + temp_url
                         self.log(u'地址： %s' % article_url)
+
+                        # 在获取到标题和发布日期的时候先进行查询数据库是否存在此条记录
+                        sql1 = "SELECT article_title, publish_date FROM wechat_article WHERE article_title='" + title + "'"+"AND publish_date='"+pdate+"'"
+                        self.cursor.execute(sql1)
+                        exits = self.cursor.fetchall()  # 查找所有符合条件的数据
+                        if len(exits) >= 1:
+                            Spider.log("%s", '数据已存在，忽略此次爬取.')
+                            continue
+
 
                         # 获取封面图片
                         cover = article('.weui_media_hd').attr('style')
@@ -133,15 +145,6 @@ class Spider:
 
                         # 获取文章图片
                         imgs = self.get_article_img(article_url)
-                        for img in imgs:
-                            if img.endswith('gif'):
-                                img_url = img + '.gif'
-                            if img.endswith('jpg'):
-                                img_url = img + '.jpg'
-                            if img.endswith('jpeg'):
-                                img_url = img + '.jpeg'
-                            if img.endswith('png'):
-                                img_url = img + '.png'
 
                             # 下载图片到本地
                             # data = requests.get(img,headers=self.headers)
@@ -155,17 +158,25 @@ class Spider:
                         temp_html.encoding = 'utf-8'
                         data = temp_html.text
                         delete = '''<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
-                                    <div class="qr_code_pc_inner">
-                                        <div class="qr_code_pc">
-                                            <img id="js_pc_qr_code_img" class="qr_code_pc_img">
-                                            <p>微信扫一扫<br>关注该公众号</p>
-                                        </div>
-                                    </div>
-                                </div>'''
+            <div class="qr_code_pc_inner">
+                <div class="qr_code_pc">
+                    <img id="js_pc_qr_code_img" class="qr_code_pc_img">
+                    <p>微信扫一扫<br>关注该公众号</p>
+                </div>
+            </div>
+        </div>'''
 
-                        html = re.sub(pattern='data-src', repl='src', string=data)
-                        html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=html)
-                        html = re.sub(pattern=delete, repl='', string=html)
+                        # html = re.sub(pattern='data-src', repl='src', string=data)
+                        html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=data)
+                        html = re.sub(pattern=delete, repl=' ', string=html)
+
+                        attr = iter(re.findall('data-src="(.*?)"', html, re.S))
+                        path_name = 'bee_imgs/'         # 存储图片的路径
+
+                        for im in imgs:                 # 依次将data-src替换为本地路径
+                            img = path_name+im
+                            html = re.sub(pattern='data-src=".*?"', repl='src="%s"' %img, string=html, count=1)
+
 
                         # html写入项目当前目录的HTML文件夹，文件名为标题前10个字，需要使用可删除注释
                         # f = open('HTML/'+title[:10]+'.html', 'a+')
@@ -177,7 +188,7 @@ class Spider:
                         # 推文为分享其他文章则不入库
                         if content != 'null':
                             try:
-                                self.cursor.execute(sql,(date, title, wechat_id, article_url, pic, content, imgs[0], html))
+                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, imgs[0], html))
                                 self.db.commit()
                                 self.log(u'入库成功')
                             except:
@@ -227,14 +238,52 @@ class Spider:
         :param url:
         :return:
         '''
+
         res = requests.get(url)
         if res.status_code == 200:
             contents = re.findall('data-src="(.*?)"', res.text, re.S)
 
         imgs = []
+        path = 'bee_imgs/'
+
         for img in contents:
-            if img.endswith('jpg') or img.endswith('jpeg') or img.endswith('gif') or img.endswith('png'):
-                imgs.append(img)
+            # 随机生成一个长度为30的字符串，作为图片的文件名
+            ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+            if img.endswith('jpg'):
+                img_name = ran_str + '.jpg'
+                imgs.append(img_name)
+
+                data = requests.get(img, headers=self.headers)
+                fp = open(path + img_name, 'wb')            # 下载图片到本地
+                fp.write(data.content)
+                fp.close()
+            elif img.endswith('jpeg'):
+                img_name = ran_str + '.jpeg'
+                imgs.append(img_name)
+
+                data = requests.get(img, headers=self.headers)
+                fp = open(path + img_name, 'wb')
+                fp.write(data.content)
+                fp.close()
+
+            elif img.endswith('png'):
+                img_name = ran_str + '.png'
+                imgs.append(img_name)
+
+                data = requests.get(img, headers=self.headers)
+                fp = open(path + img_name, 'wb')
+                fp.write(data.content)
+                fp.close()
+
+            elif img.endswith('gif'):
+                img_name = ran_str + '.gif'
+                imgs.append(img_name)
+
+                data = requests.get(img, headers=self.headers)
+                fp = open(path + img_name, 'wb')
+                fp.write(data.content)
+                fp.close()
+
         return imgs
 
 if __name__ == '__main__':
