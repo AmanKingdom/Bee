@@ -55,7 +55,7 @@
     
     如果是视频，则存入‘video’以为下一步判断视频类型做准备。
     
-> 在处理HTML代码时，判断如果有视频内容，即替换data-src为src即可：
+> 在处理HTML代码时，判断如果有视频内容，则替换data-src为src即可：
 
     for img_name in imgs:                 # 依次将data-src替换为本地路径
         if img_name == 'video':
