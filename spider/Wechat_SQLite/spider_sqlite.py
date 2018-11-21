@@ -88,24 +88,13 @@ class Spider:
                         title = article('h4[class="weui_media_title"]').text().strip()
                         self.log(u'标题： %s' % title)
 
-                        # 创建标题前五个字命名的文件夹
-                        # if not os.path.exists(title[:10]):
-                        #     os.makedirs(title[:10])
-                        # path = os.getcwd()+ '/' + title[:10] +'/'
-                        # print(path)
-
-
                         # 获取文章发表时间
-                        # date = article('.weui_media_extra_info').text().strip()
-                        # date = article('p[class="weui_media_extra_info"]').text().strip()
                         temp_date = article('p[class="weui_media_extra_info"]').text().strip()
                         if temp_date.endswith("原创"):
                             pdate = temp_date.replace('原创','')
                         else:
                             pdate = temp_date
                         self.log(u'发表时间： %s' % pdate)
-
-
 
                         # 获取标题对应的地址
                         temp_url = article('h4[class="weui_media_title"]').attr('hrefs')
@@ -124,7 +113,6 @@ class Spider:
                             Spider.log("%s", '数据已存在，忽略此次爬取.')
                             continue
 
-
                         # 获取封面图片
                         cover = article('.weui_media_hd').attr('style')
 
@@ -141,17 +129,8 @@ class Spider:
                         else:
                             content = self.get_atticle_info(article_url)
 
-                        #print(content)
-
                         # 获取文章图片
                         imgs = self.get_article_img(article_url)
-
-                            # 下载图片到本地
-                            # data = requests.get(img,headers=self.headers)
-                            # fp = open(path+img_url[-15:],'wb')
-                            # fp.write(data.content)
-                            # fp.close()
-                        # print(imgs)
 
                         # 获取html代码
                         temp_html = requests.get(article_url)
@@ -166,16 +145,17 @@ class Spider:
             </div>
         </div>'''
 
-                        # html = re.sub(pattern='data-src', repl='src', string=data)
                         html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=data)
                         html = re.sub(pattern=delete, repl=' ', string=html)
 
-                        attr = iter(re.findall('data-src="(.*?)"', html, re.S))
-                        path_name = '/static/wechat_imgs/'         # 存储图片的路径
+                        path_name = '../../static/wechat_imgs/'         # 存储图片的路径
 
-                        for im in imgs:                 # 依次将data-src替换为本地路径
-                            img = path_name+im
-                            html = re.sub(pattern='data-src=".*?"', repl='src="%s"' %img, string=html, count=1)
+                        for img_name in imgs:                 # 依次将data-src替换为本地路径
+                            if img_name == 'video':
+                                html = re.sub(pattern='data-src', repl='src', string=html, count=1)
+                            else:
+                                img = path_name+img_name
+                                html = re.sub(pattern='data-src=".*?"', repl='src="%s"' %img, string=html, count=1)
 
 
                         # html写入项目当前目录的HTML文件夹，文件名为标题前10个字，需要使用可删除注释
@@ -194,8 +174,6 @@ class Spider:
                             except:
                                 self.db.rollback()
                                 self.log(u'入库不成功')
-
-                        #time.sleep(1)
 
         self.db.close()
         Spider.log("%s",'\n爬虫已完成任务 ')
@@ -222,8 +200,6 @@ class Spider:
             ps = content.find_all('p')
             for i in ps:
                 x = i.get_text()
-                # if '分享一篇文章' in x:       # 判断文章是否为分享其他文章的类型
-                #     return 'null'
                 p_list.append(x)
 
             main_content = '\n'.join(p_list)
@@ -283,12 +259,53 @@ class Spider:
                 fp = open(path + img_name, 'wb')
                 fp.write(data.content)
                 fp.close()
+            else:
+                if img.startswith('https://mmbiz.qpic.cn/mmbiz_jpg'):
+                    img_name = ran_str + '.jpg'
+                    imgs.append(img_name)
+
+                    data = requests.get(img, headers=self.headers)
+                    fp = open(path + img_name, 'wb')  # 下载图片到本地
+                    fp.write(data.content)
+                    fp.close()
+
+                elif img.startswith('https://mmbiz.qpic.cn/mmbiz_jpeg'):
+                    img_name = ran_str + '.jpeg'
+                    imgs.append(img_name)
+
+                    data = requests.get(img, headers=self.headers)
+                    fp = open(path + img_name, 'wb')
+                    fp.write(data.content)
+                    fp.close()
+
+                elif img.startswith('https://mmbiz.qpic.cn/mmbiz_png'):
+                    img_name = ran_str + '.png'
+                    imgs.append(img_name)
+
+                    data = requests.get(img, headers=self.headers)
+                    fp = open(path + img_name, 'wb')
+                    fp.write(data.content)
+                    fp.close()
+
+                elif img.startswith('https://mmbiz.qpic.cn/mmbiz_gif'):
+                    img_name = ran_str + '.gif'
+                    imgs.append(img_name)
+
+                    data = requests.get(img, headers=self.headers)
+                    fp = open(path + img_name, 'wb')
+                    fp.write(data.content)
+                    fp.close()
+
+                elif img.startswith('https://v.qq.com/iframe'):
+                    img_name = 'video'
+                    imgs.append(img_name)
+
 
         return imgs
 
 if __name__ == '__main__':
 
-    ids = ['差评', '腾讯科技']
+    ids = ['莞工青年', 'Appso', '差评', '腾讯科技']
 
     Spider(ids).get_infos()
 
