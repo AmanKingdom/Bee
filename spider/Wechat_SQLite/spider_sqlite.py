@@ -171,7 +171,7 @@ class Spider:
                         html = re.sub(pattern=delete, repl=' ', string=html)
 
                         attr = iter(re.findall('data-src="(.*?)"', html, re.S))
-                        path_name = 'bee_imgs/'         # 存储图片的路径
+                        path_name = '/static/wechat_imgs/'         # 存储图片的路径
 
                         for im in imgs:                 # 依次将data-src替换为本地路径
                             img = path_name+im
@@ -244,7 +244,7 @@ class Spider:
             contents = re.findall('data-src="(.*?)"', res.text, re.S)
 
         imgs = []
-        path = 'bee_imgs/'
+        path = '../../static/wechat_imgs/'
 
         for img in contents:
             # 随机生成一个长度为30的字符串，作为图片的文件名
