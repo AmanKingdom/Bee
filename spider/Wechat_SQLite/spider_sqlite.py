@@ -75,10 +75,15 @@ class Spider:
                 articlesLength = len(articles_list)
                 self.log(u'抓到文章%s篇' % articlesLength)
 
-                if articles_list:
-                    index = 0
+                items = []
+                for item in articles_list.items():
+                    items.append(item)
+                items.reverse()
 
-                    for article in articles_list.items():
+                if articles_list:
+                    index = 1
+
+                    for article in items:
 
                         self.log('')
                         self.log('正在爬取(%s/%s)' % (index, articlesLength))
