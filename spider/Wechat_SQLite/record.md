@@ -63,3 +63,12 @@
         else:
             img = path_name+img_name
             html = re.sub(pattern='data-src=".*?"', repl='src="%s"' %img, string=html, count=1)
+            
+## 2018-11-22 历史文章爬取顺序改为先旧后新
+
+> 将列表反转
+
+    items = []
+    for item in articles_list.items():
+        items.append(item)
+    items.reverse()
