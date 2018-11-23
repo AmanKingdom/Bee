@@ -153,12 +153,28 @@ class Spider:
                         html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=data)
                         html = re.sub(pattern=delete, repl=' ', string=html)
 
-                        path_name = '../../static/wechat_imgs/'         # 存储图片的路径
+                        # 文章文字数量
+                        temp_content = content.replace("\n", "")
+                        temp_content = temp_content.strip()
+                        word_amount = len(temp_content)
 
-                        for img_name in imgs:                 # 依次将data-src替换为本地路径
+                        # 文章图片数量
+                        img_amount = 0
+
+                        # 文字视频数量
+                        video_amount = 0
+
+                        # 文章音频数量
+                        audio_amount = len(re.findall('audio_iframe', html, re.S))
+
+                        # 依次将data-src替换为本地路径
+                        path_name = '../../static/wechat_imgs/'  # 存储图片的路径
+                        for img_name in imgs:
                             if img_name == 'video':
+                                video_amount += 1
                                 html = re.sub(pattern='data-src', repl='src', string=html, count=1)
                             else:
+                                img_amount += 1
                                 img = path_name+img_name
                                 html = re.sub(pattern='data-src=".*?"', repl='src="%s"' %img, string=html, count=1)
 
@@ -169,16 +185,18 @@ class Spider:
                         # f.close()
 
                         # 保存数据到数据库
-                        sql = 'INSERT INTO wechat_article(publish_date,article_title,wechat_id,article_url,cover_img,article_content,article_img,article_html) values(?, ?, ?, ?, ?, ?, ?, ?)'
+                        sql = 'INSERT INTO wechat_article(publish_date,article_title,wechat_id,article_url,cover_img,article_content,article_html,img_amount,word_amount,video_amount,audio_amount) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
                         # 推文为分享其他文章则不入库
                         if content != 'null':
                             try:
-                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, imgs[0], html))
+                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
                                 self.db.commit()
                                 self.log(u'入库成功')
                             except:
                                 self.db.rollback()
                                 self.log(u'入库不成功')
+                        else:
+                            self.log(u'文章内容为null')
 
         self.db.close()
         Spider.log("%s",'\n爬虫已完成任务 ')
@@ -310,7 +328,7 @@ class Spider:
 
 if __name__ == '__main__':
 
-    ids = ['莞工青年', 'Appso', '差评', '腾讯科技']
+    ids = ['差评', '腾讯科技']
 
     Spider(ids).get_infos()
 

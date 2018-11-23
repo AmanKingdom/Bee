@@ -28,7 +28,7 @@ def create_tables():
 
     db = sqlite3.connect('../../bee-database.db')
     cursor = db.cursor()
-    sql = 'CREATE TABLE IF NOT EXISTS wechat_article(id integer PRIMARY KEY autoincrement,publish_date VARCHAR(20) NOT NULL,article_title VARCHAR(200) NOT NULL,wechat_id VARCHAR(20) NOT NULL,article_url TEXT NOT NULL,cover_img TEXT NOT NULL,article_content TEXT,article_img TEXT,article_html MEDIUMTEXT)'
+    sql = 'CREATE TABLE IF NOT EXISTS wechat_article(id integer PRIMARY KEY autoincrement,publish_date VARCHAR(20) NOT NULL,article_title VARCHAR(200) NOT NULL,wechat_id VARCHAR(20) NOT NULL,article_url TEXT NOT NULL,cover_img TEXT NOT NULL,article_content TEXT,article_html MEDIUMTEXT, img_amount integer, word_amount integer, video_amount integer, audio_amount integer)'
     cursor.execute(sql)
     db.close()
     log('wechat_article表已创建好')

@@ -39,11 +39,12 @@ class WeChatArticle(models.Model):
         unique_together = ('publish_date', 'article_title',)
 
     # 文章id在Django的models中是自动生成的，所以就不写上了
+
     # 文章发表时间
     publish_date = models.CharField(max_length=20)
     # 文章标题
     article_title = models.CharField(max_length=100)
-    # 文章所属公众号名称
+    # 文章所属公众号微信号
     wechat_id = models.CharField(max_length=20)
     # 文章链接，目前暂时是临时的
     article_url = models.TextField()
@@ -51,10 +52,17 @@ class WeChatArticle(models.Model):
     cover_img = models.TextField()
     # 文章正文内容
     article_content = models.TextField()
-    # 文章图片链接，目前只有一个
-    article_img = models.TextField()
     # 文章HTML代码
     article_html = models.TextField()
+    # 文章图片数量
+    img_amount = models.IntegerField(default="0")
+    # 文章文字数量
+    word_amount = models.IntegerField(default="0")
+    # 文章视频数量
+    video_amount = models.IntegerField(default="0")
+    # 文章音频数量
+    audio_amount = models.IntegerField(default="0")
+
 
     def __str__(self):
         return self.article_title
@@ -76,4 +84,21 @@ class BlogArticle(models.Model):
     def __str__(self):
         return self.article_title
 
+# 公众号类
+class WechatAccount(models.Model):
+    class Meta:
+        # 自定义生成的数据库表名,如果不这样用，系统会默认生成app_wechataccount的
+        db_table = 'wechat_account'
+        unique_together = ('wechat_id',)
 
+    # 公众号数据库id在Django的models中是自动生成的，所以就不写上了
+
+    # 公众号微信号
+    wechat_id = models.CharField(max_length=50)
+    # 公众号名称
+    wechat_name = models.CharField(max_length=50)
+    # 公众号头像图片路径
+    head_portrait = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.head_portrait
