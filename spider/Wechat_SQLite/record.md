@@ -72,3 +72,16 @@
     for item in articles_list.items():
         items.append(item)
     items.reverse()
+    
+## 2018-11-23 删除数据库冗余数据项、增加其他数据项和增加公众号表
+
+> 删除项
+
+    article_img     # 文章图片 
+    
+> 增加项
+
+    img_amount        # 文章图片数量
+    word_amount       # 文章文字数量
+    video_amount      # 文章视频数量
+    audio_amount      # 文章音频数量
