@@ -11,7 +11,21 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from pyquery import PyQuery as pq
 
-class Spider:
+class Log:
+
+    def log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+
+class ArticleSpider:
+    '''
+    文章爬虫，用于爬取微信文章的各项信息
+    '''
+
     def __init__(self, wechat_ids):
         '''
         构造函数，根据公众号微信号获取对应文章的发布时间、文章标题, 文章链接等信息
@@ -33,20 +47,12 @@ class Spider:
         self.cursor = self.db.cursor()
 
 
-    def log(self,msg):
-        '''
-        日志函数
-        :param msg: 日志信息
-        :return:
-        '''
-        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
-
     def get_infos(self):
 
         for wechat_id in self.wechat_ids:
 
             print('\n')
-            self.log(u'公众号为：%s' % wechat_id)
+            Log.log(u'公众号为：%s' % wechat_id)
 
             # 搜索url
             search_url = 'https://weixin.sogou.com/weixin?type=1&s_from=input&query=' + wechat_id
@@ -55,7 +61,7 @@ class Spider:
             #获取公众号URL
             doc = pq(search_html)
             wechat_url = doc('div[class=txt-box]')('p[class=tit]')('a').attr('href')
-            self.log(u'公众号url：%s' % wechat_url)
+            Log.log(u'公众号url：%s' % wechat_url)
 
             # 获取html
             browser = webdriver.Chrome()
@@ -66,14 +72,14 @@ class Spider:
 
             # 检测是否被限制访问
             if pq(wechat_html)('#verify_change').text() != '':
-                self.log(u'已限制访问，请稍后再试')
+                Log.log(u'已限制访问，请稍后再试')
 
             else:
                 # 获取发布时间，标题，首图，URL
                 doc = pq(wechat_html)
                 articles_list = doc('div[class="weui_media_box appmsg"]')
                 articlesLength = len(articles_list)
-                self.log(u'抓到文章%s篇' % articlesLength)
+                Log.log(u'抓到文章%s篇' % articlesLength)
 
                 items = []
                 for item in articles_list.items():
@@ -85,13 +91,13 @@ class Spider:
 
                     for article in items:
 
-                        self.log('')
-                        self.log('正在爬取(%s/%s)' % (index, articlesLength))
+                        Log.log('')
+                        Log.log('正在爬取(%s/%s)' % (index, articlesLength))
                         index += 1
 
                         # 获取标题
                         title = article('h4[class="weui_media_title"]').text().strip()
-                        self.log(u'标题： %s' % title)
+                        Log.log(u'标题： %s' % title)
 
                         # 获取文章发表时间
                         temp_date = article('p[class="weui_media_extra_info"]').text().strip()
@@ -99,7 +105,7 @@ class Spider:
                             pdate = temp_date.replace('原创','')
                         else:
                             pdate = temp_date
-                        self.log(u'发表时间： %s' % pdate)
+                        Log.log(u'发表时间： %s' % pdate)
 
                         # 获取标题对应的地址
                         temp_url = article('h4[class="weui_media_title"]').attr('hrefs')
@@ -108,14 +114,14 @@ class Spider:
                             article_url = temp_url
                         else:
                             article_url = 'http://mp.weixin.qq.com' + temp_url
-                        self.log(u'地址： %s' % article_url)
+                        Log.log(u'地址： %s' % article_url)
 
                         # 在获取到标题和发布日期的时候先进行查询数据库是否存在此条记录
                         sql1 = "SELECT article_title, publish_date FROM wechat_article WHERE article_title='" + title + "'"+"AND publish_date='"+pdate+"'"
                         self.cursor.execute(sql1)
                         exits = self.cursor.fetchall()  # 查找所有符合条件的数据
                         if len(exits) >= 1:
-                            Spider.log("%s", '数据已存在，忽略此次爬取.')
+                            Log.log('数据已存在，忽略此次爬取.')
                             continue
 
                         # 获取封面图片
@@ -191,15 +197,15 @@ class Spider:
                             try:
                                 self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
                                 self.db.commit()
-                                self.log(u'入库成功')
+                                Log.log(u'入库成功')
                             except:
                                 self.db.rollback()
-                                self.log(u'入库不成功')
+                                Log.log(u'入库不成功')
                         else:
-                            self.log(u'文章内容为null')
+                            Log.log(u'文章内容为null')
 
         self.db.close()
-        Spider.log("%s",'\n爬虫已完成任务 ')
+        Log.log('\n爬虫已完成任务 ')
 
     def get_atticle_info(self,url):
         '''
@@ -323,12 +329,109 @@ class Spider:
                     img_name = 'video'
                     imgs.append(img_name)
 
-
         return imgs
+
+class AccountSpider:
+    '''
+    公众号信息爬虫，用户爬取公众号名称、头像等
+    '''
+    def __init__(self, wechat_ids):
+        '''
+        构造函数，根据公众号微信号获取对应公众号名称、头像等信息
+        :param
+        '''
+        self.wechat_ids = wechat_ids
+
+        # 请求头
+        self.headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'}
+
+        # 超时时长
+        self.timeout = 5
+
+        # 爬虫模拟在一个request.session中完成
+        self.session = requests.Session()
+
+        # 连接数据库
+        self.db = sqlite3.connect('../../bee-database.db')
+        self.cursor = self.db.cursor()
+
+
+    def get_account_infos(self):
+
+        for wechat_id in self.wechat_ids:
+
+            print('\n')
+            Log.log(u'公众号id为：%s' % wechat_id)
+
+            # 先进行查询数据库是否存在此条记录
+            sql1 = "SELECT wechat_id FROM wechat_account WHERE wechat_id='" + wechat_id + "'"
+            self.cursor.execute(sql1)
+            exits = self.cursor.fetchall()  # 查找所有符合条件的数据
+            if len(exits) >= 1:
+                Log.log('数据已存在，忽略此次爬取.')
+                continue
+
+            # 搜索url
+            search_url = 'https://weixin.sogou.com/weixin?type=1&s_from=input&query=' + wechat_id
+            search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+
+            # 获取公众号URL
+            doc = pq(search_html)
+            wechat_url = doc('div[class=txt-box]')('p[class=tit]')('a').attr('href')
+
+            # 获取html
+            browser = webdriver.Chrome()
+            browser.get(wechat_url)
+            time.sleep(2)
+            wechat_html = browser.execute_script("return document.documentElement.outerHTML")
+            browser.close()
+
+            # 检测是否被限制访问
+            if pq(wechat_html)('#verify_change').text() != '':
+                Log.log(u'已限制访问，请稍后再试')
+
+            else:
+                doc = pq(wechat_html)
+                account = doc('div[class="profile_info_group"]')
+
+                # 获取公众号名称
+                wechat_name = account('strong[class="profile_nickname"]').text().strip()
+                Log.log(u'公众号名称：%s' % wechat_name)
+                Log.log(u'公众号url：%s' % wechat_url)
+                # 获取公众号头像
+                head_portrait_url = account('img').attr('src')
+                Log.log(u'头像url：%s' % head_portrait_url)
+
+                path = '../../static/head_portraits/'
+                ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+
+                img_name = ran_str + '.png'
+
+                # 保存数据到数据库
+                sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait) values(?, ?, ?)'
+
+                try:
+                    self.cursor.execute(sql, (wechat_id, wechat_name, img_name))
+                    self.db.commit()
+                    Log.log(u'入库成功')
+
+                    # 只有入库成功才下载到本地
+                    data = requests.get(head_portrait_url, headers=self.headers)
+                    fp = open(path + img_name, 'wb')
+                    fp.write(data.content)
+                    fp.close()
+                except:
+                    self.db.rollback()
+                    Log.log(u'入库不成功')
+
+        print('\n')
+        Log.log('爬虫已完成任务 ')
+
 
 if __name__ == '__main__':
 
-    ids = ['差评', '腾讯科技']
+    ids = ['chaping321', 'dglgtw', 'one', 'two', 'four', 'five']
 
-    Spider(ids).get_infos()
+    # ArticleSpider(ids).get_infos()
+    AccountSpider(ids).get_account_infos()
 
