@@ -86,7 +86,7 @@
     video_amount      # 文章视频数量
     audio_amount      # 文章音频数量
     
-## 2018-11-24 增加了爬取公众号信息的爬虫
+## 2018-11-24（1） 增加了爬取公众号信息的爬虫
 
 > 代码位置
 
@@ -109,3 +109,50 @@
     
     每个公众号的信息只有在入库成功才会下载头像文件
     避免下载了文件而入库不成功造成资源浪费
+    
+## 2018-11-24（2） 增加了请求超时异常处理和日志保存到本地文件功能
+
+> 请求超时异常处理
+
+    所有的requests请求都加入了超时异常处理
+    可以解决爬虫进行过程中因网络环境的变动而卡住的问题
+    如：
+    try:
+        search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+
+    except:
+        Log.article_log('请求超时，将爬取下一个公众号。')
+        continue
+        
+    try:
+        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+    except:
+        return 'timeout'
+        
+> 日志保存到本地文件
+
+    日志文件分为文章爬虫：article_log，公众号爬虫：account_log
+    
+    class Log:
+
+    def article_log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        f = open('../LogFile/article_log.log', 'a+')
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
+
+    def account_log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        f = open('../LogFile/account_log.log', 'a+')
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
