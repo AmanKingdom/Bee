@@ -13,13 +13,27 @@ from pyquery import PyQuery as pq
 
 class Log:
 
-    def log(msg):
+    def article_log(msg):
         '''
         日志函数
         :param msg: 日志信息
         :return:
         '''
+        f = open('../LogFile/article_log.log', 'a+')
         print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
+
+    def account_log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        f = open('../LogFile/account_log.log', 'a+')
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
 
 class ArticleSpider:
     '''
@@ -39,6 +53,9 @@ class ArticleSpider:
         # 超时时长
         self.timeout = 5
 
+        # 图片爬取超时时长
+        self.img_timeout = 10
+
         # 爬虫模拟在一个request.session中完成
         self.session = requests.Session()
 
@@ -52,16 +69,26 @@ class ArticleSpider:
         for wechat_id in self.wechat_ids:
 
             print('\n')
-            Log.log(u'公众号为：%s' % wechat_id)
+            Log.article_log(u'公众号ID为：%s' % wechat_id)
 
             # 搜索url
             search_url = 'https://weixin.sogou.com/weixin?type=1&s_from=input&query=' + wechat_id
-            search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+            try:
+                search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+
+            except:
+                Log.article_log('请求超时，将爬取下一个公众号。')
+                continue
 
             #获取公众号URL
             doc = pq(search_html)
             wechat_url = doc('div[class=txt-box]')('p[class=tit]')('a').attr('href')
-            Log.log(u'公众号url：%s' % wechat_url)
+            if wechat_url == None:
+                Log.article_log('未知错误，将爬取下一个公众号。')
+                continue
+            wechat_name = doc('#sogou_vr_11002301_box_0 .txt-box a').text().strip()
+            Log.article_log(u'公众号名称：%s' % wechat_name)
+            Log.article_log(u'公众号url：%s' % wechat_url)
 
             # 获取html
             browser = webdriver.Chrome()
@@ -72,14 +99,14 @@ class ArticleSpider:
 
             # 检测是否被限制访问
             if pq(wechat_html)('#verify_change').text() != '':
-                Log.log(u'已限制访问，请稍后再试')
+                Log.article_log(u'已限制访问，请稍后再试')
 
             else:
                 # 获取发布时间，标题，首图，URL
                 doc = pq(wechat_html)
                 articles_list = doc('div[class="weui_media_box appmsg"]')
                 articlesLength = len(articles_list)
-                Log.log(u'抓到文章%s篇' % articlesLength)
+                Log.article_log(u'抓到文章%s篇' % articlesLength)
 
                 items = []
                 for item in articles_list.items():
@@ -91,13 +118,13 @@ class ArticleSpider:
 
                     for article in items:
 
-                        Log.log('')
-                        Log.log('正在爬取(%s/%s)' % (index, articlesLength))
+                        Log.article_log('')
+                        Log.article_log('正在爬取(%s/%s)' % (index, articlesLength))
                         index += 1
 
                         # 获取标题
                         title = article('h4[class="weui_media_title"]').text().strip()
-                        Log.log(u'标题： %s' % title)
+                        Log.article_log(u'标题： %s' % title)
 
                         # 获取文章发表时间
                         temp_date = article('p[class="weui_media_extra_info"]').text().strip()
@@ -105,7 +132,7 @@ class ArticleSpider:
                             pdate = temp_date.replace('原创','')
                         else:
                             pdate = temp_date
-                        Log.log(u'发表时间： %s' % pdate)
+                        Log.article_log(u'发表时间： %s' % pdate)
 
                         # 获取标题对应的地址
                         temp_url = article('h4[class="weui_media_title"]').attr('hrefs')
@@ -114,14 +141,14 @@ class ArticleSpider:
                             article_url = temp_url
                         else:
                             article_url = 'http://mp.weixin.qq.com' + temp_url
-                        Log.log(u'地址： %s' % article_url)
+                        Log.article_log(u'地址： %s' % article_url)
 
                         # 在获取到标题和发布日期的时候先进行查询数据库是否存在此条记录
                         sql1 = "SELECT article_title, publish_date FROM wechat_article WHERE article_title='" + title + "'"+"AND publish_date='"+pdate+"'"
                         self.cursor.execute(sql1)
                         exits = self.cursor.fetchall()  # 查找所有符合条件的数据
                         if len(exits) >= 1:
-                            Log.log('数据已存在，忽略此次爬取.')
+                            Log.article_log('数据已存在，忽略此次爬取.')
                             continue
 
                         # 获取封面图片
@@ -140,11 +167,23 @@ class ArticleSpider:
                         else:
                             content = self.get_atticle_info(article_url)
 
+                        if content == 'timeout':
+                            Log.article_log('请求文章内容超时，将爬取下一篇文章。')
+                            continue
+
                         # 获取文章图片
                         imgs = self.get_article_img(article_url)
+                        if imgs == 'timeout':
+                            Log.article_log('下载图片超时，将爬取下一篇文章。')
+                            continue
 
                         # 获取html代码
-                        temp_html = requests.get(article_url)
+                        try:
+                            temp_html = requests.get(article_url, headers=self.headers, timeout=self.timeout)
+                        except:
+                            Log.article_log('html代码请求超时，将爬取下一篇文章。')
+                            continue
+
                         temp_html.encoding = 'utf-8'
                         data = temp_html.text
                         delete = '''<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
@@ -197,15 +236,15 @@ class ArticleSpider:
                             try:
                                 self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
                                 self.db.commit()
-                                Log.log(u'入库成功')
+                                Log.article_log(u'入库成功')
                             except:
                                 self.db.rollback()
-                                Log.log(u'入库不成功')
+                                Log.article_log(u'入库不成功')
                         else:
-                            Log.log(u'文章内容为null')
+                            Log.article_log(u'文章内容为null')
 
         self.db.close()
-        Log.log('\n爬虫已完成任务 ')
+        Log.article_log('\n爬虫已完成任务 ')
 
     def get_atticle_info(self,url):
         '''
@@ -213,7 +252,11 @@ class ArticleSpider:
         :param url:
         :return:
         '''
-        html = requests.get(url,headers=self.headers)
+        try:
+            html = requests.get(url,headers=self.headers, timeout=self.timeout)
+        except:
+            return 'timeout'
+
         soup = BeautifulSoup(html.text,"lxml")
         content = soup.find('div', id='img-content')
 
@@ -244,7 +287,11 @@ class ArticleSpider:
         :return:
         '''
 
-        res = requests.get(url)
+        try:
+            res = requests.get(url, headers=self.headers, timeout=self.timeout)
+        except:
+            return 'timeout'
+
         if res.status_code == 200:
             contents = re.findall('data-src="(.*?)"', res.text, re.S)
 
@@ -258,7 +305,10 @@ class ArticleSpider:
                 img_name = ran_str + '.jpg'
                 imgs.append(img_name)
 
-                data = requests.get(img, headers=self.headers)
+                try:
+                    data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                except:
+                    return 'timeout'
                 fp = open(path + img_name, 'wb')            # 下载图片到本地
                 fp.write(data.content)
                 fp.close()
@@ -266,7 +316,10 @@ class ArticleSpider:
                 img_name = ran_str + '.jpeg'
                 imgs.append(img_name)
 
-                data = requests.get(img, headers=self.headers)
+                try:
+                    data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                except:
+                    return 'timeout'
                 fp = open(path + img_name, 'wb')
                 fp.write(data.content)
                 fp.close()
@@ -275,7 +328,10 @@ class ArticleSpider:
                 img_name = ran_str + '.png'
                 imgs.append(img_name)
 
-                data = requests.get(img, headers=self.headers)
+                try:
+                    data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                except:
+                    return 'timeout'
                 fp = open(path + img_name, 'wb')
                 fp.write(data.content)
                 fp.close()
@@ -284,7 +340,10 @@ class ArticleSpider:
                 img_name = ran_str + '.gif'
                 imgs.append(img_name)
 
-                data = requests.get(img, headers=self.headers)
+                try:
+                    data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                except:
+                    return 'timeout'
                 fp = open(path + img_name, 'wb')
                 fp.write(data.content)
                 fp.close()
@@ -293,7 +352,10 @@ class ArticleSpider:
                     img_name = ran_str + '.jpg'
                     imgs.append(img_name)
 
-                    data = requests.get(img, headers=self.headers)
+                    try:
+                        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                    except:
+                        return 'timeout'
                     fp = open(path + img_name, 'wb')  # 下载图片到本地
                     fp.write(data.content)
                     fp.close()
@@ -302,7 +364,10 @@ class ArticleSpider:
                     img_name = ran_str + '.jpeg'
                     imgs.append(img_name)
 
-                    data = requests.get(img, headers=self.headers)
+                    try:
+                        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                    except:
+                        return 'timeout'
                     fp = open(path + img_name, 'wb')
                     fp.write(data.content)
                     fp.close()
@@ -311,7 +376,10 @@ class ArticleSpider:
                     img_name = ran_str + '.png'
                     imgs.append(img_name)
 
-                    data = requests.get(img, headers=self.headers)
+                    try:
+                        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                    except:
+                        return 'timeout'
                     fp = open(path + img_name, 'wb')
                     fp.write(data.content)
                     fp.close()
@@ -320,7 +388,10 @@ class ArticleSpider:
                     img_name = ran_str + '.gif'
                     imgs.append(img_name)
 
-                    data = requests.get(img, headers=self.headers)
+                    try:
+                        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+                    except:
+                        return 'timeout'
                     fp = open(path + img_name, 'wb')
                     fp.write(data.content)
                     fp.close()
@@ -348,6 +419,9 @@ class AccountSpider:
         # 超时时长
         self.timeout = 5
 
+        # 图片爬取超时时长
+        self.img_timeout = 10
+
         # 爬虫模拟在一个request.session中完成
         self.session = requests.Session()
 
@@ -358,22 +432,30 @@ class AccountSpider:
 
     def get_account_infos(self):
 
+        Log.account_log('正在爬取公众号信息。。。')
         for wechat_id in self.wechat_ids:
 
+            time.sleep(1)
             print('\n')
-            Log.log(u'公众号id为：%s' % wechat_id)
+            Log.account_log(u'公众号id为：%s' % wechat_id)
 
             # 先进行查询数据库是否存在此条记录
-            sql1 = "SELECT wechat_id FROM wechat_account WHERE wechat_id='" + wechat_id + "'"
+            sql1 = "SELECT wechat_id, wechat_name FROM wechat_account WHERE wechat_id='" + wechat_id + "'"
             self.cursor.execute(sql1)
             exits = self.cursor.fetchall()  # 查找所有符合条件的数据
             if len(exits) >= 1:
-                Log.log('数据已存在，忽略此次爬取.')
+                Log.account_log(u'公众号名称：%s' % exits[0][1])
+                Log.account_log('数据已存在，忽略此次爬取.')
                 continue
 
             # 搜索url
             search_url = 'https://weixin.sogou.com/weixin?type=1&s_from=input&query=' + wechat_id
-            search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+
+            try:
+                search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+            except:
+                Log.account_log('请求超时，将爬取下一个公众号。')
+                continue
 
             # 获取公众号URL
             doc = pq(search_html)
@@ -388,7 +470,7 @@ class AccountSpider:
 
             # 检测是否被限制访问
             if pq(wechat_html)('#verify_change').text() != '':
-                Log.log(u'已限制访问，请稍后再试')
+                Log.account_log(u'已限制访问，请稍后再试')
 
             else:
                 doc = pq(wechat_html)
@@ -396,16 +478,22 @@ class AccountSpider:
 
                 # 获取公众号名称
                 wechat_name = account('strong[class="profile_nickname"]').text().strip()
-                Log.log(u'公众号名称：%s' % wechat_name)
-                Log.log(u'公众号url：%s' % wechat_url)
+                Log.account_log(u'公众号名称：%s' % wechat_name)
+                Log.account_log(u'公众号url：%s' % wechat_url)
                 # 获取公众号头像
                 head_portrait_url = account('img').attr('src')
-                Log.log(u'头像url：%s' % head_portrait_url)
+                Log.account_log(u'头像url：%s' % head_portrait_url)
 
                 path = '../../static/head_portraits/'
                 ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
 
                 img_name = ran_str + '.png'
+
+                try:
+                    data = requests.get(head_portrait_url, headers=self.headers, timeout=self.img_timeout)
+                except:
+                    Log.account_log('爬取图片超时，将爬取下一个公众号。')
+                    continue
 
                 # 保存数据到数据库
                 sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait) values(?, ?, ?)'
@@ -413,25 +501,24 @@ class AccountSpider:
                 try:
                     self.cursor.execute(sql, (wechat_id, wechat_name, img_name))
                     self.db.commit()
-                    Log.log(u'入库成功')
+                    Log.account_log(u'入库成功')
 
                     # 只有入库成功才下载到本地
-                    data = requests.get(head_portrait_url, headers=self.headers)
                     fp = open(path + img_name, 'wb')
                     fp.write(data.content)
                     fp.close()
                 except:
                     self.db.rollback()
-                    Log.log(u'入库不成功')
+                    Log.account_log(u'入库不成功')
 
         print('\n')
-        Log.log('爬虫已完成任务 ')
+        Log.account_log('爬虫已完成任务 ')
 
 
 if __name__ == '__main__':
 
     ids = ['chaping321', 'dglgtw', 'one', 'two', 'four', 'five']
+    wechat_ids = ['dglgtw', 'guanqingluntan', 'dutsmc', 'TNTstreetdance', 'DGUT_GGCY', 'dgutxn', 'ggxshwlb', 'ggrpfamily', 'dgutkob', 'dgutzb', 'dgutpx', 'guangongkexie', 'dgutgreen', 'yinzytravel', 'DGUTTKD', 'wailianjiating', 'ggsfxh', 'gh_93ff0d749e07', 'dgutnic', 'ggdxskjcxxx', 'ggdzzyz', 'dgutsyxh', 'dgutsy']
 
-    # ArticleSpider(ids).get_infos()
-    AccountSpider(ids).get_account_infos()
-
+    AccountSpider(wechat_ids).get_account_infos()
+    ArticleSpider(wechat_ids).get_infos()
