@@ -1,12 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="">
+    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="更名大改动:spider——&gt;engine">
       <change beforePath="$PROJECT_DIR$/.idea/Bee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bee.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/bee-database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20181110_1538.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20181110_1541.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20181110_2044.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bee/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/.idea/WeChat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/.idea/WeChat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/engine/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/bee-database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/database_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/record.md" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/record.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/search_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/engine/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_assets/js/plugins/codemirror/mode/gfm/gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_assets/js/plugins/codemirror/mode/gfm/gfm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_assets/js/plugins/codemirror/mode/sql/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_assets/js/plugins/codemirror/mode/sql/sql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_assets/js/plugins/pdfjs/pdf.worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_assets/js/plugins/pdfjs/pdf.worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_assets/js/plugins/pwstrength/zxcvbn.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_assets/js/plugins/pwstrength/zxcvbn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug-lite-beta.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug-lite-beta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug-lite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-beta.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-beta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/0IpZlh6Jeb9fsvyWkqYTXc74O2U3Sj.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/0gEtz5IUxCbMDY69SeaJNsVlnukB4o.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/1JnYabjw7EZuPK32icX9sNMTDyzQxt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/1KQjD8NiYgLVuwJreoWq2h6TE3cGF9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/1PRVlbek9jIJSFOn7xfzp8q36LQMay.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/1UjAzgkVbHZQspYLvXJawfo5eM9tSO.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/1csTkKG8a6wvULqg7OFzNRrQf2iA4H.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/28oIcbNhmpfwBRZHPvQeSLKktny36G.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2ENjYzAvQGcL6PplDxkFmMg1Ry5Tnf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2RcCBm5yzGIZULp70Kuo6XWrnEv81H.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2ciMQHDwkXeR3nbB6OpyjmPFh1xfKd.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2hR9tQrDUEx57dBiJL1YeMKma3n0z4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2modWGNpMsxaZY5Tcz9A7gh6FqLVlJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3E4hkIDxr9uOU0NVYogWjcPXqKG5bA.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3FXwm49nkfBcJ8sQ1thuSjgZdz6KVx.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3yoBQTkFeavEbu6gxhI7SVWGOcwZtJ.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/4LJYr7KkMmghTWfDC9Pcdqx6Sw5lIi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/4dzJWlchLX56ujIGfHmNDBgpy1EVCA.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/4fWdFm8pPet1xrDji63TzKhyAJIX5n.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/5MLIr2nKzGPcwJdh7VAxyFlqTg3vOU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/5VbMUKDTfN0GOQEy2oFiWRC86vAhSj.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/6QyBbnEVLG1qo3Hr0KuP2kegzSYxs5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/6W7kswoCKpr2xFHU0y4VQZGgDXhNmz.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/6qWcF1tdmED3MwHJGafgQIzk485n2Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/75a61RFXOjQgsrCmTJ0blxqNMEVtKA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/8FDRThMdnZf7QOcmBzWwpH0qN9Jl35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/8eQZpdRjBKuzxHXWlMrG1IkhTfwFgt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/8kuGIPD4Jzt0Xw7VCKo2xMEYeca9mR.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/9R5TEm8QcvJpuZ6aNGqDxfkgUAXMLO.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/9SPxjXN0onpg5EbFiA2aGBDy1UOhz3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/9xvTZpsbJ6LP2NhDYWX8qVk0GUOlfQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/9zUDOah5gGvetC0xcIQHWnYZFrfL74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/AtDcxCqOojGa4NvghRu2lTn0sVEwZH.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/BxQdgZPRGK5winy8cYF2k01XeMWNto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/CMyiRtOFYVd9qgmzxI0wp7kWuoLUe3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/CTDYQ7H6KiltgadG9eV5EIo0BvpOF8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/DqaiWTkUPj6oc0dnx5FvpEQA7LGezf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/EKsHx5udMPFS6oyXnvqQAzLZa2lRtc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Eda65zxntY9PmjJQSOrHbX0UueZNoK.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/F5d2Xq0P8iuhN6ef4vQDlgkpV1MAzS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/GckiImQDPBuTz4NX2dLYwqln5UEtVx.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/IZwH03vbcakFpSn4t2qWf5BJlyV1NP.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/IrdbhUO4eKu58Ts6pzvXL2J3RPHm1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JCneQTMx3fazplLIVAONX1PZDcmRr2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JM7K8CakyZ6XxnScl5LPoUgEmqF1Ww.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/K8cmjHJYQhoMZg016ITUErNlS7dFuB.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/LYk8GQvKeiO5sSJRrVhF2lufmtHjIC.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/MF0pZDQueonE7U13VIwS2KrNA45zaB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/MYGEDjmyvxqzOB9THoS7pngwhK2dPk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/NFfIeM3X82LmprCjHUP9t7aQyBWDzn.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/NbSf40HUB5ltkJRpTLXZ36D28Gvgxc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/NmXAOFtV2boJI6zQdCk4cipnyYvh1M.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/NpdDxqKXEL0UMFQyPRuCht59ZizAr6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/OKzlpwNvZ84rBt37IhcAReM2ifTHo5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/OkxNXczbvhMLwGYR8foFrW0E5Ps4Ke.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/PLcqaV0DJFlhezKM5CZQRANnis9mxI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/PSz5ZKXt6RF4Vl98NOexgWTjsMpiI3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/PtR87TzNY2ZaFLcqubDCKy1fOG3r4X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/PwQcfhDiyLORuEsqrpHnjeX0lgWVv4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/QiLA5VWd64CH9S0Eg3ZPypGRU7krYM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Rd6DlHuiMCGF5av2fqstOJVPpXSnWg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/SBWI9EjZsoga41rTPnmlGx2M0CHdQp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/SrKlQZscenwyqGk7OVjz9MUdRLJWEI.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/SuxJ30WfZ9qKcEMtrNkGOAUnTgmDHa.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/SylfJOouLIaKAcWjTMQgVh9zYEx4ds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/UwGoSFxfQ2JHLPmBdgqZXWDOs579TM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/V2XfIze34ShWBZHg1UCpQdGrtF06KJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/V5hx0kuHKgEANjMfrTIJCz43LcDqaP.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/VP2hf6nYUiveRXQcw5rEjkg8TbJuNt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/VcZk2Ij7umidztTBXf4MhNgPUpsOWL.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/W1ERGSozvXmsy6e3Qj4br9wLMqtxBl.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Wbtq1cVMCiz78yKnNS9OR3GrDwIh54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/XRwQKJlcWyn7fxPsBaHVq2EGuboLSp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Xd8mPEvyI3U62hz7OjC0wFWSHJYeZk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Xw08JeRFz6cG5pVSUYjvdCHigZEI9T.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Y43nxhSaiBV90ENFmMKTzZ8HIoAuO5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/aVrtlQkNimsAyDcfIJTdb372K815ZO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/azFT5XJkZWqCe3p8jndyO9lRBLgvb1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bA7pn0c5BDVwReuKv9ohYdW4iJFP6S.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bBwfXYLidVNpgy7OksxU32RlKzrom0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bRhTFCGlcLqjrsn6JABvuk8emZtMYo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bwrJl9PnMWIHFkEi1jt0OLoN2cvds6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/byYBDs6foK90vQZpVFiIrzGMmtXOEW.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/cIOBE73KVflqZ8R15d6gNyHFo0kwTC.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/cpCaDjNHelnZvwzL9m6bgqITARYuPK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/d02YiJsj8MPCk5AORLIhm97TgaKxQ6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/e3kX9FsEmztaOpHT4xcMKuyr7n0hfJ.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/e5Fjiysotzh8SwuEDLZ7T2mYnQkvba.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/eS91lDiWyscAKBaM6X3z5kwOmC7uQn.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/fmurALkTVZvSJd6zYq2t3j8HUbKICy.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/hUaPwvOCkED8Q2lxtnbM6sdNjez4g7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/he4KsRX9FY0JBnQGADzdSpEm3qZogl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/hqZVfd7KU3Wuj5Iw9sb4DkXnzrOvEo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/htR0G56LTiy4vjrBEoqODbpY7gkCPI.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/iPbzjIBQOGUfC6tJy5cXa93Y0ADNKm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/iclC6jb7HfyKkY9rNT2WuxUe3AdJz0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/jcEmxBX8VQduN5l4qAhDzfROU0Yrn6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/jnbtlSZBqVEMpI0gQfUc6L5omNzOdu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/ksiZ3BfyVOTgtQA4aDbmKCMFjqLhHr.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/lCPoUdaTRZ976iuHgmJVO1vrhLj2pD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/lT4asAyGEmNWCn2S9f7iY8wRZDBHeb.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/lWg6xaE7vjVBAb9uZCzMwh1RGfSqTn.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/mn5R2jhDYHewGNygaXliEpZb7ox6W1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/msZ08Mu9TVB34irvJcAj5hoeKYOQEN.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/oIvrTO3q6bxZiGQLAJ1WszNmk94YwV.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/p2VQkqE1POlNgFWzy3IMBemYAZvU6C.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/pbiZSeJmTy1IaUl9BE0cz3rdsFRqYx.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/sYMfjPF0GztrghybunKHwvk1JaIlAx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/sYdvimBDbc6Lf170UCExMzgVQRrk4O.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/tWfJO8A609Nulgzv24odrRkZsm7GPM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/uekXICwtdFAjp5PVUsB6h81EYZLNHS.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/unCcwW1KTlPmzk8BZ5JvNA0oMSefHx.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/uo87dxgjK9Dh2LIfZBSRHJOs4XiPCk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vBUh3qEeVkiQ9Ttmdc2Xf4ngPNrA8O.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vVMryp7GnK5cwsI8ozEktXFJe0gYAP.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/w4XxMTiaCOoeZ6lBIU3HR2b15jdpL8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/wRgr0SYGFuA4yKjPI5k8bWqteMCBxT.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/wvN18CcGuz2odMRYh05QUZsrnI4Klk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/xHkWFynMw9Ghrf3jstV0ASvzoQcO2u.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/xrBZ2iP1fO4uVCUHjdYALyDahb7GTz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/xy2nljoGemUIOEBTRpJbFZLt8XwD7M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/yIKmpUB9krVOnRZqM5DxdG8CXJcsPe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/yNuHwpjYnSVr0aXBqKexC4kdZROGl8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/yNv4t0YJOArjRBUZeDW8gHxMQKEoaq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/yct8qkD3F1x0Lm4aMrPECfh5jds9TA.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/ytYwoZPbJiUWQNH81KulSBx5O9z6Rj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/z5Stj6yb4u2ZMLr0xFHKY7BqkAohJC.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/zqTAE6l50GQZYLCm3dXcRsnifNVFbK.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +172,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bee$search_sqlite.coverage" NAME="search_sqlite Coverage Results" MODIFIED="1541648554750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
-    <SUITE FILE_PATH="coverage/bee$account.coverage" NAME="account Coverage Results" MODIFIED="1540258911292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/bee$spider.coverage" NAME="spider Coverage Results" MODIFIED="1540647832890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Bee$database_sqlite.coverage" NAME="database_sqlite Coverage Results" MODIFIED="1542938630408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
     <SUITE FILE_PATH="coverage/Bee$spider_sqlite__1_.coverage" NAME="spider_sqlite (1) Coverage Results" MODIFIED="1541643837363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bee$test.coverage" NAME="test Coverage Results" MODIFIED="1542851245932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
+    <SUITE FILE_PATH="coverage/Bee$111.coverage" NAME="111 Coverage Results" MODIFIED="1542932885981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
+    <SUITE FILE_PATH="coverage/Bee$search_sqlite.coverage" NAME="search_sqlite Coverage Results" MODIFIED="1541648554750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
+    <SUITE FILE_PATH="coverage/Bee$req.coverage" NAME="req Coverage Results" MODIFIED="1542937585805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
     <SUITE FILE_PATH="coverage/Bee$spider2_0.coverage" NAME="spider2.0 Coverage Results" MODIFIED="1541477886945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/bee$search.coverage" NAME="search Coverage Results" MODIFIED="1540199457213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Bee$spider2_2.coverage" NAME="spider2.2 Coverage Results" MODIFIED="1541515989233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Bee$spider_sqlite.coverage" NAME="spider_sqlite Coverage Results" MODIFIED="1542774446181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
-    <SUITE FILE_PATH="coverage/bee$spider.coverage" NAME="spider Coverage Results" MODIFIED="1540647832890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/bee$runTools.coverage" NAME="runTools Coverage Results" MODIFIED="1539854075631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bee$account.coverage" NAME="account Coverage Results" MODIFIED="1540258911292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/bee$spider2_0.coverage" NAME="spider2.0 Coverage Results" MODIFIED="1541319893449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Bee$spider_sqlite.coverage" NAME="spider_sqlite Coverage Results" MODIFIED="1543022892151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
+    <SUITE FILE_PATH="coverage/bee$runTools.coverage" NAME="runTools Coverage Results" MODIFIED="1539854075631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bee$spider2_2.coverage" NAME="spider2.2 Coverage Results" MODIFIED="1541515989233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -288,32 +449,113 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1239067573">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="349" />
+          <entry key="js" value="36" />
+          <entry key="md" value="500" />
+          <entry key="py" value="1346" />
+          <entry key="txt" value="64" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="349" />
+          <entry key="JavaScript" value="36" />
+          <entry key="Markdown" value="500" />
+          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="Python" value="1346" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="db" value="1" />
+          <entry key="html" value="4" />
+          <entry key="js" value="2" />
+          <entry key="md" value="4" />
+          <entry key="py" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="4" />
+          <entry key="JavaScript" value="2" />
+          <entry key="Markdown" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="19" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
+        <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5454">
-              <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
+            <state relative-caret-position="541">
+              <caret line="432" column="33" selection-start-line="432" selection-start-column="33" selection-end-line="432" selection-end-column="33" />
+              <folding>
+                <element signature="e#16#29#0" expanded="true" />
+                <marker date="1543023995340" expanded="true" signature="229:397" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py">
+        <entry file="file://$PROJECT_DIR$/bee/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="290" column="11" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="11" />
+            <state relative-caret-position="133">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <folding>
+                <element signature="e#304#313#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
+        <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/record.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="2" selection-start-column="2" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="399">
+              <caret line="100" column="17" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -323,8 +565,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -382,16 +625,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/bee/wsgi.py" />
-        <option value="$PROJECT_DIR$/app/migrations/0005_auto_20181102_0909.py" />
-        <option value="$PROJECT_DIR$/app/admin.py" />
-        <option value="$PROJECT_DIR$/templates/admin-window/industry_design.html" />
-        <option value="$PROJECT_DIR$/templates/admin-window/industry_manage.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/test.html" />
-        <option value="$PROJECT_DIR$/templates/manage-window/footer.html" />
-        <option value="$PROJECT_DIR$/templates/manage-window/article_sort_design.html" />
-        <option value="$PROJECT_DIR$/templates/manage-window/index.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/base.html" />
         <option value="$PROJECT_DIR$/static/admin_assets/css/style.css" />
         <option value="$PROJECT_DIR$/templates/users-window/blog-page.html" />
@@ -402,7 +635,6 @@
         <option value="$PROJECT_DIR$/spider/spider2.0.py" />
         <option value="$PROJECT_DIR$/spider/spider2.2.py" />
         <option value="$PROJECT_DIR$/spider_sqlite.py" />
-        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
         <option value="$PROJECT_DIR$/templates/users-window/my-fans.html" />
         <option value="$PROJECT_DIR$/templates/users-window/user-iformations.html" />
         <option value="$PROJECT_DIR$/templates/users-window/user-iformation.html" />
@@ -420,9 +652,6 @@
         <option value="$PROJECT_DIR$/bee/urls.py" />
         <option value="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" />
         <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
-        <option value="$PROJECT_DIR$/bee/settings.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/templates/users-window/footer.html" />
         <option value="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" />
         <option value="$PROJECT_DIR$/templates/users-window/public-blog-article-content.html" />
@@ -432,7 +661,21 @@
         <option value="$PROJECT_DIR$/templates/users-window/index.html" />
         <option value="$PROJECT_DIR$/templates/users-window/base.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/wechat_accounts.html" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/test.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/222.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/js.js" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/hh.html" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/111.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/models.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/htm.html" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/req.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
         <option value="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" />
+        <option value="$PROJECT_DIR$/spider/Wechat_SQLite/record.md" />
+        <option value="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" />
+        <option value="$PROJECT_DIR$/bee/settings.py" />
       </list>
     </option>
   </component>
@@ -447,11 +690,9 @@
       <path value="$PROJECT_DIR$/static/assets/js/kindeditor_source/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="860" />
-    <option name="height" value="867" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -461,7 +702,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -472,12 +712,28 @@
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="bee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
               <item name="Wechat_SQLite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -489,13 +745,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="F:/Bee" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -527,7 +784,10 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.spider_sqlite">
-    <configuration name="search_sqlite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="htm.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Bee/spider/Wechat_SQLite/htm.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bee" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -540,7 +800,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/Wechat_SQLite/111.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -549,7 +809,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spider2.0" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="database_sqlite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bee" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -557,12 +817,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/Wechat_SQLite" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider2.0.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -571,7 +831,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spider2.2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="req" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bee" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -579,34 +839,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/Wechat_SQLite" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider2.2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="spider_sqlite (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="bee" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="H:\Bee\spider\Wechat_SQLite\spider_sqlite.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/Wechat_SQLite/req.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -663,19 +901,19 @@
     </configuration>
     <list>
       <item itemvalue="Django server.bee" />
-      <item itemvalue="Python.spider2.0" />
-      <item itemvalue="Python.spider2.2" />
       <item itemvalue="Python.spider_sqlite" />
-      <item itemvalue="Python.spider_sqlite (1)" />
-      <item itemvalue="Python.search_sqlite" />
+      <item itemvalue="Python.database_sqlite" />
+      <item itemvalue="JavaScript Debug.htm.html" />
+      <item itemvalue="Python.111" />
+      <item itemvalue="Python.req" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.spider_sqlite" />
-        <item itemvalue="Python.search_sqlite" />
-        <item itemvalue="Python.spider_sqlite (1)" />
-        <item itemvalue="Python.spider2.2" />
-        <item itemvalue="Python.spider2.0" />
+        <item itemvalue="Python.database_sqlite" />
+        <item itemvalue="Python.req" />
+        <item itemvalue="Python.111" />
+        <item itemvalue="JavaScript Debug.htm.html" />
       </list>
     </recent_temporary>
   </component>
@@ -760,7 +998,84 @@
       <option name="project" value="LOCAL" />
       <updated>1541861194262</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修复了图片错乱的bug和增加了视频显示的功能">
+      <created>1542807540853</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542807540853</updated>
+    </task>
+    <task id="LOCAL-00012" summary="爬虫模块的更新记录">
+      <created>1542807586373</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542807586373</updated>
+    </task>
+    <task id="LOCAL-00013" summary="小细节">
+      <created>1542807647282</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1542807647282</updated>
+    </task>
+    <task id="LOCAL-00014" summary="爬虫模块的更新记录">
+      <created>1542807729038</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542807729038</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2018-11-22 历史文章爬取顺序改为先旧后新">
+      <created>1542855174220</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1542855174220</updated>
+    </task>
+    <task id="LOCAL-00016" summary="爬虫模块的更新记录">
+      <created>1542855196669</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542855196669</updated>
+    </task>
+    <task id="LOCAL-00017" summary="删除数据库冗余数据项、增加其他数据项和增加公众号表">
+      <created>1542942973856</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542942973856</updated>
+    </task>
+    <task id="LOCAL-00018" summary="爬虫模块的更新记录">
+      <created>1542942996961</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1542942996961</updated>
+    </task>
+    <task id="LOCAL-00019" summary="2018-11-24 增加了爬取公众号信息的爬虫">
+      <created>1543024081082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1543024081082</updated>
+    </task>
+    <task id="LOCAL-00020" summary="爬虫模块的更新记录">
+      <created>1543024100135</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1543024100135</updated>
+    </task>
+    <task id="LOCAL-00021" summary="存储公众号头像文件的文件夹">
+      <created>1543024185880</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1543024185880</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -773,24 +1088,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.18830334" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.20529328" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.36707154" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.46024096" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.16144578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.31578946" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.23481782" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.09277108" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.5303644" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.32928476" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.32891566" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.0" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32884097" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -818,58 +1132,17 @@
     <MESSAGE value="search_sqlite.py中的数据库引用在Django中运行和其单独运行是不一样的，在Django中由于我增加了数据库的环境变量，所以直接用bee-database.db就OK了，但单独运行才需要../../bee-database.db，由于在这个项目中它不需要单独的运行，所以我还是让它适应这个项目为宜。" />
     <MESSAGE value="现在把一个小的数据库上传，是用来测试服务器的，以后的版本会删除这个数据库。" />
     <MESSAGE value="完善了博客文章的作者绑定。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了博客文章的作者绑定。" />
+    <MESSAGE value="修复了图片错乱的bug和增加了视频显示的功能" />
+    <MESSAGE value="小细节" />
+    <MESSAGE value="2018-11-22 历史文章爬取顺序改为先旧后新" />
+    <MESSAGE value="删除数据库冗余数据项、增加其他数据项和增加公众号表" />
+    <MESSAGE value="2018-11-24 增加了爬取公众号信息的爬虫" />
+    <MESSAGE value="爬虫模块的更新记录" />
+    <MESSAGE value="存储公众号头像文件的文件夹" />
+    <MESSAGE value="更名大改动:spider——&gt;engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="更名大改动:spider——&gt;engine" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/users-window/temp.html" />
-    <entry file="file://$PROJECT_DIR$/templates/users-window/temp2.html" />
-    <entry file="file://$PROJECT_DIR$/spider/spider2.0.py" />
-    <entry file="file://$PROJECT_DIR$/spider/spider2.2.py" />
-    <entry file="file://$PROJECT_DIR$/spider/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="108">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/spider.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/database.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
-    <entry file="das://a8c0dbc7-d5df-4032-8e40-83047233e2ea/schema/main/table/app_blogarticle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a8c0dbc7-d5df-4032-8e40-83047233e2ea/schema/main/table/sqlite_sequence">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a8c0dbc7-d5df-4032-8e40-83047233e2ea/schema/main/table/wechat_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -903,7 +1176,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py" />
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/search_sqlite.py" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-collections.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -991,16 +1264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bee/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#304#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bee/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1008,13 +1271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1026,13 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1085,28 +1335,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/account.py">
+    <entry file="file://$PROJECT_DIR$/engine/account.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/wechat_accounts.html" />
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5454">
-          <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="132">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py">
+    <entry file="file://$PROJECT_DIR$/bee-database.db">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="290" column="11" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="11" />
+        <state relative-caret-position="-6978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin_assets/js/plugins/pwstrength/zxcvbn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="7" column="42019" selection-start-line="7" selection-start-column="42019" selection-end-line="7" selection-end-column="42019" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/hh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/111.py" />
+    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/test.py" />
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/222.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34936">
+          <caret line="1588" selection-start-line="1588" selection-end-line="1588" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/database_sqlite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="362" selection-start-line="30" selection-start-column="362" selection-end-line="30" selection-end-column="362" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/htm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="1562" column="5" lean-forward="true" selection-start-line="1562" selection-start-column="5" selection-end-line="1562" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/req.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/record.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="2" selection-start-column="2" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="432" column="33" selection-start-line="432" selection-start-column="33" selection-end-line="432" selection-end-column="33" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+            <marker date="1543023995340" expanded="true" signature="229:397" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="e#304#313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

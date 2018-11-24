@@ -11,7 +11,7 @@
 /*
  * CSS selectors powered by:
  *
- * Sizzle CSS Selector Engine - v1.0
+ * Sizzle CSS Selector engine - v1.0
  *  Copyright 2009, The Dojo Foundation
  *  Released under the MIT, BSD, and GPL Licenses.
  *  More information: http://sizzlejs.com/
