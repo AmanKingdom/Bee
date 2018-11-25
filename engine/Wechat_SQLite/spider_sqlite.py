@@ -233,13 +233,13 @@ class ArticleSpider:
                         sql = 'INSERT INTO wechat_article(publish_date,article_title,wechat_id,article_url,cover_img,article_content,article_html,img_amount,word_amount,video_amount,audio_amount) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
                         # 推文为分享其他文章则不入库
                         if content != 'null':
-                            # try:
-                            self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
-                            self.db.commit()
-                            Log.article_log(u'入库成功')
-                            # except:
-                            #     self.db.rollback()
-                            #     Log.article_log(u'入库不成功')
+                            try:
+                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
+                                self.db.commit()
+                                Log.article_log(u'入库成功')
+                            except:
+                                self.db.rollback()
+                                Log.article_log(u'入库不成功')
                         else:
                             Log.article_log(u'文章内容为null')
 
