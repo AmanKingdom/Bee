@@ -85,3 +85,74 @@
     word_amount       # 文章文字数量
     video_amount      # 文章视频数量
     audio_amount      # 文章音频数量
+    
+## 2018-11-24（1） 增加了爬取公众号信息的爬虫
+
+> 代码位置
+
+    spider.Wechat_SQLite.spider_sqlite.AccountSpider
+
+> 功能说明
+
+    通过传入公众号微信号（wechat_id），
+    利用selenium自动化获取公众号的url，
+    进而通过pyquery解释页面获取公众号名称、头像url，
+    
+    头像下载到本地的../../static/head_portraits/文件夹
+    头像文件命名为长度30的随机字符串，文件类型为png
+    如：dWtKGuEa0V5OsQkIzgvCb6T3SBD9Rr.png
+    
+> 数据库说明
+
+    每个公众号爬取之前都会先进行查询数据库是否存在此条记录
+    如存在则不会调用selenium，节省系统资源
+    
+    每个公众号的信息只有在入库成功才会下载头像文件
+    避免下载了文件而入库不成功造成资源浪费
+    
+## 2018-11-24（2） 增加了请求超时异常处理和日志保存到本地文件功能
+
+> 请求超时异常处理
+
+    所有的requests请求都加入了超时异常处理
+    可以解决爬虫进行过程中因网络环境的变动而卡住的问题
+    如：
+    try:
+        search_html = self.session.get(search_url,headers=self.headers, timeout=self.timeout).content
+
+    except:
+        Log.article_log('请求超时，将爬取下一个公众号。')
+        continue
+        
+    try:
+        data = requests.get(img, headers=self.headers, timeout=self.img_timeout)
+    except:
+        return 'timeout'
+        
+> 日志保存到本地文件
+
+    日志文件分为文章爬虫：article_log，公众号爬虫：account_log
+    
+    class Log:
+
+    def article_log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        f = open('../LogFile/article_log.log', 'a+')
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
+
+    def account_log(msg):
+        '''
+        日志函数
+        :param msg: 日志信息
+        :return:
+        '''
+        f = open('../LogFile/account_log.log', 'a+')
+        print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
+        f.close()
