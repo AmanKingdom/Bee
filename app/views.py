@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from app.forms import *
+from app.models import WechatAccount
 from engine.Wechat_SQLite.search_sqlite import Search
 import datetime
 
@@ -14,6 +15,12 @@ def homepage(request):
         user_id = request.session['user_id']
     blog_articles = BlogArticle.objects.all()
     wechat_articles = WeChatArticle.objects.all()[0:15]
+
+    # 通过文章列表中各项的公众号id获取公众号名称
+    wechat_name_list = [x.wechat.wechat_name for x in wechat_articles]
+    # 打包发送到templates让它自己解压处理
+    articles_list = zip(wechat_articles, wechat_name_list)
+
     now = datetime.datetime.now()
 
     return render(request, 'users-window/index.html', locals())
@@ -50,6 +57,12 @@ def search_result(request):
         if len(wechat_articles) == 0:
             wechat_articles = None
             print('搜索“', search_text, '”时，并没有找到什么。')
+        else:
+            # 通过搜索结果列表中各项的公众号id获取公众号名称
+            wechat_name_list = [WechatAccount.objects.get(wechat_id=x.get('wechat_id')).wechat_name for x in wechat_articles]
+
+            # 打包发送到templates让它自己解压处理
+            articles_list = zip(wechat_articles, wechat_name_list)
     else:
         return HttpResponseRedirect('/')
     return render(request, 'users-window/search-result.html', locals())

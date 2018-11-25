@@ -46,8 +46,8 @@
 
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    {% if wechat_articles %}
-                        {%  for article in wechat_articles %}
+                    {% if articles_list %}
+                        {%  for article,wechat_name in articles_list %}
                             <div class="wechat-articles-list">
                                 <div>{{ article.cover_img | safe }}</div>
                                 <h4>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 col-xs-6">{{ article.publish_date }}</div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">文章来源：{{ article.wechat_id }}</div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">文章来源：{{ wechat_name }}</div>
                                 </div>
                             </div>
                         {% endfor %}

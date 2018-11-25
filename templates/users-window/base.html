@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     {% load staticfiles %}
+    <meta name="referrer" content="never">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,8 +38,8 @@
                                 <li><a href="{% url 'user-information' %}">欢迎您，{{ user_id }}</a></li>
                                 <li><a href="{% url 'logout' %}">注销</a></li>
                             {% else %}
-                                <li><span class="glyphicon glyphicon-log-in"></span><a href="{% url 'login' %}">登录</a></li>
-                                <li><span class="glyphicon glyphicon-user"></span><a href="{% url 'register' %}">注册</a></li>
+                                <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> 登录</a></li>
+                                <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
                             {% endif %}
                         </ul>
                     </div>

@@ -17,3 +17,5 @@ class ArticleAdmin(admin.ModelAdmin):
 admin.site.register(User)
 admin.site.register(Industry)
 admin.site.register(WeChatArticle)
+admin.site.register(WechatAccount)
+admin.site.register(Carousel)

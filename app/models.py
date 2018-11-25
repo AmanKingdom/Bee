@@ -32,6 +32,25 @@ class User(models.Model):
     def __str__(self):
         return self.name
 
+
+# 公众号类
+class WechatAccount(models.Model):
+    class Meta:
+        # 自定义生成的数据库表名,如果不这样用，系统会默认生成app_wechataccount的
+        db_table = 'wechat_account'
+        unique_together = ('wechat_id',)
+
+    # 公众号微信号，主键
+    wechat_id = models.CharField(max_length=50, primary_key=True, null=False, blank=False)
+    # 公众号名称
+    wechat_name = models.CharField(max_length=50)
+    # 公众号头像图片路径
+    head_portrait = models.CharField(max_length=100)
+
+    def __str__(self):
+        return u'公众号id：%s  |  公众号名称：%s ' % (self.wechat_id, self.wechat_name)
+
+
 class WeChatArticle(models.Model):
     class Meta:
         # 自定义生成的数据库表名,如果不这样用，系统会默认生成app_wechatarticle的
@@ -44,8 +63,8 @@ class WeChatArticle(models.Model):
     publish_date = models.CharField(max_length=20)
     # 文章标题
     article_title = models.CharField(max_length=100)
-    # 文章所属公众号微信号
-    wechat_id = models.CharField(max_length=20)
+    # 文章所属公众号微信号，在经过设置为外键后，在数据库中的属性字段名wechat变更为wechat_id
+    wechat = models.ForeignKey(WechatAccount, on_delete=models.CASCADE, null=False)
     # 文章链接，目前暂时是临时的
     article_url = models.TextField()
     # 文章封面图片链接，一个
@@ -84,21 +103,13 @@ class BlogArticle(models.Model):
     def __str__(self):
         return self.article_title
 
-# 公众号类
-class WechatAccount(models.Model):
-    class Meta:
-        # 自定义生成的数据库表名,如果不这样用，系统会默认生成app_wechataccount的
-        db_table = 'wechat_account'
-        unique_together = ('wechat_id',)
-
-    # 公众号数据库id在Django的models中是自动生成的，所以就不写上了
-
-    # 公众号微信号
-    wechat_id = models.CharField(max_length=50)
-    # 公众号名称
-    wechat_name = models.CharField(max_length=50)
-    # 公众号头像图片路径
-    head_portrait = models.CharField(max_length=100)
+class Carousel(models.Model):
+    # 轮播图片的链接，记得在后台管理时选择对应的微信文章封面图就行
+    img_url = models.ForeignKey(WeChatArticle, on_delete=models.CASCADE, null=False)
+    # 标题，记得在后台管理时选择对应的微信文章标题就行
+    title = models.CharField(max_length=30)
+    # 图片描述
+    alt = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.head_portrait
+        return u'图片链接：%s   文章标题：%s ' % (self.img_url, self.title)
