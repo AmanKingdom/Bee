@@ -1,206 +1,116 @@
 ﻿<!--index.html-->
 {% extends "users-window/base.html" %}
 {% load staticfiles %}
-{% block title %}Bee主页{% endblock %}
+{% block title %}Bee | 主页{% endblock %}
+
 {% block base_body %}
-<body>
-<header class="header2">
-    <section class="top-md-menu">
+    <div class="center-block">
         <div class="container">
-            <div class="col-sm-3">
-                <!--<div class="logo">-->
-                <!--<h6><img src="{% static 'assets/images/logo.png' %}" alt="logo" /></h6>-->
-                <!--</div>-->
-            </div>
-            <div class="col-sm-6">
-                <!-- Search box Start -->
-                <form name="searchForm" action="{% url 'search' %}" method="get">
-                    <div class="searchBox">
-                        <span class="btn-group">
-                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">检索条件 </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">最新</a></li>
-                                <li><a href="#">最热</a></li>
-                                <li><a href="#">最高质量</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">综合</a></li>
-                            </ul>
-                        </span>
-                        <span class="search">
-                            <input type="text" id="search-text" name="search-text" placeholder="搜索您想看的……" />
-                        </span>
-                        <span class="btn-group">
-                            <button type="submit" id="searchBtn" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </span>
-                    </div>
-                </form>
-                <!-- Search box End -->
-            </div>
-            <!--<div class="col-sm-3">-->
-            <!--&lt;!&ndash; cart-menu &ndash;&gt;-->
-            <!--<div class="cart-menu">-->
-            <!--<ul>-->
-            <!--<li><a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a><span class="subno">1</span><strong>您的私信</strong></li>-->
-            <!--<li class="dropdown"> <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a><span class="subno">2</span><strong>您的订阅</strong></li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; cart-menu End &ndash;&gt;-->
-            <!--</div>-->
-            <div class="main-menu">
-                <!--  nav  -->
-                <nav class="navbar navbar-inverse navbar-default">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
-                        <ul class="nav navbar-nav">
-                            <li class="all-departments dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span> 看看其他领域 </span> <i class="fa fa-bars" aria-hidden="true"></i> </a>
-                                <ul class="dropdown-menu dropdownhover-bottom" role="menu">
-                                    <li class="dropdown">
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon1.png' %}" alt="menu-icon1" /> 科技 <sup class="bg-red">热门</sup></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon2.png' %}" alt="menu-icon2" /> 军事 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon3.png' %}" alt="menu-icon3" /> 文化 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon4.png' %}" alt="menu-icon4" /> 财经 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon5.png' %}" alt="menu-icon2" /> 教育 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon6.png' %}" alt="menu-icon2" /> 历史 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon7.png' %}" alt="menu-icon2" /> 国际 </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="{% static 'assets/images/menu-icon8.png' %}" alt="menu-icon2" /> 大学生 <sup class="bg-blue">新</sup></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#"> </a></li>
-                            <li><a href="#">标准</a></li>
-                            <li><a href="#">短小精悍</a></li>
-                            <li><a href="#">含视频</a></li>
-                            <li><a href="#">含音乐</a></li>
-                            <li><a href="#">图片多</a></li>
-                            <li><a href="#">无广告</a></li>
-                        </ul>
-                        <!-- /.navbar-collapse -->
-                    </div>
-                </nav>
-                <!-- /nav end -->
-            </div>
-        </div>
-    </section>
-</header>
-<!-- exhibition -->
-<section class="exhibition">
-    <!-- .grid -->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-md-3">
-                <div class="weight">
-                    <div class="title">
-                        <h2>科技</h2>
-                    </div>
-                    <div class="article-categories">
-                        <ul>
-                            <li><a href="#">人工智能  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">大数据、云计算   <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">区块链  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">数据库  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">游戏开发 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">移动开发 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">前端 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">物联网 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">编程语言 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">其他 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-9 col-md-9">
-                <!--轮播热门文章-->
-                <div class="col-md-12 grid-banner"> <img src="{% static 'assets/images/Grid-banner.png' %}" alt="Grid-banner" /> </div>
-                <!--<div class="grid-spr">-->
-                <!--<div class="col-sm-6 col-md-6"> <a href="#" class="grid-view-icon"><i class="fa fa-th-large" aria-hidden="true"></i></a> <a href="#" class="list-view-icon"><i class="fa fa-list" aria-hidden="true"></i></a>-->
-                <!--<div class="select-option">-->
-                <!--<a class="btn btn-default btn-select options2">-->
-                <!--<input type="hidden" class="btn-select-input" id="1" name="1" value="" />-->
-                <!--<span class="btn-select-value">Select an Item</span>-->
-                <!--<span class="btn-select-arrow fa fa-angle-down"></span>-->
-                <!--<ul>-->
-                <!--<li class="selected">Default Sorting</li>-->
-                <!--<li>Option 1</li>-->
-                <!--<li>Option 2</li>-->
-                <!--<li>Option 3</li>-->
-                <!--<li>Option 4</li>-->
-                <!--</ul>-->
-                <!--</a>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-sm-6 col-md-6 text-right"> <strong>Showing 1-12 <span>of 30 relults</span></strong> </div>-->
-                <!--</div>-->
-
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <!-- .pro-text -->
-                    <div class="pro-text text-center">
-                        <div class="title">
-                            <h5>最新推荐</h5>
-                        </div>
-                        <ul>
-                            {% for wechat_article in wechat_articles %}
-                                <li>
-                                    <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
-                                </li><hr>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <!-- /.pro-text -->
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <!-- .pro-text -->
-                    <div class="pro-text text-center">
-                        <div class="title">
-                            <h5>博客文章</h5>
-                        </div>
-                        {% for blog_article in blog_articles %}
-                            <div class="pro-text text-left">
-                                <h5><a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank"><font color="red">{{blog_article.article_title | safe}}</font></a></h5>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12">
+                    <div class="search-form">
+                        <form action="{% url 'search' %}" method="get">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="search-text" name="search-text" placeholder="搜索您想看的……" />
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                </div>
                             </div>
-                        {% endfor %}
+                        </form>
                     </div>
-                    <!-- /.pro-text -->
                 </div>
-
-                <!--<div class="col-xs-12">-->
-                <!--<div class="grid-spr pag">-->
-                <!--&lt;!&ndash; .pagetions &ndash;&gt;-->
-                <!--<div class="col-xs-12 col-sm-6 col-md-6 text-left">-->
-                <!--<ul class="pagination">-->
-                <!--<li class="active"><a href="#">1</a></li>-->
-                <!--<li><a href="#">2</a></li>-->
-                <!--<li><a href="#">3</a></li>-->
-                <!--<li><a href="#">&raquo;</a></li>-->
-                <!--</ul>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /.pagetions &ndash;&gt;-->
-                <!--&lt;!&ndash; .Showing &ndash;&gt;-->
-                <!--<div class="col-xs-12 col-sm-6 col-md-6 text-right">-->
-                <!--<strong>Showing 1-12 <span>of 30 relults</span></strong>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /.Showing &ndash;&gt;-->
-                <!--</div>-->
-                <!--</div>-->
-
             </div>
         </div>
     </div>
-    <!-- /.grid -->
-</section>
-<!-- exhibition -->
-{% include "users-window/footer.html" %}
+    <br>
+    <div class="center-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <!--轮播图所在行begin-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="myCarousel" class="carousel slide">
+                                <!-- 轮播（Carousel）指标 -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarouse1" data-slide-to="1"></li>
+                                    <li data-target="#myCarouse1" data-slide-to="2"></li>
+                                </ol>
+                                <!-- 轮播（Carousel）项目 -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="{% static 'carousel_imgs/first-slide.png' %}" alt="First slide" style="width:100%; height:300px;">
+                                        <div class="carousel-caption">分享一张图片</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{% static 'carousel_imgs/me.jpg' %}" alt="Second slide"  style="width:100%; height:300px;">
+                                        <div class="carousel-caption">米国队长是个超级蛙</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{% static 'carousel_imgs/small.png' %}" alt="three slide"  style="width:100%; height:300px;">
+                                        <div class="carousel-caption">啦啦啦啦</div>
+                                    </div>
+                                </div>
+                                <!-- 轮播（Carousel）导航 -->
+                                <a class="carousel-control left" href="#myCarousel"
+                                   data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a>
+                                <a class="carousel-control right" href="#myCarousel"
+                                   data-slide="next"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!--轮播图所在行end-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">莞工十大组织最新公众文章</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        {% for wechat_article in wechat_articles %}
+                                            <li class="list-group-item">
+                                                <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">莞工校友日常鸡汤文章</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        {% for blog_article in blog_articles %}
+                                            <li class="list-group-item">
+                                                <a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank">{{blog_article.article_title | safe}}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">校园热门文章</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">啦啦啦啦啦啦啦啦啦啦了</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "users-window/footer.html" %}
 {% endblock %}

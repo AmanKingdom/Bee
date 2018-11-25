@@ -2,23 +2,16 @@
 {% load staticfiles %}
 {% block user_homepage_block_title %}写文章{% endblock %}
 {% block user_homepage_block %}
-
-<section class="exhibition">
-    <!-- .grid -->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9 col-md-9">
-                <form name="articleForm" action="{% url 'write-blog-article' %}" method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="panel-body">
-                        {{ article_form.as_p }}
-                        <input type="submit" value="完成编辑">
-                        <input type="reset" value="重新填写">
-                    </div>
-                </form>
-            </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+            <form name="articleForm" action="{% url 'write-blog-article' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="panel-body">
+                    {{ article_form.as_p }}
+                    <input type="submit" value="完成编辑">
+                    <input type="reset" value="重新填写">
+                </div>
+            </form>
         </div>
     </div>
-    <!-- /.grid -->
-</section>
 {% endblock %}

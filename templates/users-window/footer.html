@@ -1,59 +1,12 @@
 <!--footer.html-->
 {% load staticfiles %}
-<section class="newsletter">
-    <div class="container">
-        <h3 class="sing-up-text">学而知不足。</h3>
-    </div>
-</section>
-<!-- /newsletter -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-10">
-                <!-- f-weghit -->
-                <div class="f-weghit"> <img src="{% static 'assets/images/BEElogo.png' %}" alt="logo" />
-                    <p><strong>BEE</strong> 是全球最大的高质量微信公众文章多条件搜索平台。这里没有铺天盖地的广告、没有骗人芳心的标题党，只有优选的文章和爱学习的你。</p>
-                    <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>地址：</strong> 中国 广东省 东莞市 东莞理工学院 计算机学院8B406实验室</li>
-                        <li><i class="icon-envelope-letter icons"></i> <strong>电子邮箱：</strong> ***********@qq.com</li>
-                        <li><i class="icon-call-in icons"></i> <strong>联系电话：</strong> 1008611</li>
-                    </ul>
-                </div>
-                <!-- /f-weghit -->
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <!-- f-weghit2 -->
-                <div class="f-weghit2">
-                    <h4>信息</h4>
-                    <ul>
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">联系我们</a></li>
-                        <li><a href="#">隐私政策</a></li>
-                        <li><a href="#">条款和条件</a></li>
-                    </ul>
-                </div>
-                <!-- /f-weghit2 -->
-            </div>
-            <!-- copayright -->
-            <div class="copayright">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">版权所有 &copy; 2018。BEE保留所有权利。<a target="_blank" href="http://sc.chinaz.com/moban/">BEE主页</a></div>
-                    <div class="col-xs-12 col-sm-6 col-md-6" align="right">{% if now %}现在时间：{{ now | date:"Y-m-d H:i:s" }}{% endif %}</div>
-                </div>
-            </div>
-            <!-- /copayright -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <section class="jumbotron text-center" style="margin-bottom:0">
+                <h2>学而知不足。</h2>
+            </section>
         </div>
     </div>
-</footer>
+</div>
 
-<!--&lt;!&ndash; sticky-socia &ndash;&gt;-->
-<!--<aside id="sticky-social">-->
-<!--<ul>-->
-<!--<li><a href="#" class="fa fa-facebook" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a></li>-->
-<!--<li><a href="#" class="fa fa-twitter" target="_blank"><span><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span></a></li>-->
-<!--<li><a href="#" class="fa fa-rss" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span></a></li>-->
-<!--<li><a href="#" class="fa fa-pinterest-p" target="_blank"><span><i class="fa fa-pinterest-p" aria-hidden="true"></i> Pinterest</span></a></li>-->
-<!--<li><a href="#" class="fa fa-share-alt" target="_blank"><span><i class="fa fa-share-alt" aria-hidden="true"></i> Flickr</span></a></li>-->
-<!--</ul>-->
-<!--</aside>-->
-<!-- /sticky-socia -->

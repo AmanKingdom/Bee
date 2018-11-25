@@ -3,10 +3,814 @@
   <component name="ChangeListManager">
     <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/Bee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bee.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/bee-database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/baguetteBox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-dropdownhover.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/jcarousel.connected-carousels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/texgyreadventor-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/texgyreadventor-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/texgyreadventor-regular-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/texgyreadventor-regular-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/texgyreadventor-regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/BEE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/BEElogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/Grid-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/add-banner-large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/add-banner-large2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/add-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/add-banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/banner-img6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/blog-header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/elec-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/elec-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/elec-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/elec-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/eng-flg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/fc-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/fc-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/fc-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/fc-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/fs-add-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/ghm-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/ghm-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/ghm-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/ghm-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/half-banner8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/header-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hgk-add-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hgk-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hgk-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hgk-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hgk-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/hom4-banner6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/home-design-add-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/home-header1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/home-header2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/home-header3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/large-banner5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/lt-blog-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/lt-blog-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/lt-blog-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/megamenu-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/menu-icon9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/new-arrivals-img6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/on-seal-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/on-seal-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/payment-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/popup-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/digital/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/products/fashion/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/qoute-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/test-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/images/wk-deal-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-dropdownhover.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/filter-price.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/incrementing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jcarousel.connected-carousels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.elevatezoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.jcarousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/changelog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/_static/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/_static/firebug_upload_json.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/_templates/classy/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/_templates/classy/static/classy.css_t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/_templates/classy/theme.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/ajax.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/changelog.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/classyext.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/cmd.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/colorpicker.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/core.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/dialog.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/editor.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/event.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/menu.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/node.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/option.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/plugin.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/qna.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/range.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/selector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/tabs.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/theme.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/upgrade.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/upload.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/uploadbutton.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/usage.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/docs/widget.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/kindeditor-all-min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/kindeditor-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lang/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/background.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/contentScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug-lite-beta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug24_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/firebug48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/googleChrome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/buttonBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/buttonBgHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/detach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/detachHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disable.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disableHover.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/disableHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/downActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/downHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon-sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/errorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug-1.3a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.IE6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/firebug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/infoIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/loading_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/minHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/offHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/pixel_transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/roundCorner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/search.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadow2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/shadowAlpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabHoverRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuCheckbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuPin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuRadio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuTarget.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMenuTargetHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tabRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorBorders.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorBorders.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorCorners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/textEditorCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/titlebarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/toolbarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tree_close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/tree_open.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/upActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/upHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/warningIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension-beta/skin/xp/warningIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/background.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/contentScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug24_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/firebug48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/googleChrome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/buttonBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/buttonBgHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/detach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/detachHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/disable.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/disable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/disableHover.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/disableHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/downActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/downHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon-sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/errorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/firebug-1.3a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.IE6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/firebug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/infoIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/loading_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/minHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/offHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/pixel_transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/roundCorner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/search.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/shadow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/shadow2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/shadowAlpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabHoverRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuCheckbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuPin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuRadio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuTarget.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMenuTargetHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tabRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorBorders.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorBorders.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorCorners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/textEditorCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/titlebarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/toolbarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tree_close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/tree_open.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/upActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/upHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/warningIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/chrome-extension/skin/xp/warningIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/compress.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-beta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite-debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/build/firebug-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/plugin/proxy/proxy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/buttonBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/buttonBgHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/detach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/detachHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/disable.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/disable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/disableHover.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/disableHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/downActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/downHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/errorIcon-sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/errorIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/errorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/firebug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/firebug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/firebug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/infoIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/loading_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/minHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/offHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/pixel_transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/roundCorner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/search.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/shadow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/shadow2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/shadowAlpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabHoverLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabHoverMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabHoverRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMenuCheckbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMenuPin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMenuRadio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMenuTarget.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMenuTargetHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tabRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/textEditorBorders.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/textEditorBorders.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/textEditorCorners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/textEditorCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/titlebarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/toolbarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tree_close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/tree_open.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/twistyClosed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/twistyOpen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/upActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/upHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/warningIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/classic/warningIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/buttonBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/buttonBgHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/closeHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/detach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/detachHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/disable.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/disable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/disableHover.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/disableHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/downActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/downHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/errorIcon-sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/errorIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/errorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/firebug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/firebug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/firebug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/infoIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/loading_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/minHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/offHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/pixel_transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/roundCorner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/search.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/shadow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/shadow2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/shadowAlpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabHoverLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabHoverMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabHoverRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMenuCheckbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMenuPin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMenuRadio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMenuTarget.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMenuTargetHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tabRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/textEditorBorders.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/textEditorBorders.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/textEditorCorners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/textEditorCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/titlebarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/toolbarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tree_close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/tree_open.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/twistyClosed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/twistyOpen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/upActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/upHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/warningIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/light/warningIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/buttonBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/buttonBgHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/detach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/detachHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/disable.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/disable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/disableHover.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/disableHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/downActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/downHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/errorIcon-sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/errorIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/errorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/firebug-1.3a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/firebug.IE6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/firebug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/firebug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/firebug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/infoIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/infoIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/loading_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/minHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/offHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/pixel_transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/roundCorner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/search.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/shadow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/shadow2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/shadowAlpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabHoverLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabHoverMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabHoverRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabLeft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMenuCheckbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMenuPin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMenuRadio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMenuTarget.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMenuTargetHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tabRight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/textEditorBorders.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/textEditorBorders.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/textEditorCorners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/textEditorCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/titlebarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/toolbarMid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tree_close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/tree_open.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/upActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/upHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/warningIcon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/firebug-lite/skin/xp/warningIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/qunit/qunit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/lib/qunit/qunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/php/JSON.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/php/demo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/php/file_manager_json.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/php/upload_json.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/anchor/anchor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/autoheight/autoheight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/baidumap/baidumap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/baidumap/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/baidumap/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/clearhtml/clearhtml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/code/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/code/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/code/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/emoticons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/100.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/101.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/102.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/103.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/104.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/105.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/106.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/107.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/108.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/109.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/110.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/111.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/112.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/113.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/114.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/115.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/116.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/117.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/118.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/119.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/120.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/121.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/122.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/123.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/124.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/125.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/126.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/127.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/128.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/129.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/130.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/131.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/132.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/133.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/134.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/72.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/73.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/74.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/75.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/76.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/77.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/78.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/79.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/80.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/81.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/82.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/83.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/84.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/85.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/86.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/87.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/88.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/89.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/90.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/91.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/92.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/93.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/94.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/95.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/96.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/97.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/98.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/99.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/emoticons/images/static.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/filemanager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/images/file-16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/images/file-64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/images/folder-16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/images/folder-64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/filemanager/images/go-up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/fixtoolbar/fixtoolbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/flash/flash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/image/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/image/images/align_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/image/images/align_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/image/images/align_top.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/image/images/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/insertfile/insertfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/lineheight/lineheight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/link/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/map/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/map/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/media/media.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/multiimage/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/multiimage/images/select-files-en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/multiimage/images/select-files-zh-CN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/multiimage/images/swfupload.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/multiimage/multiimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/pagebreak/pagebreak.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/plainpaste/plainpaste.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/preview/preview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/quickformat/quickformat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/table/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/template/html/1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/template/html/2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/template/html/3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/template/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/plugins/wordpaste/wordpaste.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/cmd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/edit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/toolbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/uploadbutton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/src/widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/cmd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/cmd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/core.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/data/logo_180_30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/edit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/editor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/editor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/hidden.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/leak.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/navi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/node.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/quirkmode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/range.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/remote.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/selector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/tabs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/toolbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/toolbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/total.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/KindEditorDriver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/all-chrome.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/all-firefox.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/all-ie.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/all.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverBase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverElement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverEnvironment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverExceptions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverSession.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/WebDriverSimpleItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/php-webdriver/__init__.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/test-default.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/test-dialog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/webdriver/test-unittest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/test/widget.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/flash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/media.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/common/rm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/default/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/default/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/default/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/qq/editor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/qq/qq.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/kindeditor_source/themes/simple/simple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/owl-carousel/AjaxLoader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/owl-carousel/grabbing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/owl-carousel/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/owl-carousel/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/owl-carousel/owl.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/simple-line-icon/css/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/simple-line-icon/fonts/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/simple-line-icon/fonts/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/simple-line-icon/fonts/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/simple-line-icon/fonts/Simple-Line-Icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/stroke-gap-icons/fonts/Stroke-Gap-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/stroke-gap-icons/stroke-gap-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/search-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/search-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +825,7 @@
     <SUITE FILE_PATH="coverage/Bee$spider2_0.coverage" NAME="spider2.0 Coverage Results" MODIFIED="1541477886945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/bee$search.coverage" NAME="search Coverage Results" MODIFIED="1540199457213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/Bee$spider2_2.coverage" NAME="spider2.2 Coverage Results" MODIFIED="1541515989233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Bee$spider_sqlite.coverage" NAME="spider_sqlite Coverage Results" MODIFIED="1542774446181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
+    <SUITE FILE_PATH="coverage/Bee$spider_sqlite.coverage" NAME="spider_sqlite Coverage Results" MODIFIED="1542984205702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/Wechat_SQLite" />
     <SUITE FILE_PATH="coverage/bee$spider.coverage" NAME="spider Coverage Results" MODIFIED="1540647832890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/bee$runTools.coverage" NAME="runTools Coverage Results" MODIFIED="1539854075631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bee$spider2_0.coverage" NAME="spider2.0 Coverage Results" MODIFIED="1541319893449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
@@ -40,21 +844,6 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bee-database" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bee-database" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bee-database" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="bee_database" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -64,43 +853,9 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="bee_database" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -210,8 +965,10 @@
     <session id="1073276838">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.35" value="1" />
@@ -220,51 +977,53 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="215" />
-          <entry key="html" value="2048" />
+          <entry key="html" value="4545" />
           <entry key="js" value="24" />
           <entry key="meta" value="1" />
-          <entry key="py" value="2384" />
-          <entry key="txt" value="801" />
+          <entry key="py" value="2794" />
+          <entry key="txt" value="845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="215" />
-          <entry key="HTML" value="2048" />
+          <entry key="HTML" value="4545" />
           <entry key="JavaScript" value="24" />
-          <entry key="PLAIN_TEXT" value="802" />
-          <entry key="Python" value="2384" />
+          <entry key="PLAIN_TEXT" value="846" />
+          <entry key="Python" value="2794" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="app_blogarticle" value="1" />
           <entry key="css" value="7" />
-          <entry key="html" value="66" />
-          <entry key="js" value="2" />
-          <entry key="md" value="1" />
-          <entry key="py" value="44" />
+          <entry key="html" value="74" />
+          <entry key="js" value="5" />
+          <entry key="md" value="2" />
+          <entry key="py" value="53" />
           <entry key="pyc" value="1" />
+          <entry key="rnc" value="1" />
           <entry key="sqlite_sequence" value="1" />
           <entry key="txt" value="1" />
-          <entry key="wechat_article" value="5" />
+          <entry key="wechat_article" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="Database Element" value="7" />
-          <entry key="HTML" value="66" />
-          <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="1" />
+          <entry key="Database Element" value="10" />
+          <entry key="HTML" value="74" />
+          <entry key="JavaScript" value="5" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="45" />
+          <entry key="Python" value="54" />
+          <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -292,28 +1051,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
+        <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5454">
-              <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
+            <state relative-caret-position="27">
+              <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py">
+        <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="290" column="11" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="381">
+              <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+              <folding>
+                <element signature="e#147#3659#0#HTML" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -382,7 +1143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/bee/wsgi.py" />
         <option value="$PROJECT_DIR$/app/migrations/0005_auto_20181102_0909.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
@@ -419,20 +1179,21 @@
         <option value="$PROJECT_DIR$/templates/users-window/register.html" />
         <option value="$PROJECT_DIR$/bee/urls.py" />
         <option value="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" />
-        <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
         <option value="$PROJECT_DIR$/bee/settings.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/templates/users-window/footer.html" />
         <option value="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" />
         <option value="$PROJECT_DIR$/templates/users-window/public-blog-article-content.html" />
         <option value="$PROJECT_DIR$/app/uploads.py" />
-        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
         <option value="$PROJECT_DIR$/static/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/users-window/index.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/base.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/wechat_accounts.html" />
         <option value="$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py" />
+        <option value="$PROJECT_DIR$/app/tests.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/templates/users-window/base.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/footer.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/index.html" />
       </list>
     </option>
   </component>
@@ -444,13 +1205,12 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/static/assets/js/kindeditor_source/package.json" />
+      <path value="$PROJECT_DIR$/static/kindeditor/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="860" />
+    <option name="x" value="-7" />
+    <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -461,7 +1221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -472,23 +1231,34 @@
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-              <item name="Wechat_SQLite" type="462c0819:PsiDirectoryNode" />
+              <item name="bee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users-window" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,19 +1269,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Bee" />
-      <recent name="H:\Bee\spider\Wechat_SQLite" />
-      <recent name="H:\bee\static\admin_assets\img" />
-      <recent name="H:\bee\templates\manage-window" />
-      <recent name="H:\bee" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Bee\spider\Wechat_SQLite" />
       <recent name="H:\bee" />
       <recent name="H:\bee\static\admin_assets" />
       <recent name="H:\bee\templates" />
       <recent name="H:\bee\static\assets\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Bee\static\carousel_imgs" />
+      <recent name="H:\Bee\static" />
+      <recent name="H:\Bee" />
+      <recent name="H:\Bee\spider\Wechat_SQLite" />
+      <recent name="H:\bee\static\admin_assets\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -526,7 +1296,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spider_sqlite">
+  <component name="RunManager" selected="Django server.bee">
     <configuration name="search_sqlite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bee" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -760,7 +1530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541861194262</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="上传一些测试数据，有二十几M图片在static/wechat_imgs中">
+      <created>1542774578445</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542774578445</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -774,14 +1551,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.18830334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.16773778" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.36707154" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.32928476" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -790,7 +1566,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23481782" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.5303644" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.32928476" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.21187584" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.0" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32884097" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -799,6 +1575,30 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.32969153" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.005141388" />
+      <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.32928476" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.31578946" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.23481782" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.5303644" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.21187584" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.0" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32884097" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32969153" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -818,44 +1618,10 @@
     <MESSAGE value="search_sqlite.py中的数据库引用在Django中运行和其单独运行是不一样的，在Django中由于我增加了数据库的环境变量，所以直接用bee-database.db就OK了，但单独运行才需要../../bee-database.db，由于在这个项目中它不需要单独的运行，所以我还是让它适应这个项目为宜。" />
     <MESSAGE value="现在把一个小的数据库上传，是用来测试服务器的，以后的版本会删除这个数据库。" />
     <MESSAGE value="完善了博客文章的作者绑定。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了博客文章的作者绑定。" />
+    <MESSAGE value="上传一些测试数据，有二十几M图片在static/wechat_imgs中" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传一些测试数据，有二十几M图片在static/wechat_imgs中" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/users-window/temp.html" />
-    <entry file="file://$PROJECT_DIR$/templates/users-window/temp2.html" />
-    <entry file="file://$PROJECT_DIR$/spider/spider2.0.py" />
-    <entry file="file://$PROJECT_DIR$/spider/spider2.2.py" />
-    <entry file="file://$PROJECT_DIR$/spider/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="108">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/spider.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/database.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py" />
-    <entry file="das://a8c0dbc7-d5df-4032-8e40-83047233e2ea/schema/main/table/app_blogarticle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://a8c0dbc7-d5df-4032-8e40-83047233e2ea/schema/main/table/sqlite_sequence">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -903,7 +1669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-collections.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -970,13 +1735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article-page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -991,30 +1749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bee/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#304#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bee/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1022,38 +1756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/wechat-article-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="58" column="46" lean-forward="true" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1071,31 +1777,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/account.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/wechat_accounts.html" />
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5454">
-          <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1103,10 +1785,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spider/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/wechat-article-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/database_sqlite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/record.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1847" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-659">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dffb2884-bf25-4928-8438-3ebb749684c2/schema/main/table/wechat_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/spider_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="290" column="11" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="11" />
+        <state relative-caret-position="270">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+          <folding>
+            <element signature="e#304#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/kindeditor/lib/qunit/qunit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#15#21#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="244" column="16" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/kindeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#201#255#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+          <folding>
+            <element signature="e#147#3659#0#HTML" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
