@@ -156,3 +156,24 @@
         print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.close()
+        
+## 2018-11-25 增加了下载文章封面图到本地的功能
+
+> 说明
+    
+    封面图片文件名为系统随机生成的30个字符串
+    文件存储于../../static/cover_imgs/文件夹
+    入库的数据由图片url改为图片名称（不带路径名）
+    
+    path_cover = '../../static/cover_imgs/'
+    ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+    cover_name = ran_str + '.jpeg'
+
+    try:
+        cover_data = requests.get(pic, headers=self.headers, timeout=self.img_timeout)
+    except:
+        Log.article_log('封面图请求超时，将爬取下一篇文章。')
+        continue
+    fp = open(path_cover + cover_name, 'wb')  # 下载图片到本地
+    fp.write(cover_data.content)
+    fp.close()

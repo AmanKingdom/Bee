@@ -66,6 +66,7 @@ class ArticleSpider:
 
     def get_infos(self):
 
+        Log.article_log('正在爬取文章信息。。。')
         for wechat_id in self.wechat_ids:
 
             print('\n')
@@ -161,6 +162,20 @@ class ArticleSpider:
                             pic = pic.replace(')', '')
                             #self.log(u'封面图片：%s ' % pic)
 
+                        # 下载封面图到本地
+                        path_cover = '../../static/cover_imgs/'
+                        ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+                        cover_name = ran_str + '.jpeg'
+
+                        try:
+                            cover_data = requests.get(pic, headers=self.headers, timeout=self.img_timeout)
+                        except:
+                            Log.article_log('封面图请求超时，将爬取下一篇文章。')
+                            continue
+                        fp = open(path_cover + cover_name, 'wb')  # 下载图片到本地
+                        fp.write(cover_data.content)
+                        fp.close()
+
                         # 获取正文内容
                         if title == "分享图片":     # 判断文章是否是为分享图片的类型
                             content = "null"
@@ -234,7 +249,7 @@ class ArticleSpider:
                         # 推文为分享其他文章则不入库
                         if content != 'null':
                             try:
-                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, pic, content, html, img_amount, word_amount, video_amount, audio_amount))
+                                self.cursor.execute(sql,(pdate, title, wechat_id, article_url, cover_name, content, html, img_amount, word_amount, video_amount, audio_amount))
                                 self.db.commit()
                                 Log.article_log(u'入库成功')
                             except:
@@ -244,7 +259,8 @@ class ArticleSpider:
                             Log.article_log(u'文章内容为null')
 
         self.db.close()
-        Log.article_log('\n爬虫已完成任务 ')
+        print('\n')
+        Log.article_log('爬虫已完成任务 ')
 
     def get_atticle_info(self,url):
         '''
