@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from app.forms import *
-from app.models import WechatAccount
+from app.models import WechatAccount, Carousel
 from engine.Wechat_SQLite.search_sqlite import Search
 import datetime
 
@@ -20,6 +20,11 @@ def homepage(request):
     wechat_name_list = [x.wechat.wechat_name for x in wechat_articles]
     # 打包发送到templates让它自己解压处理
     articles_list = zip(wechat_articles, wechat_name_list)
+
+    # 轮播图
+    carousel = Carousel.objects.all()
+    # 需要用到轮播图的数量
+    carousel_len = [x for x in range(0, len(carousel))]
 
     now = datetime.datetime.now()
 

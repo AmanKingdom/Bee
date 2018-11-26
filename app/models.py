@@ -104,10 +104,12 @@ class BlogArticle(models.Model):
         return self.article_title
 
 class Carousel(models.Model):
-    # 轮播图片的链接，记得在后台管理时选择对应的微信文章封面图就行
-    img_url = models.ForeignKey(WeChatArticle, on_delete=models.CASCADE, null=False)
+    # 轮播图片的链接，记得在后台管理时选择对应的微信文章封面图的路径就行
+    img_url = models.TextField()
     # 标题，记得在后台管理时选择对应的微信文章标题就行
     title = models.CharField(max_length=30)
+    # 文章的链接
+    article_url = models.TextField()
     # 图片描述
     alt = models.TextField(null=True, blank=True)
 
