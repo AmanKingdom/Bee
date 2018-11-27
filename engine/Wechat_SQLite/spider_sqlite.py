@@ -192,6 +192,12 @@ class ArticleSpider:
                             Log.article_log('下载图片超时，将爬取下一篇文章。')
                             continue
 
+                        # 从数据库获取公众号二维码图片
+                        sql2 = "SELECT qr_code FROM wechat_account WHERE wechat_id='" + wechat_id + "'"
+                        self.cursor.execute(sql2)
+                        qr_code = self.cursor.fetchone()[0]  # 查找符合条件的数据
+                        qr_code_path = '../../static/qr_codes/' + qr_code
+
                         # 获取html代码
                         try:
                             temp_html = requests.get(article_url, headers=self.headers, timeout=self.timeout)
@@ -201,17 +207,15 @@ class ArticleSpider:
 
                         temp_html.encoding = 'utf-8'
                         data = temp_html.text
-                        delete = '''<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
-            <div class="qr_code_pc_inner">
-                <div class="qr_code_pc">
-                    <img id="js_pc_qr_code_img" class="qr_code_pc_img">
-                    <p>微信扫一扫<br>关注该公众号</p>
-                </div>
-            </div>
-        </div>'''
 
+                        # 加入反防盗链标签
                         html = re.sub(pattern='<head>', repl='<head><meta name="referrer" content="never">', string=data)
-                        html = re.sub(pattern=delete, repl=' ', string=html)
+                        # 显示二维码
+                        html = re.sub(pattern='id="js_pc_qr_code_img"', repl='id="pc_qr_code_img" src="%s"' % qr_code_path, string=html)
+                        # 显示二维码
+                        html = re.sub(pattern='id="js_profile_qrcode_img"', repl='id="profile_qrcode_img" src="%s"' % qr_code_path, string=html)
+
+
 
                         # 文章文字数量
                         temp_content = content.replace("\n", "")
@@ -496,32 +500,46 @@ class AccountSpider:
                 wechat_name = account('strong[class="profile_nickname"]').text().strip()
                 Log.account_log(u'公众号名称：%s' % wechat_name)
                 Log.account_log(u'公众号url：%s' % wechat_url)
+
                 # 获取公众号头像
                 head_portrait_url = account('img').attr('src')
                 Log.account_log(u'头像url：%s' % head_portrait_url)
 
-                path = '../../static/head_portraits/'
-                ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+                # 获取公众号二维码图片
+                temp_url = doc('#js_pc_qr_code_img').attr('src')
+                qr_code_url = 'http://mp.weixin.qq.com' + temp_url
+                Log.account_log(u'二维码url：%s' % qr_code_url)
 
-                img_name = ran_str + '.png'
+                path_head_portrait = '../../static/head_portraits/'
+                path_qr_code = '../../static/qr_codes/'
+
+                ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+                head_portrait_name = ran_str + '.png'
+                ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
+                qr_code_name = ran_str + '.jpeg'
 
                 try:
-                    data = requests.get(head_portrait_url, headers=self.headers, timeout=self.img_timeout)
+                    head_portrait_data = requests.get(head_portrait_url, headers=self.headers, timeout=self.img_timeout)
+                    qr_code_data = requests.get(qr_code_url, headers=self.headers, timeout=self.img_timeout)
                 except:
                     Log.account_log('爬取图片超时，将爬取下一个公众号。')
                     continue
 
                 # 保存数据到数据库
-                sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait) values(?, ?, ?)'
+                sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait, qr_code) values(?, ?, ?, ?)'
 
                 try:
-                    self.cursor.execute(sql, (wechat_id, wechat_name, img_name))
+                    self.cursor.execute(sql, (wechat_id, wechat_name, head_portrait_name, qr_code_name))
                     self.db.commit()
                     Log.account_log(u'入库成功')
 
                     # 只有入库成功才下载到本地
-                    fp = open(path + img_name, 'wb')
-                    fp.write(data.content)
+                    fp = open(path_head_portrait + head_portrait_name, 'wb')
+                    fp.write(head_portrait_data.content)
+                    fp.close()
+
+                    fp = open(path_qr_code + qr_code_name, 'wb')
+                    fp.write(qr_code_data.content)
                     fp.close()
                 except:
                     self.db.rollback()
@@ -535,7 +553,7 @@ if __name__ == '__main__':
 
     ids = ['chaping321', 'dglgtw', 'one', 'two', 'four', 'five']
     # wechat_ids = ['dglgtw', 'guanqingluntan', 'dutsmc', 'TNTstreetdance', 'DGUT_GGCY', 'dgutxn', 'ggxshwlb', 'ggrpfamily', 'dgutkob', 'dgutzb', 'dgutpx', 'guangongkexie', 'dgutgreen', 'yinzytravel', 'DGUTTKD', 'wailianjiating', 'ggsfxh', 'gh_93ff0d749e07', 'dgutnic', 'ggdxskjcxxx', 'ggdzzyz', 'dgutsyxh', 'dgutsy']
-    wechat_ids = ['dglgtw']
+    wechat_ids = ['chaping321', 'DGUT_GGCY','dglgtw', 'guanqingluntan', 'dutsmc']
 
     AccountSpider(wechat_ids).get_account_infos()
     ArticleSpider(wechat_ids).get_infos()
