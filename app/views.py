@@ -57,17 +57,19 @@ def search_result(request):
         search_text = request.session['search_key']
         print('正在搜索：', search_text, '……')
 
-        wechat_articles = Search(search_text).search_infos()
+        search_results = Search(search_text).search_infos()
 
-        if len(wechat_articles) == 0:
-            wechat_articles = None
+        if len(search_results) == 0:
+            search_results = None
             print('搜索“', search_text, '”时，并没有找到什么。')
         else:
             # 通过搜索结果列表中各项的公众号id获取公众号名称
-            wechat_name_list = [WechatAccount.objects.get(wechat_id=x.get('wechat_id')).wechat_name for x in wechat_articles]
+            wechat_name_list = [WechatAccount.objects.get(wechat_id=x.get('wechat_id')).wechat_name for x in search_results]
+            # 通过搜索结果列表中各项的文章id获取对应的文章对象
+            wechat_articles = [WeChatArticle.objects.get(id=x.get('article_id')) for x in search_results]
 
             # 打包发送到templates让它自己解压处理
-            articles_list = zip(wechat_articles, wechat_name_list)
+            articles_list = zip(search_results, wechat_name_list, wechat_articles)
     else:
         return HttpResponseRedirect('/')
     return render(request, 'users-window/search-result.html', locals())
@@ -200,7 +202,7 @@ def login(request):
             if login_user_form.data.get('user_id') == u.user_id and login_user_form.data.get('password') == u.password:
                 feedback_message = '登录成功啦'
                 request.session['user_id'] = u.user_id
-                return HttpResponseRedirect('/user-homepage/')
+                return HttpResponseRedirect('/user-information/')
             elif login_user_form.data.get('user_id') == u.user_id and login_user_form.data.get('password') != u.password:
                 feedback_message = '密码不对哦大哥'
                 break

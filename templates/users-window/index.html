@@ -118,12 +118,12 @@
                                 {% for wechat_article,wechat_name in articles_list %}
                                     <li class="list-group-item">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 col-sm-4 col-xs-4">
                                                 <img src="{% static wechat_article.cover_img %}" style="width:100px;"/>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-md-8 col-sm-8 col-xs-8">
                                                 <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
-                                                <p class="control-right">来自：{{ wechat_name }}</p>
+                                                <p class="text-right">来自：{{ wechat_name }}</p>
                                             </div>
                                         </div>
                                     </li>

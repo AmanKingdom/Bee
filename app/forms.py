@@ -11,6 +11,7 @@ class UserRegisterForm(forms.ModelForm):
             'user_id': forms.TextInput(attrs={'class': "form-control", 'placeholder': "账号"}),
             'name': forms.TextInput(attrs={'class': "form-control", 'placeholder': "昵称"}),
             'password': forms.PasswordInput(attrs={'class': "form-control", 'placeholder': "密码"}),
+            'sex': forms.Select(attrs={'class': "form-control"}),
         }
         error_messages = {
             'user_id': {
@@ -62,6 +63,10 @@ class BlogArticleForm(forms.ModelForm):
         model = BlogArticle
         fields = '__all__'
         exclude = ['publish_date', 'author']
+        widgets = {
+            'article_title': forms.TextInput(attrs={'class': "form-control", 'placeholder': "请输入文章大标题"}),
+            'article_content': forms.TextInput(attrs={'class': "form-control"}),
+        }
 
     def __init__(self, *args, **kwargs):
         super(BlogArticleForm, self).__init__(*args, **kwargs)

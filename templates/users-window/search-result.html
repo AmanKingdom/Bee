@@ -47,22 +47,26 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     {% if articles_list %}
-                        {%  for article,wechat_name in articles_list %}
-                            <div class="wechat-articles-list">
-                                <div>{{ article.cover_img | safe }}</div>
-                                <h4>
-                                    <a href = "{% url 'wechat-article-content' article.article_id %}" target="_blank">{{ article.article_title | safe }}</a>
-                                </h4>
-                                <div class="two-lines">
-                                    {% for item in article.article_content %}
-                                        {{ item | safe }}
-                                    {% endfor %}
+                        {%  for results,wechat_name,article in articles_list %}
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <img src="{{ article.cover_img }}" style="width: 280px;"/>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">{{ article.publish_date }}</div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">文章来源：{{ wechat_name }}</div>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <h4>
+                                        <a href = "{% url 'wechat-article-content' results.article_id %}" target="_blank">{{ results.article_title | safe }}</a>
+                                    </h4>
+                                    <div class="two-lines">
+                                        {% for item in results.article_content %}
+                                            {{ item | safe }}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">{{ results.publish_date }}</div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">文章来源：{{ wechat_name }}</div>
+                                    </div>
                                 </div>
-                            </div>
+                            </div><hr><br>
                         {% endfor %}
                     {% else %}
                         <div>
