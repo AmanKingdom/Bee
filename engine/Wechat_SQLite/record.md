@@ -177,3 +177,27 @@
     fp = open(path_cover + cover_name, 'wb')  # 下载图片到本地
     fp.write(cover_data.content)
     fp.close()
+    
+## 2018-11-27 增加了二维码下载到本地、微信文章页面二维码显示的功能和wechat_account表新增数据项
+
+> 新增项
+
+    qr_code     # 存储二维码文件名
+    
+> 二维码下载
+
+    文件名为系统随机生成的30个字符串
+    文件存储于../../static/qr_codes/文件夹
+    入库的数据为图片名称（不带路径名）
+    
+> 二维码显示
+
+    # 显示二维码
+    html = re.sub(pattern='id="js_pc_qr_code_img"', repl='id="pc_qr_code_img" src="%s"' % qr_code_path, string=html)
+    # 显示二维码
+    html = re.sub(pattern='id="js_profile_qrcode_img"', repl='id="profile_qrcode_img" src="%s"' % qr_code_path, string=html)
+    
+
+   
+
+    
