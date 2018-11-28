@@ -4,7 +4,23 @@
     <bookmark url="file://$PROJECT_DIR$/templates/users-window/index.html" line="79" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="" />
+    <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="有以下几点更新：&#10;1、成功对接了搜索引擎端的爬虫模块，使得文章的显示更丰富了。&#10;2、整个web页面风格全变，前端框架不再使用之前的模板，目前只是简单的套用bootstrap的部分基本用法，但加载速度和显示效果较之前稳定了好多。&#10;3、其次，添加了轮播图功能，但目前轮播图是在数据库管理端手动输入参数，还不能实现点选输入参数的快捷，待改进。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20181125_2036.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20181125_2042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20181125_2138.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/LogFile/account_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/engine/LogFile/account_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/LogFile/article_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/engine/LogFile/article_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/carousel_imgs/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cover_imgs/vrKa7f6n4uO2jy9GDFHhA1SXIs0cmN.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +211,7 @@
     <session id="1073276838">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.24" value="2" />
@@ -218,7 +234,7 @@
           <entry key="md" value="512" />
           <entry key="meta" value="1" />
           <entry key="py" value="3865" />
-          <entry key="txt" value="1049" />
+          <entry key="txt" value="1015" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -227,7 +243,7 @@
           <entry key="HTML" value="2665" />
           <entry key="JavaScript" value="24" />
           <entry key="Markdown" value="512" />
-          <entry key="PLAIN_TEXT" value="1050" />
+          <entry key="PLAIN_TEXT" value="1016" />
           <entry key="Python" value="3865" />
         </counts>
       </usages-collector>
@@ -809,14 +825,7 @@
       <option name="project" value="LOCAL" />
       <updated>1543156292105</updated>
     </task>
-    <task id="LOCAL-00013" summary="更新了三大方面，具体可以看README.md文件最新的介绍。">
-      <created>1543229670322</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1543229670322</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -837,7 +846,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.29014844" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.29014844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -876,8 +885,7 @@
     <MESSAGE value="完善了博客文章的作者绑定。" />
     <MESSAGE value="Merge branch 'master' of https://github.com/AmanKingdom/Bee&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="already to pull." />
-    <MESSAGE value="更新了三大方面，具体可以看README.md文件最新的介绍。" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了三大方面，具体可以看README.md文件最新的介绍。" />
+    <option name="LAST_COMMIT_MESSAGE" value="already to pull." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/admin_assets/css/style.css">
