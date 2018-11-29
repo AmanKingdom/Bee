@@ -1,25 +1,30 @@
-<!--article_sort_design.html-->
+<!--article-sort-design.html-->
 {% extends 'manage-window/base.html' %}
 {% load staticfiles %}
-{% block title %}Bee | 数据管理平台{% endblock %}
+{% block title %}Bee | 设计分类{% endblock %}
 
-{% block app_head %}
-    <h3>文章的分类设计</h3>
-    <form action="{% url 'article-sort-design' %}" method="post">
-        {% csrf_token %}
-        {{ industry_form }}
-        <input type="submit" value="创建"/>
-    </form>
+{% block title_block %}
+    文章的分类设计
 {% endblock %}
 
-{% block base_body %}
-    <div>
+{% block body_block %}
+    <form action="{% url 'article-sort-design' %}" method="post" role="form" class="list-group-item form-inline">
+        {% csrf_token %}
+        {{ industry_form }}
+        <input type="submit" value="创建" class="form-control"/>
+    </form>
+    <div  class="list-group-item">
         {% for industry, sub_industrys in industry_dict.items %}
             <ul>
                 <h4>{{ industry }}</h4>
                 {% for sub_industry in sub_industrys %}
                     {% if sub_industry %}
-                        <li class="sub-industry"><div class="control-left">{{ sub_industry }}</div> <div class="control-right"><a href="{% url 'delete-sub-industry' sub_industry %}">删除该子领域</a></div></li>
+                        <li class="sub-industry">
+                            <div class="control-left">{{ sub_industry }}</div>
+                            <div class="control-right">
+                                <a href="{% url 'delete-sub-industry' sub_industry %}">删除该子领域</a>
+                            </div>
+                        </li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -114,3 +114,58 @@ python manage.py crearesuperuser
 点击wechat_article项，打开某一篇你想要放到轮播图上的文章，复制其中的内容到`carousel`的对应
 栏中即可，最后保存，刷新主页即可看到轮播图了。
 
+
+# 2018.11.29前端后台可视化调用爬虫模块
+新增的数据管理平台在BEE主页最底部，目前只有爬虫栏的爬取公众号功能开放。
+
+### 爬虫程序被修改部分：
+
+1、由于Django运行后，项目里所有程序访问其他文件的路径都是从Django根目录出发，
+所以原来爬虫程序的日志文件路径变化如下：
+```python
+    # 爬取文章日志部分
+    # f = open('../LogFile/article_log.log', 'a+')
+    f = open('engine/LogFile/article_log.log', 'a+')
+```
+```python
+    # 爬取公众号日志部分
+    # f = open('../LogFile/account_log.log', 'a+')
+    f = open('engine/LogFile/account_log.log', 'a+')
+```
+
+2、理由同上，原来爬虫程序的访问数据库路径变化如下(目前只修改了爬取公众号函数内的部分)：
+```python
+    # 连接数据库
+    # self.db = sqlite3.connect('../../bee-database.db')
+    self.db = sqlite3.connect('bee-database.db')
+```
+
+3、理由同上，原来爬虫程序爬取公众号头像和二维码的保存路径修改为：
+```python
+    # path_head_portrait = '../../static/head_portraits/'
+    path_head_portrait = 'static/head_portraits/'
+    # path_qr_code = '../../static/qr_codes/'
+    path_qr_code = 'static/qr_codes/'
+```
+
+4、由于公众号信息保存的头像信息应该为完整路径，加上为了前端显示的方便、统一，
+现将头像入库信息由原来的头像文件名称修改为完整路径：
+```python
+    self.cursor.execute(sql, (wechat_id, wechat_name, '/'+path_head_portrait+head_portrait_name, '/'+path_qr_code+qr_code_name))
+```
+
+5、为了在前端能够接受到爬虫程序爬取成功后的信息，现对原程序添加了信息返回：
+```python
+    Log.account_log(u'入库成功')
+    wechat_accounts_list.append({'wechat_id': wechat_id, 'wechat_name': wechat_name})
+    
+    Log.account_log('爬虫已完成任务 ')
+    return wechat_accounts_list
+```
+
+### 爬取公众号的功能介绍：
+1、多个公众号用逗号隔开输入即可；
+
+2、目前仅支持微信号搜索；
+
+3、删除公众号会连着头像、二维码文件也删除。
