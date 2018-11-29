@@ -1,25 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/templates/users-window/index.html" line="79" />
+    <bookmark url="file://$PROJECT_DIR$/templates/users-window/index.html" line="49" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce06e3b5-eb2f-41bd-b6ab-bedf35d29a26" name="Default Changelist" comment="有以下几点更新：&#10;1、成功对接了搜索引擎端的爬虫模块，使得文章的显示更丰富了。&#10;2、整个web页面风格全变，前端框架不再使用之前的模板，目前只是简单的套用bootstrap的部分基本用法，但加载速度和显示效果较之前稳定了好多。&#10;3、其次，添加了轮播图功能，但目前轮播图是在数据库管理端手动输入参数，还不能实现点选输入参数的快捷，待改进。">
+      <change beforePath="$PROJECT_DIR$/.idea/Bee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bee.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20181125_2036.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20181125_2042.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20181125_2138.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/bee-database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bee/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/LogFile/account_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/engine/LogFile/account_log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/LogFile/article_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/engine/LogFile/article_log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/carousel_imgs/me.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/cover_imgs/vrKa7f6n4uO2jy9GDFHhA1SXIs0cmN.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cover_imgs/BqGkycR1e5wPXNU8fjQna42VMzWHSh.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cover_imgs/Wb4508KzcYhf1G9BTLAHtEgakVwRd2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cover_imgs/eVoH6sDRJK2Y1hyQTfp9PWmMn73CGj.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cover_imgs/jrcRn1WhdokeOJuPzTAblGawCxEHqf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/head_portraits/Q6j9gc3loNkTSLbKtEfuWmJ8P0BIOi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/0ByRsCJ91lXoNFaeIAGDrEcbuZiVKO.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/2at97mdErNH68L1lpy3IBzSKqeVQvi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3YytEbCcwDi6j2nNUhmfHpuIeWJogA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3jZzS9nWDKqweCRa8I6EbsM4fVXH5N.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/3mjbTVIS02pu47liaq5o1HzsMdnQgY.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/5JbCWeOYnHyaKiv6xBSLmTdgDsz0jI.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/6MjbwNUfY4Z8ISt3G0Vikv7ydAnHhl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/7MXrei36UqyxnJAFEpcR5Lu1mtBYV9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/7VL3yhIbFZv8xdPwpnRUMWJSQ5c4Kz.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/7abySNKVYtEnGemjF2D6lrqpLZX0Af.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/9RHD3j8aMdoFS5lyw0LWE7rxpGz1Vn.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/AaOQkHhn70pEBSDYcZ81sbXiC3dxw6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/AbMseI1SrUBXQ50wqTyczfCiHtKmY4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/AjnedMUqY8mDkCs1EJBKhri2Z7bOlN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/BHKMuy13YL0sQVZTIzPWJNbdxqF86e.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/CFVcdJjZ9AWiYUzEXHN6y8wtDOP5QT.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/CNRrPoJEMmgfSXlOcTq8KA1v67FaLQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Ci4ExwnQIdN3ky1HzhoArWFavLfMmV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/DJ0OiKAM3Syl2cQrTtkZ8v5nafeHRo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/FDKb4NUIyO6vqkB7eidPu5QMT8Cs2a.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/FsLT3S0ea2cpyikuNgZMU1fE4Cwvqx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/GSWfw6RXstKjkoxr1mBU0OvV8qL5aY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/GpQeUC5W6FS3smTzanhjHdcOxfoLti.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/HX456SLko9mxR7rQOZtw1Mzq2yB8Jv.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/HahMpDqVbw938SNLPmcsI5dZotR0Yk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/IcpExWd8bB1DC96SY4tKVUroRgHiZ3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JQPeqnv5grhtyw7IHK0XxAmjGp3RaY.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JT28bi3XvAqtdo79flnjL41HSUhBPa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JWMnxQAdfsruato6F2YRKqziVBgZ4k.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/JZOySVYWpT8IabKhz9n4QBPwjrCtFA.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/KfLbl1AJgZHCXOYTMdxcuSi7qkRanV.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/LE7znlf8kX12WtU4DTCGm3RPvJrH5j.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/LuhRxa0XqyF8VSsb4jGQ32Old1ZEKm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/NMGPcSjQ0VkembtvUuywgYArWKHnOo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Nm0x8tF9TbJgyqU5HEPesZlrLKQB3v.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/OaCbkVEzLntYjh4xcKqwse1JpSRT6N.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/PkyavifcTUX6RuzY7G9VtQLj8ZW5IH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/QHur7xjEIg8M2P0ZWLzCDS1YoKe9GA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/QJe3DtHnzI5fSmbFKZd1U2oW4AaxgR.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/QfhviR2qobsFjuKdmzHlCTYaUXZ1wr.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/QzUH64uy2dlDZpATaMKowfFvWtRY70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/SIXhawmFEoPQ29fOUGBCs1J43ZAKn5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Sg6uApREO7rawP41X5HNJ0msTciDGy.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/So0HgZT3W6ORUpIzQ7Y9xyPqdfBj8A.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/T3WUqebSL0OrJR2hNwl8sCd9IY51kt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Tm93IUW6qrsg2t5AMwxEPualbnS70L.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/UCKZwc4FpyiNskux8tP6moO35QXRrA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/UHPMErBw7ZjCc6DgYJNdy4sA201xzm.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/UO7gsXGjeRpSNxDch23C59V6HnT8tI.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/VO1FDAu8IjkiZr63RnfJz9HaUbpoxK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Vbm5za9Q7jKfJSnhyeD40plYE6HBIv.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Y97A0Wey4ZBVthN3ozufvrknibwHX1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/YtepxHif7cjz3sb8XugIyr4Em9lVGJ.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/ZTaINvFcM3gQHVCb5mLhlPd9seRXi0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/Zp7Bg2kaG5ciEdCutfhY1leUNo0yIA.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/b5mX8GKjvQWU6dOz7JPghRlVAuDFMn.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bQ9Pwvs6BhUYMZOW7jG31latTKfLqn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bs1ocHC2GABD5VlPe47WXnQ6dkjmvt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/bvO4wqXRD82aQGh6tdBWlyUoezEJFr.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/cLDgwBjym68QNX1qtornfeaITJVAYk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/cLihqIOTdX6uWPrCB9KpgYowAlt8xZ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/cNfSGtMDPaYsLqydrjziQwvB3uROp5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/covpBmwbqGCDU7iIZt6TK49lhXV23H.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/dKVYJotfvbTPe0FEs3G2xShB9Oc4yz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/g7WsMDNYLIUy3cXRa2eV0JtEqjoAzn.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/gTIvxQC4ZSbLEDFJl13jfPeGOqWpi8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/hO2SP0rN1YuXp5FBaATHCfz3cxi6kL.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/hZIuHlm5zdrDJRWvB67X3iyLqQkpVf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/jThUAOvYoGxfDwXVspbLzQcaImu9KH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/jXBsk09ygICi2HKu1rUhAZl4cDS86v.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/jahCOHqomJwLrd9EX6UK7ynRVcz8sf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/k9qSNx2YODiLz6ajHTQfoMcP83IlRg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/l4AZ56EiF1fLDHpgYwS83bTJG2uhUR.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/l6NV8AJjEak2hCZ7onWseOSxDBrM3H.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/lMLNURXkgAoyC5jfTmG0Vxq1FIK8cW.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/lra7Nwq96AmR3Fv8HPgLpJMeSbtzZ1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/mHz0LoBk5ClEybaVO8gGSFiPn1QudT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/nWivGCxIP0bwhSd281zgsuTkANY75M.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/nmN6yX40QYt12uqUzGoIdWEigAPLcJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/o6gZNwYfjTM83ALDxi5OGpnWukKR01.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/obPAOHSKnxvRqasw4XQeYLFEUJ538I.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/pN0EKtlrGj82afzWxwvbM1sD6eT4iA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/qZKQfAC4DkilBNthJXTpxjUSbwMaIO.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/qkH3zS2iMFfwunx91GrBgd0epEQC6U.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/rNhcdbo0OZ2KxG1aL4VftWTPwjHiFz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/rUIY6mkzTq3F7aNi2ScjDQ4sfvXg1O.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/rbPFNuOY9WdTZ4REixlAv5g73MJLak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/sOmo5ATNqdCarRS8KFlItZkz1MV92W.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/ujXA6ZrRhKivLOwgocIC8Y7pmfPbyz.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vBZgKAbIO2cdwlX8NHyu1qprY6LEeW.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vMPk0WoD4LTZqd91RK6iJx72Cgbzen.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vWJAxsQazrjmKHpygItdi39XEZMkeP.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vXjYnG2yWdlK0hSNfMwIgs3rmbCaHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/vmHl1KQWG7f2h5zwECdaPTpJtXLNSR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/xJs7OVpXHKMDZLi84hRfjg2GYTPSqn.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/zJCVc9QSg6bpWx4XvMqyu0rT2ZEGAY.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/wechat_imgs/zqOQgCPliejmsZLnMp9VWK1f5EtNRF.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/article-sort-design.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/article-sort-design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,8 +316,9 @@
     <session id="1073276838">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.29" value="1" />
@@ -222,56 +328,59 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="215" />
-          <entry key="html" value="2665" />
+          <entry key="html" value="2830" />
           <entry key="js" value="24" />
-          <entry key="md" value="512" />
+          <entry key="md" value="693" />
           <entry key="meta" value="1" />
-          <entry key="py" value="3865" />
+          <entry key="py" value="4272" />
           <entry key="txt" value="1015" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="215" />
-          <entry key="HTML" value="2665" />
+          <entry key="HTML" value="2830" />
           <entry key="JavaScript" value="24" />
-          <entry key="Markdown" value="512" />
+          <entry key="Markdown" value="691" />
           <entry key="PLAIN_TEXT" value="1016" />
-          <entry key="Python" value="3865" />
+          <entry key="Python" value="4274" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="app_blogarticle" value="1" />
           <entry key="css" value="7" />
-          <entry key="html" value="72" />
+          <entry key="html" value="74" />
           <entry key="js" value="2" />
-          <entry key="md" value="4" />
-          <entry key="png" value="6" />
-          <entry key="py" value="56" />
+          <entry key="md" value="5" />
+          <entry key="png" value="7" />
+          <entry key="py" value="58" />
           <entry key="pyc" value="1" />
           <entry key="sqlite_sequence" value="1" />
           <entry key="txt" value="3" />
           <entry key="wechat_article" value="17" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
           <entry key="Database Element" value="19" />
-          <entry key="HTML" value="72" />
-          <entry key="Image" value="6" />
+          <entry key="HTML" value="74" />
+          <entry key="Image" value="7" />
           <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="57" />
+          <entry key="Python" value="59" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -298,11 +407,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="120">
+              <caret line="289" column="46" selection-start-line="289" selection-start-column="46" selection-end-line="289" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1543454300305" expanded="true" signature="10975:10976" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -319,7 +432,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="486">
               <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -329,10 +442,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="38" column="98" lean-forward="true" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
+              <folding>
+                <element signature="e#1189#1220#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bee/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="51" column="76" lean-forward="true" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="530" column="35" selection-start-line="530" selection-start-column="35" selection-end-line="530" selection-end-column="35" />
+            <state relative-caret-position="-511">
+              <caret line="511" column="43" lean-forward="true" selection-start-line="511" selection-start-column="43" selection-end-line="511" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -340,8 +474,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="110" column="11" lean-forward="true" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+            <state relative-caret-position="2176">
+              <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -349,24 +483,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
-              <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="515">
-                <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="89">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -440,12 +558,12 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/admin-window/industry_manage.html" />
         <option value="$PROJECT_DIR$/templates/users-window/test.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/footer.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/article_sort_design.html" />
@@ -453,7 +571,6 @@
         <option value="$PROJECT_DIR$/templates/manage-window/base.html" />
         <option value="$PROJECT_DIR$/static/admin_assets/css/style.css" />
         <option value="$PROJECT_DIR$/templates/users-window/blog-page.html" />
-        <option value="$PROJECT_DIR$/templates/manage-window/article-sort-design.html" />
         <option value="$PROJECT_DIR$/templates/users-window/blog-article-page.html" />
         <option value="$PROJECT_DIR$/templates/users-window/temp.html" />
         <option value="$PROJECT_DIR$/templates/users-window/temp2.html" />
@@ -475,7 +592,6 @@
         <option value="$PROJECT_DIR$/templates/users-window/login.html" />
         <option value="$PROJECT_DIR$/templates/users-window/forget-password.html" />
         <option value="$PROJECT_DIR$/templates/users-window/register.html" />
-        <option value="$PROJECT_DIR$/bee/urls.py" />
         <option value="$PROJECT_DIR$/static/assets/js/kindeditor_source/config.js" />
         <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
         <option value="$PROJECT_DIR$/bee/settings.py" />
@@ -491,11 +607,14 @@
         <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
         <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/templates/users-window/base.html" />
-        <option value="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/templates/users-window/index.html" />
+        <option value="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html" />
+        <option value="$PROJECT_DIR$/bee/urls.py" />
+        <option value="$PROJECT_DIR$/templates/manage-window/article-sort-design.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
@@ -523,7 +642,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -534,12 +652,45 @@
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="bee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Wechat_SQLite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="manage-window" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,19 +701,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Bee" />
-      <recent name="H:\Bee\spider\Wechat_SQLite" />
-      <recent name="H:\bee\static\admin_assets\img" />
-      <recent name="H:\bee\templates\manage-window" />
-      <recent name="H:\bee" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Bee\spider\Wechat_SQLite" />
       <recent name="H:\bee" />
       <recent name="H:\bee\static\admin_assets" />
       <recent name="H:\bee\templates" />
       <recent name="H:\bee\static\assets\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Bee" />
+      <recent name="H:\Bee\spider\Wechat_SQLite" />
+      <recent name="H:\bee\static\admin_assets\img" />
+      <recent name="H:\bee\templates\manage-window" />
+      <recent name="H:\bee" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -839,20 +990,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.15681234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814814" visible="true" weight="0.16066837" />
       <window_info id="Structure" order="1" sideWeight="0.50185186" side_tool="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.29014844" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.24021593" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.31443995" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.048582997" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.0" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012854" side_tool="true" weight="0.5303644" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.30634278" />
@@ -867,6 +1017,42 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -888,20 +1074,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="already to pull." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/admin_assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="3640" column="14" lean-forward="true" selection-start-line="3640" selection-start-column="14" selection-end-line="3640" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/user-information.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/Wechat_SQLite/search_sqlite.py" />
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-collections.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -977,13 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bee/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1046,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/database_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3064" />
@@ -1062,9 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1609">
           <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#304#313#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,9 +1247,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="486">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -1109,6 +1271,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/head_portraits/tL9I16jRS4Qf7B8ovHpMhrYUOPnlDz.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="487">
+            <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1116,52 +1298,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://01692db7-c0af-4fea-8a25-7913008dcdfa/schema/main/table/wechat_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="38" column="98" lean-forward="true" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
+          <folding>
+            <element signature="e#1189#1220#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bee/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="51" column="76" lean-forward="true" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="530" column="35" selection-start-line="530" selection-start-column="35" selection-end-line="530" selection-end-column="35" />
+        <state relative-caret-position="-511">
+          <caret line="511" column="43" lean-forward="true" selection-start-line="511" selection-start-column="43" selection-end-line="511" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="110" column="11" lean-forward="true" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="289" column="46" selection-start-line="289" selection-start-column="46" selection-end-line="289" selection-end-column="46" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1543454300305" expanded="true" signature="10975:10976" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="515">
-            <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

@@ -10,6 +10,9 @@ from engine.Wechat_SQLite.search_sqlite import Search
 import datetime
 
 # 主页
+from engine.Wechat_SQLite.spider_sqlite import *
+
+
 def homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
@@ -25,6 +28,8 @@ def homepage(request):
     carousel = Carousel.objects.all()
     # 需要用到轮播图的数量
     carousel_len = [x for x in range(0, len(carousel))]
+    if len(carousel) is 0:
+        carousel = None
 
     now = datetime.datetime.now()
 
@@ -227,6 +232,9 @@ def forget_password(request):
     request.session['user_id'] = None
     return render(request, 'users-window/forget-password.html', locals())
 
+
+
+
 # 后台用户管理界面的显示方法
 def manage(request):
     return render(request, 'manage-window/index.html', locals())
@@ -257,3 +265,36 @@ def get_industry_dict():
 def sub_industry_delete(request, sub_industry_name):
     Industry.objects.filter(sub_industry_name=sub_industry_name).delete()
     return HttpResponseRedirect('/manage/article-sort-design/')
+
+def crawl_articles(request):
+    return render(request, 'manage-window/crawl.html', locals())
+
+def crawl_wechat_accounts(request):
+    wechat_accounts = WechatAccount.objects.all()
+    wechat_id = None
+
+    if request.method == 'POST':
+        wechat_id_dict = request.POST
+        print(wechat_id_dict)
+        wechat_id = wechat_id_dict['wechat-account-id']
+        print('接收到微信号：', wechat_id)
+
+    if wechat_id is not None:
+        wechat_ids = []
+        wechat_ids.append(wechat_id)
+        wechat_account_info = AccountSpider(wechat_ids).get_account_infos()
+        print('爬取的公众号为：', wechat_account_info)
+    return render(request, 'manage-window/crawl-wechat-accounts.html', locals())
+
+def delete_wechat_account(request, wechat_id):
+    # 需要连着头像一起删除，这里[1:]的意思是去掉开头的'/'，这样才能找到对的路径
+    head_portrait = WechatAccount.objects.get(wechat_id=wechat_id).head_portrait[1:]
+    print('删除的头像路径为', head_portrait)
+    if os.path.exists(head_portrait):
+        os.remove(head_portrait)
+        print('成功删除路径为', head_portrait, '的头像。')
+        # os.unlink(my_file)
+    else:
+        print('头像文件不存在，不需要删除。')
+    WechatAccount.objects.filter(wechat_id=wechat_id).delete()
+    return HttpResponseRedirect('/manage/crawl-wechat-accounts/')

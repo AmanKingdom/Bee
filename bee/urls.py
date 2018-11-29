@@ -46,7 +46,10 @@ urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
 
-    url(r'^manage/$', manage),
+    url(r'^manage/$', manage, name='manage'),
     url(r'^manage/article-sort-design/$', article_sort_design, name='article-sort-design'),
     url(r'^manage/delete-sub-industry/(.*?)/$', sub_industry_delete, name='delete-sub-industry'),
+    url(r'^manage/crawl-articles/$', crawl_articles, name='crawl-articles'),
+    url(r'^manage/crawl-wechat-accounts/$', crawl_wechat_accounts, name='crawl-wechat-accounts'),
+    url(r'^manage/delete-wechat-account/(.*?)/$', delete_wechat_account, name='delete-wechat-account'),
 ]

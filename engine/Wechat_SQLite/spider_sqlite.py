@@ -19,7 +19,8 @@ class Log:
         :param msg: 日志信息
         :return:
         '''
-        f = open('../LogFile/article_log.log', 'a+')
+        # f = open('../LogFile/article_log.log', 'a+')
+        f = open('engine/LogFile/article_log.log', 'a+')
         print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.close()
@@ -30,7 +31,8 @@ class Log:
         :param msg: 日志信息
         :return:
         '''
-        f = open('../LogFile/account_log.log', 'a+')
+        # f = open('../LogFile/account_log.log', 'a+')
+        f = open('engine/LogFile/account_log.log', 'a+')
         print(u'%s: %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.write(u'%s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'), msg))
         f.close()
@@ -442,11 +444,14 @@ class AccountSpider:
         self.session = requests.Session()
 
         # 连接数据库
-        self.db = sqlite3.connect('../../bee-database.db')
+        # self.db = sqlite3.connect('../../bee-database.db')
+        self.db = sqlite3.connect('bee-database.db')
         self.cursor = self.db.cursor()
 
 
     def get_account_infos(self):
+        wechat_accounts_list = []
+        print(self.wechat_ids)
 
         Log.account_log('正在爬取公众号信息。。。')
         for wechat_id in self.wechat_ids:
@@ -500,7 +505,8 @@ class AccountSpider:
                 head_portrait_url = account('img').attr('src')
                 Log.account_log(u'头像url：%s' % head_portrait_url)
 
-                path = '../../static/head_portraits/'
+                # path = '../../static/head_portraits/'
+                path = 'static/head_portraits/'
                 ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
 
                 img_name = ran_str + '.png'
@@ -515,27 +521,29 @@ class AccountSpider:
                 sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait) values(?, ?, ?)'
 
                 try:
-                    self.cursor.execute(sql, (wechat_id, wechat_name, img_name))
+                    self.cursor.execute(sql, (wechat_id, wechat_name, '/' + path + img_name))
                     self.db.commit()
-                    Log.account_log(u'入库成功')
+                    Log.account_log(u'数据库信息入库成功')
+                    wechat_accounts_list.append({'wechat_id': wechat_id, 'wechat_name': wechat_name})
 
                     # 只有入库成功才下载到本地
                     fp = open(path + img_name, 'wb')
                     fp.write(data.content)
                     fp.close()
+
                 except:
                     self.db.rollback()
-                    Log.account_log(u'入库不成功')
+                    Log.account_log(u'头像图片入库不成功')
 
         print('\n')
         Log.account_log('爬虫已完成任务 ')
-
+        return wechat_accounts_list
 
 if __name__ == '__main__':
 
     ids = ['chaping321', 'dglgtw', 'one', 'two', 'four', 'five']
     # wechat_ids = ['dglgtw', 'guanqingluntan', 'dutsmc', 'TNTstreetdance', 'DGUT_GGCY', 'dgutxn', 'ggxshwlb', 'ggrpfamily', 'dgutkob', 'dgutzb', 'dgutpx', 'guangongkexie', 'dgutgreen', 'yinzytravel', 'DGUTTKD', 'wailianjiating', 'ggsfxh', 'gh_93ff0d749e07', 'dgutnic', 'ggdxskjcxxx', 'ggdzzyz', 'dgutsyxh', 'dgutsy']
-    wechat_ids = ['dglgtw']
+    wechat_ids = ['dglgtw', 'dglgxyxsh']
 
     AccountSpider(wechat_ids).get_account_infos()
     ArticleSpider(wechat_ids).get_infos()

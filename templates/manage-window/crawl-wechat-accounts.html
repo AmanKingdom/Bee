@@ -4,14 +4,17 @@
 
 {% block crawl_body %}
     <br>
-    <form role="form" class="form-inline" method="get" action="{% url 'crawl-wechat-accounts' %}">
+    <form role="form" class="form-inline" method="post" action="{% url 'crawl-wechat-accounts' %}">
+        {% csrf_token %}
         <label for="wechat-account-id">公众号id：</label>
         <input id="wechat-account-id" name="wechat-account-id" class="form-control" type="text" placeholder="请输入公众号对应的微信号">
         <button class="form-control" type="submit">查询并爬取</button>
     </form>
     <br>
     {% if wechat_account_info %}
-        <p>已爬取微信公众号：{{ wechat_account_info.wechat_id }}，名称为：{{ wechat_account_info.wechat_name }}。</p>
+        {% for item in wechat_account_info %}
+            <p>已爬取微信公众号：{{ item.wechat_id }}，名称为：{{ item.wechat_name }}。</p>
+        {% endfor %}
     {% endif %}
     <hr>
     {% if wechat_accounts %}
@@ -19,19 +22,21 @@
             {#        <caption>已爬取公众号</caption>#}
             <thead>
             <tr>
+                <th>公众号头像</th>
                 <th>公众号微信号</th>
                 <th>公众号名称</th>
                 <th>公众号头像路径</th>
-                <th>公众号头像</th>
+                <th>管理</th>
             </tr>
             </thead>
             <tbody>
             {% for item in wechat_accounts %}
                 <tr>
+                    <td><img src="{{ item.head_portrait }}" style="width:60px;height:60px;"/> </td>
                     <td>{{ item.wechat_id }}</td>
                     <td>{{ item.wechat_name }}</td>
                     <td>{{ item.head_portrait }}</td>
-                    <td><img src="{% static item.head_portrait %}"/> </td>
+                    <td><a href="{% url 'delete-wechat-account' item.wechat_id %}">删除该公众号</a></td>
                 </tr>
             {% endfor %}
             </tbody>
