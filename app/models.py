@@ -46,6 +46,8 @@ class WechatAccount(models.Model):
     wechat_name = models.CharField(max_length=50)
     # 公众号头像图片路径
     head_portrait = models.CharField(max_length=100)
+    # 公众号二维码图片路径
+    qr_code = models.CharField(max_length=100)
 
     def __str__(self):
         return u'公众号id：%s  |  公众号名称：%s ' % (self.wechat_id, self.wechat_name)
