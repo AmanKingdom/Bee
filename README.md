@@ -115,7 +115,7 @@ python manage.py crearesuperuser
 栏中即可，最后保存，刷新主页即可看到轮播图了。
 
 
-# 2018.11.28前端后台可视化调用爬虫模块
+# 2018.11.29前端后台可视化调用爬虫模块
 新增的数据管理平台在BEE主页最底部，目前只有爬虫栏的爬取公众号功能开放。
 
 ### 爬虫程序被修改部分：
@@ -140,28 +140,32 @@ python manage.py crearesuperuser
     self.db = sqlite3.connect('bee-database.db')
 ```
 
-3、理由同上，原来爬虫程序爬取公众号头像的保存路径修改为：
+3、理由同上，原来爬虫程序爬取公众号头像和二维码的保存路径修改为：
 ```python
-    # path = '../../static/head_portraits/'
-    path = 'static/head_portraits/'
+    # path_head_portrait = '../../static/head_portraits/'
+    path_head_portrait = 'static/head_portraits/'
+    # path_qr_code = '../../static/qr_codes/'
+    path_qr_code = 'static/qr_codes/'
 ```
 
 4、由于公众号信息保存的头像信息应该为完整路径，加上为了前端显示的方便、统一，
 现将头像入库信息由原来的头像文件名称修改为完整路径：
 ```python
-    self.cursor.execute(sql, (wechat_id, wechat_name, '/' + path + img_name))
+    self.cursor.execute(sql, (wechat_id, wechat_name, '/'+path_head_portrait+head_portrait_name, '/'+path_qr_code+qr_code_name))
 ```
 
 5、为了在前端能够接受到爬虫程序爬取成功后的信息，现对原程序添加了信息返回：
 ```python
-    Log.account_log(u'数据库信息入库成功')
+    Log.account_log(u'入库成功')
     wechat_accounts_list.append({'wechat_id': wechat_id, 'wechat_name': wechat_name})
+    
+    Log.account_log('爬虫已完成任务 ')
+    return wechat_accounts_list
 ```
 
 ### 爬取公众号的功能介绍：
-1、目前只能一个一个公众号地输入、爬取；
+1、多个公众号用逗号隔开输入即可；
 
 2、目前仅支持微信号搜索；
 
-3、删除公众号会连着头像也删除。
-
+3、删除公众号会连着头像、二维码文件也删除。

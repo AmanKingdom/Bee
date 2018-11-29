@@ -515,11 +515,11 @@ class AccountSpider:
                 qr_code_url = 'http://mp.weixin.qq.com' + temp_url
                 Log.account_log(u'二维码url：%s' % qr_code_url)
 
-                path_head_portrait = '../../static/head_portraits/'
-                path_qr_code = '../../static/qr_codes/'
+                # path_head_portrait = '../../static/head_portraits/'
+                path_head_portrait = 'static/head_portraits/'
+                # path_qr_code = '../../static/qr_codes/'
+                path_qr_code = 'static/qr_codes/'
 
-                # path = '../../static/head_portraits/'
-                path = 'static/head_portraits/'
                 ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
                 head_portrait_name = ran_str + '.png'
                 ran_str = (''.join(random.sample(string.ascii_letters + string.digits, 30)))
@@ -536,10 +536,9 @@ class AccountSpider:
                 sql = 'INSERT INTO wechat_account(wechat_id, wechat_name, head_portrait, qr_code) values(?, ?, ?, ?)'
 
                 try:
-                    self.cursor.execute(sql, (wechat_id, wechat_name, head_portrait_name, qr_code_name))
-                    self.cursor.execute(sql, (wechat_id, wechat_name, '/' + path + img_name))
+                    self.cursor.execute(sql, (wechat_id, wechat_name, '/'+path_head_portrait+head_portrait_name, '/'+path_qr_code+qr_code_name))
                     self.db.commit()
-                    Log.account_log(u'数据库信息入库成功')
+                    Log.account_log(u'入库成功')
                     wechat_accounts_list.append({'wechat_id': wechat_id, 'wechat_name': wechat_name})
 
                     # 只有入库成功才下载到本地
@@ -553,7 +552,7 @@ class AccountSpider:
 
                 except:
                     self.db.rollback()
-                    Log.account_log(u'头像图片入库不成功')
+                    Log.account_log(u'入库不成功')
 
         print('\n')
         Log.account_log('爬虫已完成任务 ')

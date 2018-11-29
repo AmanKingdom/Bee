@@ -31,9 +31,9 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
+                    <li><a href="{% url 'crawl-wechat-accounts' %}">爬爬爬</a> </li>
                     <li><a href="{% url 'article-sort-design' %}">设计分类</a></li>
                     <li><a href="#">管理轮播图</a></li>
-                    <li><a href="{% url 'crawl-wechat-accounts' %}">爬文章</a> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if user_id %}

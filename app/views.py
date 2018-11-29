@@ -271,30 +271,32 @@ def crawl_articles(request):
 
 def crawl_wechat_accounts(request):
     wechat_accounts = WechatAccount.objects.all()
-    wechat_id = None
+    wechat_ids = []
 
     if request.method == 'POST':
         wechat_id_dict = request.POST
-        print(wechat_id_dict)
-        wechat_id = wechat_id_dict['wechat-account-id']
-        print('接收到微信号：', wechat_id)
+        print('接收到前端的原始数据：', wechat_id_dict)
+        # 以逗号为分割符分割该字符串
+        wechat_ids = str(wechat_id_dict['wechat-account-id']).split(',')
+        if wechat_ids is not None:
+            print('分割后的数据列表：', wechat_ids)
 
-    if wechat_id is not None:
-        wechat_ids = []
-        wechat_ids.append(wechat_id)
-        wechat_account_info = AccountSpider(wechat_ids).get_account_infos()
-        print('爬取的公众号为：', wechat_account_info)
+            wechat_account_info = AccountSpider(wechat_ids).get_account_infos()
+            print('爬取成功的公众号为：', wechat_account_info)
     return render(request, 'manage-window/crawl-wechat-accounts.html', locals())
 
 def delete_wechat_account(request, wechat_id):
     # 需要连着头像一起删除，这里[1:]的意思是去掉开头的'/'，这样才能找到对的路径
-    head_portrait = WechatAccount.objects.get(wechat_id=wechat_id).head_portrait[1:]
+    account = WechatAccount.objects.get(wechat_id=wechat_id)
+    head_portrait = account.head_portrait[1:]
+    qr_code = account.qr_code[1:]
     print('删除的头像路径为', head_portrait)
     if os.path.exists(head_portrait):
         os.remove(head_portrait)
-        print('成功删除路径为', head_portrait, '的头像。')
-        # os.unlink(my_file)
+        os.remove(qr_code)
+        print('成功删除路径为', head_portrait, '的头像和路径为', qr_code, '的二维码。')
+        # os.unlink(my_file)    # <——也可以用这个语句删除
     else:
-        print('头像文件不存在，不需要删除。')
+        print('文件不存在，不需要删除。')
     WechatAccount.objects.filter(wechat_id=wechat_id).delete()
     return HttpResponseRedirect('/manage/crawl-wechat-accounts/')

@@ -8,7 +8,8 @@
         {% csrf_token %}
         <label for="wechat-account-id">公众号id：</label>
         <input id="wechat-account-id" name="wechat-account-id" class="form-control" type="text" placeholder="请输入公众号对应的微信号">
-        <button class="form-control" type="submit">查询并爬取</button>
+        <button class="form-control" type="submit">查询获取</button>
+        <small>(多个微信号请用逗号(英文字符)隔开)</small>
     </form>
     <br>
     {% if wechat_account_info %}
@@ -18,24 +19,28 @@
     {% endif %}
     <hr>
     {% if wechat_accounts %}
-        <table class="table">
+        <table class="table" style="table-layout:fixed;word-break:break-all;">
             {#        <caption>已爬取公众号</caption>#}
             <thead>
             <tr>
                 <th>公众号头像</th>
+                <th>公众号二维码</th>
                 <th>公众号微信号</th>
                 <th>公众号名称</th>
                 <th>公众号头像路径</th>
+                <th>公众号二维码路径</th>
                 <th>管理</th>
             </tr>
             </thead>
             <tbody>
             {% for item in wechat_accounts %}
                 <tr>
-                    <td><img src="{{ item.head_portrait }}" style="width:60px;height:60px;"/> </td>
+                    <td><img src="{{ item.head_portrait }}" style="width:80px;height:80px;"/> </td>
+                    <td><img src="{{ item.qr_code }}" style="width:80px;height:80px;"/> </td>
                     <td>{{ item.wechat_id }}</td>
                     <td>{{ item.wechat_name }}</td>
                     <td>{{ item.head_portrait }}</td>
+                    <td>{{ item.qr_code }}</td>
                     <td><a href="{% url 'delete-wechat-account' item.wechat_id %}">删除该公众号</a></td>
                 </tr>
             {% endfor %}
