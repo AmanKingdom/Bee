@@ -1,0 +1,75 @@
+<!--crawl-wechat-articles.html-->
+{% extends 'manage-window/crawl.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+    <ul class="nav nav-tabs">
+        <li><a href="{% url 'crawl-wechat-accounts' %}">爬取公众号</a></li>
+        <li><a href="{% url 'show-wechat-articles' %}">已爬文章</a></li>
+        <li class="active"><a href="{% url 'crawl-articles' %}">爬取文章</a></li>
+    </ul>
+    <br>
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <form role="form" method="post" action="{% url 'crawl-articles' %}" class="form-inline">
+                {% csrf_token %}
+                <label>请选择要爬取的公众号:</label>
+                <select multiple="multiple" class="form-control" name="selected_accounts" id="selected_accounts" style="width: 50%;">
+                    {% for item in accounts %}
+                        <option id="{{ item.wechat_id }}" value="{{ item.wechat_id }}">{{ item.wechat_name }}</option>
+                    {% endfor %}
+                </select>
+                <button class="form-control" type="submit">爬取</button>
+                <small>(按住ctrl键可多选)</small>
+            </form>
+
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form role="form" method="post" action="{% url 'crawl-wechat-articles' 'all' %}" class="form-inline">
+                {% csrf_token %}
+                <button class="form-control" type="submit">一键爬取所有库存公众号的文章</button>
+            </form>
+        </div>
+    </div>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    {% if wechat_articles %}
+        <hr>
+        <h5>已爬取文章：</h5>
+        <table class="table" style="table-layout:fixed;word-break:break-all;">
+            <thead>
+            <tr>
+                <th>文章ID</th>
+                <th>文章封面图</th>
+                <th>文章标题</th>
+                <th>来自公众号</th>
+                <th>发表时间</th>
+                <th>文章图片数量</th>
+                <th>文章文字数量</th>
+                <th>文章视频数量</th>
+                <th>文章音频数量</th>
+                <th>管理</th>
+            </tr>
+            </thead>
+            {% for item in wechat_articles %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td><img src="{{ item.cover_img }}" style="width:80px;"/> </td>
+                    <td>{{ item.article_title }}</td>
+                    <td>{{ item.wechat.wechat_name }}</td>
+                    <td>{{ item.publish_date }}</td>
+                    <td>{{ item.img_amount }}</td>
+                    <td>{{ item.word_amount }}</td>
+                    <td>{{ item.video_amount }}</td>
+                    <td>{{ item.audio_amount }}</td>
+                    <td>
+                        <a href="{% url 'delete-wechat-article' item.id %}">删除该文章</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1 class="text-center">数据库里还没有爬取的文章</h1>
+    {% endif %}
+{% endblock %}

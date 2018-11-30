@@ -1,0 +1,32 @@
+{% extends "users-window/base.html" %}
+{% block title %}BEE | 注册{% endblock %}
+{% block base_body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-10 col-md-offset-4 col-sm-offset-4 col-xs-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center panel-title">注册您的BEE账户</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" role="form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {{ register_user.as_p }}
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="submit" align="center" value="注册"/><br>
+                            </div>
+                            {% if feedback_message %}
+                                <div class="form-group">
+                                    <font color="red">{{ feedback_message }}</font>
+                                </div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#                <form action="." method="post">#}
+{% endblock %}
