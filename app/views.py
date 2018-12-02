@@ -17,7 +17,7 @@ def homepage(request):
     wechat_articles = WeChatArticle.objects.all()[0:15]
 
     # 轮播图
-    carousel = Carousel.objects.all()
+    carousel = Carousel.objects.all().order_by('number')
     # 需要用到轮播图的数量
     carousel_len = [x for x in range(0, len(carousel))]
     if len(carousel) is 0:
@@ -343,3 +343,56 @@ def delete_wechat_article(request, article_id):
 def show_wechat_articles(request):
     wechat_articles = WeChatArticle.objects.all()
     return render(request, 'manage-window/show-wechat-articles.html', locals())
+
+def manage_carousel(request):
+    current_carousels = Carousel.objects.all().order_by('number')
+    wechat_articles = WeChatArticle.objects.all()
+    return render(request, 'manage-window/manage-carousel.html', locals())
+
+def add_wechat_article_to_carousel(request, article_id):
+    wechat_article = WeChatArticle.objects.get(id=article_id)
+    carousel_len = len(Carousel.objects.all())
+    print('目前轮播图的个数为：', carousel_len)
+    Carousel.objects.create(img_url=wechat_article.cover_img, title=wechat_article.article_title, article_url=wechat_article.id, alt=wechat_article.article_title, number=carousel_len)
+    return HttpResponseRedirect('/manage/manage-carousel/')
+
+def delete_carousel(request, id):
+    number = Carousel.objects.get(id=id).number
+    Carousel.objects.filter(id=id).delete()
+    carousel_list = Carousel.objects.all().order_by('number')
+    for i in carousel_list:
+        print('取出的轮播对象的序号：', i.number)
+        if i.number > number:
+            Carousel.objects.filter(id=i.id).update(number=(i.number-1))
+
+    return HttpResponseRedirect('/manage/manage-carousel/')
+
+def carousel_up(request, number):
+    number = int(number)
+    print('上移的轮播图序号：', number)
+    if number == 0:
+        return HttpResponseRedirect('/manage/manage-carousel/')
+    elif number > 0:
+        # 要上移的对象
+        up_carousel = Carousel.objects.get(number=number)
+        # 和要上移对象的上一个对象交换序号
+        Carousel.objects.filter(number=(number-1)).update(number=number)
+        Carousel.objects.filter(id=up_carousel.id).update(number=(number-1))
+    else:
+        print('轮播图的序号number为负数？')
+    return HttpResponseRedirect('/manage/manage-carousel/')
+
+def carousel_down(request, number):
+    number = int(number)
+    print('下移的轮播图序号：', number)
+    if number == len(Carousel.objects.all()):
+        return HttpResponseRedirect('/manage/manage-carousel/')
+    elif number >= 0:
+        # 要下移的对象
+        down_carousel = Carousel.objects.get(number=number)
+        # 和要下移对象的下一个对象交换序号
+        Carousel.objects.filter(number=(number + 1)).update(number=number)
+        Carousel.objects.filter(id=down_carousel.id).update(number=(number + 1))
+    else:
+        print('number为负数？')
+    return HttpResponseRedirect('/manage/manage-carousel/')

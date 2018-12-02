@@ -1,0 +1,91 @@
+<!--crawl.html-->
+{% extends 'manage-window/base.html' %}
+{% load staticfiles %}
+{% block title %}Bee | 轮播图管理{% endblock %}
+
+{% block title_block %}
+    管理轮播图
+{% endblock %}
+
+{% block body_block %}
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            {% if current_carousels %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">当前轮播图列表</h5>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" style="table-layout:fixed;word-break:break-all;">
+                            <thead>
+                            <tr>
+                                <th>轮播图序号</th>
+                                <th>轮播图id</th>
+                                <th>轮播图图片</th>
+                                <th>轮播图标题</th>
+                                <th>轮播图描述</th>
+                            </tr>
+                            </thead>
+                            {% for item in current_carousels %}
+                                <tr>
+                                    <td>{{ item.number }}</td>
+                                    <td>{{ item.id }}</td>
+                                    <td><img src="{{ item.img_url }}" style="width:100%;"/> </td>
+                                    <td>{{ item.title }}</td>
+                                    <td>{{ item.alt }}</td>
+                                    <td>
+                                        <a href="{% url 'delete-carousel' item.id %}">删除该轮播图</a><br>
+                                        <a href="{% url 'carousel-up' item.number %}">上移</a><br>
+                                        <a href="{% url 'carousel-down' item.number %}">下移</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            {% else %}
+                <h1 class="text-center">还没有添加轮播图呢，赶紧选择一篇文章添加到轮播大图。</h1>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            {% if wechat_articles %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">数据库现有文章</h5>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" style="table-layout:fixed;word-break:break-all;">
+                            <thead>
+                            <tr>
+                                <th>文章ID</th>
+                                <th>文章封面图</th>
+                                <th>文章标题</th>
+                                <th>发表时间</th>
+                                <th>来自公众号</th>
+                                <th>管理</th>
+                            </tr>
+                            </thead>
+                            {% for item in wechat_articles %}
+                                <tr>
+                                    <td>{{ item.id }}</td>
+                                    <td><img src="{{ item.cover_img }}" style="width:100%;"/> </td>
+                                    <td>{{ item.article_title }}</td>
+                                    <td>{{ item.publish_date }}</td>
+                                    <td>{{ item.wechat.wechat_name }}</td>
+                                    <td>
+                                        <a href="{% url 'add-wechat-article-to-carousel' item.id %}">添加到轮播图</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            {% else %}
+                <h1 class="text-center">数据库里还没有爬取的文章，你可以先去爬取文章再来添加轮播图。</h1>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
