@@ -1,6 +1,6 @@
 from django import forms
 
-from app.models import User, BlogArticle, WeChatArticle, Industry
+from app.models import User, WeChatArticle, Industry, BlogArticle
 
 
 class UserRegisterForm(forms.ModelForm):
@@ -61,17 +61,18 @@ class UserForm(forms.ModelForm):
 class BlogArticleForm(forms.ModelForm):
     class Meta:
         model = BlogArticle
-        fields = '__all__'
-        exclude = ['publish_date', 'author']
+        fields = ['cover_img', 'article_title', 'article_html']
         widgets = {
+            'cover_img': forms.TextInput(attrs={'class': 'form-control'}),
             'article_title': forms.TextInput(attrs={'class': "form-control", 'placeholder': "请输入文章大标题"}),
-            'article_content': forms.TextInput(attrs={'class': "form-control"}),
+            'article_html': forms.TextInput(attrs={'class': "form-control"}),
         }
 
     def __init__(self, *args, **kwargs):
         super(BlogArticleForm, self).__init__(*args, **kwargs)
         self.fields['article_title'].label = '文章标题'
-        self.fields['article_content'].label = '文章内容'
+        self.fields['article_html'].label = '文章内容'
+        self.fields['cover_img'].label = '请添加文章封面图'
 
 
 class WeChatArticleForm(forms.ModelForm):

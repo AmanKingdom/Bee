@@ -14,10 +14,14 @@
                     </div><hr>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            {{ blog_article.article_content | safe }}
+                            {{ blog_article.article_html | safe }}
                         </div>
                     </div>
-
+                    <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p>浏览次数：{{ blog_article.browsed_times }}</p>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

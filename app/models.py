@@ -58,6 +58,7 @@ class WeChatArticle(models.Model):
         # 自定义生成的数据库表名,如果不这样用，系统会默认生成app_wechatarticle的
         db_table = 'wechat_article'
         unique_together = ('publish_date', 'article_title',)
+        ordering = ('-publish_date',)
 
     # 文章id在Django的models中是自动生成的，所以就不写上了
 
@@ -94,13 +95,27 @@ class BlogArticle(models.Model):
         ordering = ('-publish_date',)
 
     # 标题
-    article_title = models.CharField(max_length=100, unique=True)
+    article_title = models.CharField(max_length=100)
     # 文章内容
     article_content = models.TextField(null=False)
     # 发表时间
     publish_date = models.DateTimeField(default=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     # 作者
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
+    # 文章封面图片链接，一个
+    cover_img = models.TextField()
+    # 文章HTML代码
+    article_html = models.TextField()
+    # 文章图片数量
+    img_amount = models.IntegerField(default=0)
+    # 文章文字数量
+    word_amount = models.IntegerField(default=0)
+    # 文章视频数量
+    video_amount = models.IntegerField(default=0)
+    # 文章音频数量
+    audio_amount = models.IntegerField(default=0)
+    # 被浏览次数
+    browsed_times = models.IntegerField(default=0)
 
     def __str__(self):
         return self.article_title

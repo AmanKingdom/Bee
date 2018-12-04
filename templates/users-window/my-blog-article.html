@@ -7,7 +7,7 @@
                 <li class="list-group-item">
                     <h4><a href="{% url 'my-blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
                     <div class="text-right">
-                        <a href="{% url 'delete-blog-article' article.article_title %}">删除该文章</a>
+                        <a href="{% url 'delete-blog-article' article.id %}">删除该文章</a>
                     </div>
                 </li>
             {% endfor %}
