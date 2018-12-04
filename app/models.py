@@ -111,9 +111,11 @@ class Carousel(models.Model):
     # 标题，记得在后台管理时选择对应的微信文章标题就行
     title = models.CharField(max_length=30)
     # 文章的链接
-    article_url = models.TextField()
+    article_url = models.IntegerField()
     # 图片描述
     alt = models.TextField(null=True, blank=True)
+    # 轮播图序号
+    number = models.IntegerField(default=0)
 
     def __str__(self):
         return u'图片链接：%s   文章标题：%s ' % (self.img_url, self.title)

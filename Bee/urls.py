@@ -58,4 +58,10 @@ urlpatterns = [
     url(r'^manage/crawl-articles/$', crawl_articles, name='crawl-articles'),
     url(r'^manage/crawl-wechat-articles/(.*?)/$', crawl_wechat_articles, name='crawl-wechat-articles'),
     url(r'^manage/delete-wechat-article/(.*?)/$', delete_wechat_article, name='delete-wechat-article'),
+
+    url(r'^manage/manage-carousel/$', manage_carousel, name='manage-carousel'),
+    url(r'^manage/add-wechat-article-to-carousel/(.*?)/$', add_wechat_article_to_carousel, name='add-wechat-article-to-carousel'),
+    url(r'^manage/delete-carousel/(.*?)/$', delete_carousel, name='delete-carousel'),
+    url(r'^manage/carousel-up/(.*?)/$', carousel_up, name='carousel-up'),
+    url(r'^manage/carousel-down/(.*?)/$', carousel_down, name='carousel-down'),
 ]
