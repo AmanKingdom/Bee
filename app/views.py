@@ -1,6 +1,3 @@
-import os
-import re
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from app.forms import *
@@ -14,7 +11,10 @@ def homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
     blog_articles = BlogArticle.objects.all()
-    wechat_articles = WeChatArticle.objects.all()[0:15]
+    wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')[0:15]
+
+    # 十大校园组织的文章
+    ten_organzations = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')[0:13]
 
     # 轮播图
     carousel = Carousel.objects.all().order_by('number')
@@ -34,6 +34,8 @@ def homepage(request):
 def show_public_blog_article_content(request, article_id):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
+    blog_article = BlogArticle.objects.get(id=int(article_id))
+    BlogArticle.objects.filter(id=int(article_id)).update(browsed_times=blog_article.browsed_times+1)
     blog_article = BlogArticle.objects.get(id=int(article_id))
     return render(request, 'users-window/public-blog-article-content.html', locals())
 
@@ -131,38 +133,75 @@ def my_fans(request):
         return HttpResponseRedirect('/login/')
     return render(request, 'users-window/my-fans.html', locals())
 
+def check_blog_article(content):
+    print('接收到文章具体内容content：', content)
+    similarity = duplicate_check(content)
+    print('相似度为：', similarity)
+    if similarity > 0.6:
+        return {'error': False, 'similarity': similarity, 'pass': False}
+    elif (similarity <= 0.6) and (similarity >= 0):
+        return {'error': False, 'similarity': similarity, 'pass': True}
+    else:
+        return {'error': True, 'similarity': similarity, 'pass': False}
+
+# 替换这个函数即可，这个函数返回相似度######
+def duplicate_check(content):
+    return 0
+# ##########################################
+
 # 用户登录后的博客文章创作页面的显示方法
 def write_blog_article(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
         article_form = BlogArticleForm()
+        message = None
         if request.method == 'POST':
             print("博客文章提交了,方式为POST。")
 
             article_form = BlogArticleForm(request.POST)
             if article_form.is_valid():
-                article_content = article_form.data.get('article_content')
-                # flag可以用来标记是否有视频存在，还可以标记有多少个视频
-                flag = 0
-                if '<embed' in article_content:
+
+                cover_img_html = article_form.data.get('cover_img')
+                cover_img = re.findall('<img src="(.*?)"', cover_img_html, re.S)
+                print('获取到的封面图路径：', cover_img)
+
+                article_html = article_form.data.get('article_html')
+                print('博客文章HTML代码：', article_html)
+
+                # ################################
+                message = check_blog_article(article_html)
+                # ################################
+
+                # video_amount可以用来标记是否有视频存在，还可以标记有多少个视频
+                video_amount = 0
+                if '<embed' in article_html:
                     # 检查到有视频输入
-                    urls = re.findall('<embed src="/static/media/upload/(.*?)"', article_content)
+                    urls = re.findall('<embed src="/static/media/upload/(.*?)"', article_html)
                     print('博客文章中有视频，视频文件为：', urls)
 
                     for url in urls:
                         if os.path.exists('./static/media/upload/' + url):
-                            print('文件存在')
-                            flag = flag + 1
+                            print('视频文件存在')
+                            video_amount = video_amount + 1
                         else:
-                            print('文件不存在，继续执行可能会出错')
+                            print('视频文件不存在，继续执行可能会出错')
+
+                # 从modelform获取数据对象并保存数据对象到数据库
                 article_form.instance.author = User.objects.get(user_id=user_id)
+                article_form.instance.article_content = '暂时为空'
+                article_form.instance.video_amount = video_amount
+                article_form.instance.cover_img = cover_img[0]
                 title = article_form.save()
-                if flag > 0:
-                    embed_labels_attr = iter(re.findall('<embed src="/static/media/upload/(.*?)/>', article_content, re.S))
-                    for i in range(0, flag):
-                        article_content = re.sub(pattern='<embed src="/static/media/upload/.*?/>', repl='<iframe src="/static/media/upload/%s></iframe>' % next(embed_labels_attr), string=article_content)
-                    BlogArticle.objects.filter(article_title=title).update(article_content=article_content)
-                return HttpResponseRedirect('/write-blog-article/')
+
+                id = article_form.instance.id
+                print('通过article_form获取到对应博客文章的id：', id)
+
+                if video_amount > 0:
+                    embed_labels_attr = iter(re.findall('<embed src="/static/media/upload/(.*?)/>', article_html, re.S))
+                    for i in range(0, video_amount):
+                        article_html = re.sub(pattern='<embed src="/static/media/upload/.*?/>', repl='<iframe src="/static/media/upload/%s></iframe>' % next(embed_labels_attr), string=article_html)
+                    BlogArticle.objects.filter(id=id).update(article_html=article_html)
+                return render(request, 'users-window/write-blog-article.html', locals())
     else:
         return HttpResponseRedirect('/login/')
     return render(request, 'users-window/write-blog-article.html', locals())
@@ -177,8 +216,15 @@ def show_my_blog_article_content(request, article_id):
     return render(request, 'users-window/my-blog-article-page.html', locals())
 
 # 用户登录后才能删除用户个人文章的显示方法
-def blog_article_delete(request, article_title):
-    BlogArticle.objects.filter(article_title=article_title).delete()
+def blog_article_delete(request, article_id):
+    # 删除封面图
+    cover_img = BlogArticle.objects.get(id=int(article_id)).cover_img[1:]
+    if os.path.exists(cover_img):
+        os.remove(cover_img)
+        print('成功删除路径为', cover_img, '封面图')
+    else:
+        print('文件不存在，不需要删除。')
+    BlogArticle.objects.filter(id=int(article_id)).delete()
     return HttpResponseRedirect('/my-blog-articles/')
 
 # 用户登录后的个人主页的显示方法

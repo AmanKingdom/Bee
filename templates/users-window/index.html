@@ -94,21 +94,21 @@
                                     <h3 class="panel-title">莞工十大组织最新公众文章</h3>
                                 </div>
                                 <div class="panel-body">
-                                    {#                                    <ul class="list-group">#}
-                                    {#                                        {% for wechat_article,wechat_name in articles_list %}#}
-                                    {#                                            <li class="list-group-item">#}
-                                    {#                                                <div class="row">#}
-                                    {#                                                    <div class="col-md-4">#}
-                                    {#                                                        <img src="{{ wechat_article.cover_img | safe }}" style="width:100px; height: 65px;"/>#}
-                                    {#                                                    </div>#}
-                                    {#                                                    <div class="col-md-8">#}
-                                    {#                                                        <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>#}
-                                    {#                                                        <p class="control-right">来自：{{ wechat_name }}</p>#}
-                                    {#                                                    </div>#}
-                                    {#                                                </div>#}
-                                    {#                                            </li>#}
-                                    {#                                        {% endfor %}#}
-                                    {#                                    </ul>#}
+                                    <ul class="list-group">
+                                        {% for wechat_article in ten_organzations %}
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <img src="{{ wechat_article.cover_img | safe }}" style="width:100px; height: 65px;"/>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                                        <p class="control-right">来自：{{ wechat_article.wechat.wechat_name }}</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,15 @@
                                     <ul class="list-group">
                                         {% for blog_article in blog_articles %}
                                             <li class="list-group-item">
-                                                <a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank">{{blog_article.article_title | safe}}</a>
+                                                <div class="row">
+                                                    <div class="col-md-5 col-sm-5 col-xs-5">
+                                                        <img src="{{ blog_article.cover_img }}" style="width:100%;"/>
+                                                    </div>
+                                                    <div class="col-md-7 col-sm-7 col-xs-7">
+                                                        <a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank">{{blog_article.article_title | safe}}</a>
+                                                        <p class="text-right">来自：{{ blog_article.author.name }}</p>
+                                                    </div>
+                                                </div>
                                             </li>
                                         {% endfor %}
                                     </ul>

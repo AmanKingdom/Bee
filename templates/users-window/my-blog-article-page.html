@@ -8,10 +8,15 @@
         </div>
         <div class="panel-body">
             <div class="text-right">发表时间：{{ blog_article.publish_date | date:"Y-m-d H:i:s" }}</div><hr>
-            {{ blog_article.article_content | safe }}
+            {{ blog_article.article_html | safe }}
         </div>
     </div>
-    <div class="text-right">
-        <a href="{% url 'delete-blog-article' blog_article.article_title %}">删除该文章</a>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <p>浏览次数：{{ blog_article.browsed_times }}</p>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+            <a href="{% url 'delete-blog-article' blog_article.id %}">删除该文章</a>
+        </div>
     </div>
 {%  endblock %}

@@ -13,7 +13,7 @@
     <form role="form" class="form-inline" method="post" action="{% url 'crawl-wechat-accounts' %}">
         {% csrf_token %}
         <label for="wechat-account-id">公众号id：</label>
-        <input id="wechat-account-id" name="wechat-account-id" class="form-control" type="text" placeholder="请输入公众号对应的微信号" style="width: 60%;">
+        <input id="wechat-account-id" name="wechat-account-id" class="form-control" type="text" placeholder="请输入公众号对应的微信号或名称" style="width: 60%;">
         <button class="form-control" type="submit">查询获取</button>
         <small>(多个微信号请用逗号(英文字符)隔开)</small>
     </form>

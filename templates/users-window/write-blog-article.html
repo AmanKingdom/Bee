@@ -2,18 +2,27 @@
 {% load staticfiles %}
 {% block user_homepage_block_title %}写文章{% endblock %}
 {% block user_homepage_block %}
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-xs-12">
-                <form role="form" name="articleForm" action="{% url 'write-blog-article' %}" method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="panel-body">
-                        {{ article_form.as_p }}
-                        <p class="text-right">
-                            <button class="btn" type="submit">完成编辑</button>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+            <form role="form" name="articleForm" action="{% url 'write-blog-article' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="panel-body">
+                    {{ article_form.as_p }}
+                    <p class="text-right">
+                        <button class="btn" type="submit">完成编辑</button>
                         <button class="btn" type="reset">重新填写</button>
-                        </p>
-                    </div>
-                </form>
-            </div>
+                    </p>
+                </div>
+                {% if message %}
+                    {% if message.error %}
+                        <p>出错。。。</p>
+                    {% elif message.pass %}
+                        <p>提交成功！您的文章和别人的相似度为：{{ message.similarity }}</p>
+                    {% else %}
+                        <p>提交失败。。你的文章和别人的太相似了。。相似度为：{{ message.similarity }}</p>
+                    {% endif %}
+                {% endif %}
+            </form>
         </div>
+    </div>
 {% endblock %}
