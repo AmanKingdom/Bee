@@ -1,16 +1,6 @@
 from django.db import models
 import datetime
 
-# 文章所属行业和子行业的类
-class Industry(models.Model):
-    # 行业名称，不能为空，其对应的子行业可以为空
-    industry_name = models.CharField(max_length=10)
-    # 子行业名称
-    sub_industry_name = models.CharField(max_length=10, null=True, blank=True, unique=True)
-
-    def __str__(self):
-        return self.industry_name
-
 # 用户类
 class User(models.Model):
     # 用户账号ID就是邮箱，不是Django自创建的id
@@ -89,21 +79,50 @@ class WeChatArticle(models.Model):
     def __str__(self):
         return self.article_title
 
+# 文章所属行业的类
+class Industry(models.Model):
+    # 行业名称
+    industry_name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.industry_name
+
+# 文章分类，从属于行业类
+class Category(models.Model):
+    category_name = models.CharField(max_length=30)
+    industry = models.ForeignKey(Industry, on_delete=models.CASCADE, null=False)
+
+    def __str__(self):
+        return self.category_name
+
+# 标签
+class Tag(models.Model):
+    tag_name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.tag_name
+
 # 博客文章类
 class BlogArticle(models.Model):
     class Meta:
-        ordering = ('-publish_date',)
+        ordering = ('-publish_time',)
 
     # 标题
     article_title = models.CharField(max_length=100)
     # 文章内容
     article_content = models.TextField(null=False)
-    # 发表时间
-    publish_date = models.DateTimeField(default=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    # 文章分类
+    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, blank=True, null=True)
+    # 标签
+    tags = models.ManyToManyField(Tag, blank=True)
+    # 发布时间
+    publish_time = models.DateTimeField(auto_now_add=True)
+    # 修改时间
+    modified_time = models.DateTimeField(auto_now=True)
     # 作者
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     # 文章封面图片链接，一个
-    cover_img = models.TextField()
+    cover_img = models.ImageField(upload_to='static/cover_imgs/%Y/%m/%d/', blank=True, null=True)
     # 文章HTML代码
     article_html = models.TextField()
     # 文章图片数量
@@ -114,12 +133,15 @@ class BlogArticle(models.Model):
     video_amount = models.IntegerField(default=0)
     # 文章音频数量
     audio_amount = models.IntegerField(default=0)
-    # 被浏览次数
-    browsed_times = models.IntegerField(default=0)
+    # 阅读量
+    browsed_times = models.PositiveIntegerField(default=0)
+    # 推荐位
+    recommend = models.IntegerField(default=0)
 
     def __str__(self):
         return self.article_title
 
+# 轮播图
 class Carousel(models.Model):
     # 轮播图片的链接，记得在后台管理时选择对应的微信文章封面图的路径就行
     img_url = models.TextField()
@@ -134,3 +156,11 @@ class Carousel(models.Model):
 
     def __str__(self):
         return u'图片链接：%s   文章标题：%s ' % (self.img_url, self.title)
+
+# 友情链接
+class Link(models.Model):
+    link_name = models.CharField(max_length=20)
+    link_url = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.link_name
