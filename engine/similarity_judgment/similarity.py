@@ -97,6 +97,7 @@ class SimilarityJudge:
 
             # print(data[1])
             temp_value = SimilarityJudge( ).judgement(key,compared_text)
+            self.log("相似度：%s" % temp_value)
             if temp_value >= value:
                 return temp_value
         return 0
@@ -110,9 +111,11 @@ if __name__ == '__main__':
 '''
     key_text = key_text.replace("\n", "")
 
+
     # 设置相似度筏值
     value =0.9
 
+    # 相似度大于value就返回该值，否则返回0
     aa = SimilarityJudge().operation(key_text,value)
     print(aa)
 

@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from app.forms import *
-from app.models import WechatAccount, Carousel
+from app.models import *
 from engine.Wechat_SQLite.search_sqlite import Search
 import datetime
 from engine.Wechat_SQLite.spider_sqlite import *

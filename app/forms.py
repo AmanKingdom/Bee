@@ -1,6 +1,6 @@
 from django import forms
 
-from app.models import User, WeChatArticle, Industry, BlogArticle
+from app.models import *
 
 
 class UserRegisterForm(forms.ModelForm):
@@ -63,7 +63,7 @@ class BlogArticleForm(forms.ModelForm):
         model = BlogArticle
         fields = ['cover_img', 'article_title', 'article_html']
         widgets = {
-            'cover_img': forms.TextInput(attrs={'class': 'form-control'}),
+            'cover_img': forms.FileInput(attrs={'class': "center-block"}),
             'article_title': forms.TextInput(attrs={'class': "form-control", 'placeholder': "请输入文章大标题"}),
             'article_html': forms.TextInput(attrs={'class': "form-control"}),
         }
@@ -87,17 +87,35 @@ class IndustryForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'industry_name': forms.TextInput(attrs={'placeholder': "行业领域"}),
-            'sub_industry_name': forms.TextInput(attrs={'placeholder': "子行业领域"}),
         }
 
     def __init__(self, *args, **kwargs):
         super(IndustryForm, self).__init__(*args, **kwargs)
         self.fields['industry_name'].label = '领域'
-        self.fields['sub_industry_name'].label = '子领域'
 
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = '__all__'
+        widgets = {
+            'category_name': forms.TextInput(attrs={'placeholder': "分类名称"}),
+        }
 
+    def __init__(self, *args, **kwargs):
+        super(CategoryForm, self).__init__(*args, **kwargs)
+        self.fields['category_name'].label = '分类'
 
+class TagForm(forms.ModelForm):
+    class Meta:
+        model = Tag
+        fields = '__all__'
+        widgets = {
+            'tag_name': forms.TextInput(attrs={'placeholder': "标签名称"}),
+        }
 
+    def __init__(self, *args, **kwargs):
+        super(TagForm, self).__init__(*args, **kwargs)
+        self.fields['tag_name'].label = '标签'
 
 
 
