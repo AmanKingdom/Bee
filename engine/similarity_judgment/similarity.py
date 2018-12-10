@@ -115,7 +115,7 @@ if __name__ == '__main__':
     # 设置相似度筏值
     value =0.9
 
-    # 相似度大于value就返回该值，否则返回0
+    # 相似度大于value就返回该值，否则返回 0
     aa = SimilarityJudge().operation(key_text,value)
     print(aa)
 
