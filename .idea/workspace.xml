@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f09e2ad6-641b-44ea-a1a9-1e168c01883e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bee/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bee/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bee-database.db" beforeDir="false" afterPath="$PROJECT_DIR$/bee-database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/kindeditor/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/kindeditor/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users-window/search-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/search-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manage-window/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage-window/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/my-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/my-blog-article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users-window/write-blog-article.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,54 +74,83 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="47" />
-          <entry key="html" value="954" />
+          <entry key="html" value="2190" />
           <entry key="js" value="18" />
-          <entry key="py" value="3608" />
-          <entry key="txt" value="64" />
+          <entry key="py" value="5164" />
+          <entry key="txt" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="47" />
-          <entry key="HTML" value="954" />
+          <entry key="HTML" value="2190" />
           <entry key="JavaScript" value="18" />
-          <entry key="PLAIN_TEXT" value="64" />
-          <entry key="Python" value="3608" />
+          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="Python" value="5164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="36" />
+          <entry key="html" value="49" />
           <entry key="jpeg" value="2" />
           <entry key="js" value="5" />
           <entry key="md" value="2" />
-          <entry key="py" value="52" />
+          <entry key="py" value="57" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="36" />
+          <entry key="HTML" value="49" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="5" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="52" />
+          <entry key="Python" value="57" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+            <state relative-caret-position="259">
+              <caret line="282" column="35" lean-forward="true" selection-start-line="282" selection-start-column="35" selection-end-line="282" selection-end-column="35" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
+                <marker date="1544437942157" expanded="true" signature="2712:2714" ph="..." />
+                <marker date="1544437942157" expanded="true" signature="11405:11606" ph="..." />
+                <marker date="1544437942157" expanded="true" signature="12189:12251" ph="..." />
+                <marker date="1544437942157" expanded="true" signature="12372:12434" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/manage-window/examine-on-wall.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding>
+                <element signature="e#609#657#0#HTML" expanded="true" />
+                <element signature="e#1986#2034#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bee/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#627#659#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,27 +159,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="367">
+              <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="15" />
               <folding>
                 <element signature="e#370#939#0" />
                 <element signature="e#988#1536#0" />
                 <element signature="e#1578#2623#0" />
                 <element signature="e#3554#3956#0" />
-                <marker date="1544325135966" expanded="true" signature="2865:2867" ph="..." />
-                <marker date="1544325135966" expanded="true" signature="4553:4558" ph="..." />
+                <marker date="1544433449334" expanded="true" signature="2865:2867" ph="..." />
+                <marker date="1544433449334" expanded="true" signature="4553:4558" ph="..." />
+                <marker date="1544433449334" expanded="true" signature="4745:5088" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/forms.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
+            <state relative-caret-position="405">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/manage-window/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="n#head#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -174,23 +213,24 @@
         <option value="$PROJECT_DIR$/Bee/settings.py" />
         <option value="$PROJECT_DIR$/engine/Wechat_SQLite/spider_sqlite.py" />
         <option value="$PROJECT_DIR$/templates/users-window/login.html" />
-        <option value="$PROJECT_DIR$/Bee/urls.py" />
         <option value="$PROJECT_DIR$/templates/manage-window/manage-carousel.html" />
         <option value="$PROJECT_DIR$/templates/users-window/public-blog-article-content.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/my-blog-article.html" />
         <option value="$PROJECT_DIR$/static/bootstrap-3.3.7/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
-        <option value="$PROJECT_DIR$/templates/manage-window/base.html" />
         <option value="$PROJECT_DIR$/templates/users-window/base.html" />
         <option value="$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html" />
-        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
         <option value="$PROJECT_DIR$/templates/users-window/index.html" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/static/kindeditor/config.js" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/forms.py" />
+        <option value="$PROJECT_DIR$/templates/users-window/search-result.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/write-blog-article.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/my-blog-article-page.html" />
+        <option value="$PROJECT_DIR$/app/admin.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/Bee/urls.py" />
+        <option value="$PROJECT_DIR$/templates/manage-window/examine-on-wall.html" />
+        <option value="$PROJECT_DIR$/templates/manage-window/base.html" />
+        <option value="$PROJECT_DIR$/templates/users-window/my-blog-article.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
@@ -242,20 +282,8 @@
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="apps.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="forms.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="forms.py" type="8704e2dd:PyFileNode" />
-              <item name="BlogArticleForm" type="dd8bbb05:PyElementNode" />
+              <item name="admin.py" type="8704e2dd:PyFileNode" />
+              <item name="ArticleAdmin" type="dd8bbb05:PyElementNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
@@ -267,24 +295,24 @@
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models.py" type="8704e2dd:PyFileNode" />
+              <item name="OnWall" type="dd8bbb05:PyElementNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views.py" type="8704e2dd:PyFileNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="kindeditor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bee" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
@@ -296,6 +324,12 @@
               <item name="Bee" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="manage-window" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bee" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users-window" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543894775613</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="博客文章数据模型大整改，另外还添加了许多附属数据模型，待一一实现功能。">
+      <created>1544327472628</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544327472628</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -400,13 +441,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17030849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17030849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49807197" visible="true" weight="0.25641027" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49807197" weight="0.6437247" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,7 +457,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.0" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32928476" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50192803" side_tool="true" weight="0.57894737" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" weight="0.32928476" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49871466" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32928476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -457,16 +499,12 @@
     <MESSAGE value="爬取了一个公众号和它的一篇文章。" />
     <MESSAGE value="博客文章添加了阅读量、封面图和查重函数，查重函数准备和搜索引擎端对接。" />
     <MESSAGE value="博客文章添加了阅读量、封面图和查重函数，查重函数准备和搜索引擎端对接222。" />
-    <option name="LAST_COMMIT_MESSAGE" value="博客文章添加了阅读量、封面图和查重函数，查重函数准备和搜索引擎端对接222。" />
+    <MESSAGE value="博客文章数据模型大整改，另外还添加了许多附属数据模型，待一一实现功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="博客文章数据模型大整改，另外还添加了许多附属数据模型，待一一实现功能。" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Bee/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/account.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -551,23 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/show-wechat-articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/crawl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/manage-carousel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -585,16 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bee/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1593">
-          <caret line="64" column="73" selection-start-line="64" selection-start-column="73" selection-end-line="64" selection-end-column="73" />
-          <folding>
-            <element signature="e#627#659#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,24 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="6760" column="5" lean-forward="true" selection-start-line="6760" selection-start-column="5" selection-end-line="6760" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -653,65 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage-window/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="14" column="148" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage-window/crawl-wechat-accounts.html">
@@ -724,31 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-          <folding>
-            <element signature="e#370#939#0" />
-            <element signature="e#988#1536#0" />
-            <element signature="e#1578#2623#0" />
-            <element signature="e#3554#3956#0" />
-            <marker date="1544325135966" expanded="true" signature="2865:2867" ph="..." />
-            <marker date="1544325135966" expanded="true" signature="4553:4558" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/kindeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -756,12 +670,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
+        <state relative-caret-position="1863">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/search-result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/write-blog-article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/article-sort-design.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/crawl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bee/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#627#659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="122" column="72" selection-start-line="122" selection-start-column="72" selection-end-line="122" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="15" />
+          <folding>
+            <element signature="e#370#939#0" />
+            <element signature="e#988#1536#0" />
+            <element signature="e#1578#2623#0" />
+            <element signature="e#3554#3956#0" />
+            <marker date="1544433449334" expanded="true" signature="2865:2867" ph="..." />
+            <marker date="1544433449334" expanded="true" signature="4553:4558" ph="..." />
+            <marker date="1544433449334" expanded="true" signature="4745:5088" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/show-wechat-articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#433#481#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/examine-on-wall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#609#657#0#HTML" expanded="true" />
+            <element signature="e#1986#2034#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage-window/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users-window/my-blog-article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="282" column="35" lean-forward="true" selection-start-line="282" selection-start-column="35" selection-end-line="282" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+            <marker date="1544437942157" expanded="true" signature="2712:2714" ph="..." />
+            <marker date="1544437942157" expanded="true" signature="11405:11606" ph="..." />
+            <marker date="1544437942157" expanded="true" signature="12189:12251" ph="..." />
+            <marker date="1544437942157" expanded="true" signature="12372:12434" ph="..." />
           </folding>
         </state>
       </provider>

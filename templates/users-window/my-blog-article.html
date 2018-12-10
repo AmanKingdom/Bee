@@ -5,12 +5,16 @@
         <ul class="list-group">
             {% for article in blog_articles %}
                 <li class="list-group-item">
-                    <h4><a href="{% url 'my-blog-article-content' article.id %}">标题：{{article.article_title | safe}}</a></h4>
-                    <div class="text-right">
-                        <a href="{% url 'delete-blog-article' article.id %}">删除该文章</a>
-                    </div>
+                    <ul class="list-inline">
+                        标题：<li class="list-group-item"><a href="{% url 'my-blog-article-content' article.id %}">{{article.article_title | safe}}</a></li>
+                        <li class="list-group-item"><a href="{% url 'request-on-wall' article.id %}">请求上墙</a></li>
+                        <li class="list-group-item"><a href="{% url 'delete-blog-article' article.id %}">删除该文章</a></li>
+                    </ul>
                 </li>
             {% endfor %}
+            {% if message %}
+                <p class="text-right"><font color="red">{{ message }}</font></p>
+            {% endif %}
         </ul>
     {% else %}
         <div class="text-center">

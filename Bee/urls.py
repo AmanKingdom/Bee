@@ -64,4 +64,9 @@ urlpatterns = [
     url(r'^manage/delete-carousel/(.*?)/$', delete_carousel, name='delete-carousel'),
     url(r'^manage/carousel-up/(.*?)/$', carousel_up, name='carousel-up'),
     url(r'^manage/carousel-down/(.*?)/$', carousel_down, name='carousel-down'),
+
+    url(r'^manage/request-on-wall/(.*?)/$', request_on_wall, name='request-on-wall'),
+    url(r'^manage/examine-on-wall/$', examine_on_wall, name='examine-on-wall'),
+    url(r'^manage/accept-on-wall/(.*?)/$', accept_on_wall, name='accept-on-wall'),
+    url(r'^manage/refuse-on-wall/(.*?)/$', refuse_on_wall, name='refuse-on-wall'),
 ]

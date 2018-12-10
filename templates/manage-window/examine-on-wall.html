@@ -1,0 +1,103 @@
+<!--examine-on-wall.html-->
+{% extends 'manage-window/base.html' %}
+{% load staticfiles %}
+{% block title %}Bee | 管理上墙请求{% endblock %}
+
+{% block title_block %}上墙文章请求·管理·审核{% endblock %}
+
+{% block body_block %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">待处理的上墙请求</h4>
+        </div>
+        <div class="panel-body">
+            {% if need_examine %}
+                {% for item in need_examine %}
+                    <table class="table" style="table-layout:fixed;word-break:break-all;">
+                        <thead>
+                        <tr>
+                            <th>文章标题</th>
+                            <th>审核状态</th>
+                            <th>上墙状态</th>
+                            <th>管理</th>
+                        </tr>
+                        </thead>
+                        {% for item in need_examine %}
+                            <tr>
+                                <td><a href="{% url 'public-blog-article-content' item.article.id %}" target="_blank">标题：{{ item.article.article_title }}</a></td>
+                                <td>
+                                    {% if item.examine %}
+                                        已审核
+                                    {% else %}
+                                        未审核
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if item.pass_or_not %}
+                                        同意上墙
+                                    {% else %}
+                                        不同意上墙
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if item.pass_or_not %}
+                                        <a href="{% url 'refuse-on-wall' item.id %}">不同意上墙</a>
+                                    {% else %}
+                                        <a href="{% url 'accept-on-wall' item.id %}">审核通过·同意上墙</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endfor %}
+            {% else %}
+                <h1>没有待处理的上墙请求</h1>
+            {% endif %}
+        </div>
+    </div>
+    {% if already_examine %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">已处理的上墙请求</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table" style="table-layout:fixed;word-break:break-all;">
+                    <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>审核状态</th>
+                        <th>上墙状态</th>
+                        <th>管理</th>
+                    </tr>
+                    </thead>
+                    {% for item in already_examine %}
+                        <tr>
+                            <td><a href="{% url 'public-blog-article-content' item.article.id %}" target="_blank">{{ item.article.article_title }}</a></td>
+                            <td>
+                                {% if item.examine %}
+                                    已审核
+                                {% else %}
+                                    未审核
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if item.pass_or_not %}
+                                    同意上墙
+                                {% else %}
+                                    不同意上墙
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if item.pass_or_not %}
+                                    <a href="{% url 'refuse-on-wall' item.id %}">取消该文章上墙资格</a>
+                                {% else %}
+                                    <a href="{% url 'accept-on-wall' item.id %}">恢复同意上墙</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
