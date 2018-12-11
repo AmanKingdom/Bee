@@ -135,7 +135,7 @@ def my_fans(request):
 # 查重方法，调用了引擎中的SimilarityJudge
 def check_blog_article(content):
     print('接收到文章具体内容content：', content)
-    similarity = SimilarityJudge().operation(content, 0.3)
+    similarity = SimilarityJudge().operation(content, 0.9)
     print('相似度为：', similarity)
     if similarity > 0.7:
         return {'error': False, 'similarity': similarity, 'pass': False}
