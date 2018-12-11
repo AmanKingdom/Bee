@@ -567,7 +567,7 @@ if __name__ == '__main__':
 
     ids = ['chaping321', 'dglgtw', 'one', 'two', 'four', 'five']
     # wechat_ids = ['dglgtw', 'guanqingluntan', 'dutsmc', 'TNTstreetdance', 'DGUT_GGCY', 'dgutxn', 'ggxshwlb', 'ggrpfamily', 'dgutkob', 'dgutzb', 'dgutpx', 'guangongkexie', 'dgutgreen', 'yinzytravel', 'DGUTTKD', 'wailianjiating', 'ggsfxh', 'gh_93ff0d749e07', 'dgutnic', 'ggdxskjcxxx', 'ggdzzyz', 'dgutsyxh', 'dgutsy']
-    wechat_ids = ['dglgtw', 'dglgxyxsh']
+    wechat_ids = ['dglgtw', 'dglgxyxsh', 'dutsmc']
 
     AccountSpider(wechat_ids).get_account_infos()
     ArticleSpider(wechat_ids).get_infos()
