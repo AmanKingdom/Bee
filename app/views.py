@@ -6,6 +6,9 @@ from engine.Wechat_SQLite.search_sqlite import Search
 from engine.Wechat_SQLite.spider_sqlite import *
 
 # 主页
+from engine.similarity_judgment.similarity import SimilarityJudge
+
+
 def homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
@@ -129,21 +132,17 @@ def my_fans(request):
         return HttpResponseRedirect('/login/')
     return render(request, 'users-window/my-fans.html', locals())
 
+# 查重方法，调用了引擎中的SimilarityJudge
 def check_blog_article(content):
     print('接收到文章具体内容content：', content)
-    similarity = duplicate_check(content)
+    similarity = SimilarityJudge().operation(content, 0.3)
     print('相似度为：', similarity)
-    if similarity > 0.6:
+    if similarity > 0.7:
         return {'error': False, 'similarity': similarity, 'pass': False}
-    elif (similarity <= 0.6) and (similarity >= 0):
+    elif (similarity <= 0.7) and (similarity >= 0):
         return {'error': False, 'similarity': similarity, 'pass': True}
     else:
         return {'error': True, 'similarity': similarity, 'pass': False}
-
-# 替换这个函数即可，这个函数返回相似度######
-def duplicate_check(content):
-    return 0
-# ##########################################
 
 # 用户登录后的博客文章创作页面的显示方法
 def write_blog_article(request):
@@ -164,9 +163,8 @@ def write_blog_article(request):
                 article_html = article_form.data.get('article_html')
                 print('博客文章HTML代码：', article_html)
 
-                # ################################
+                # 查重反馈
                 message = check_blog_article(article_html)
-                # ################################
 
                 # video_amount可以用来标记是否有视频存在，还可以标记有多少个视频
                 video_amount = 0
@@ -197,7 +195,8 @@ def write_blog_article(request):
                     for i in range(0, video_amount):
                         article_html = re.sub(pattern='<embed src="/static/media/upload/.*?/>', repl='<iframe src="/static/media/upload/%s></iframe>' % next(embed_labels_attr), string=article_html)
                     BlogArticle.objects.filter(id=id).update(article_html=article_html)
-                return render(request, 'users-window/write-blog-article.html', locals())
+                # return render(request, 'users-window/write-blog-article.html', locals())
+                return render(request, 'users-window/jump-page.html', locals())
     else:
         return HttpResponseRedirect('/login/')
     return render(request, 'users-window/write-blog-article.html', locals())
