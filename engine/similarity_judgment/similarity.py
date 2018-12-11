@@ -94,6 +94,7 @@ class SimilarityJudge:
         :return:相似度 >= value 时返回该相似度，否则返回0
         '''
         datas = self.get_info()
+        value_datas = []
 
         for data in datas:
             compared_text = data[2]
@@ -101,11 +102,12 @@ class SimilarityJudge:
             # print(com)
 
             # print(data[1])
-            temp_value = SimilarityJudge( ).judgement(key,compared_text)
+            temp_value = SimilarityJudge().judgement(key,compared_text)
             self.log("相似度：%s" % temp_value)
-            if temp_value >= value:
-                return temp_value
-        return 0
+            value_datas.append(temp_value)
+            # if temp_value >= value:
+            #     return temp_value
+        return max(value_datas)
 
 if __name__ == '__main__':
 
