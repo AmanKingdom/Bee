@@ -164,3 +164,16 @@ class Link(models.Model):
 
     def __str__(self):
         return self.link_name
+
+class OnWall(models.Model):
+    # 请求上墙的文章
+    article = models.ForeignKey(BlogArticle, on_delete=models.CASCADE, null=False)
+    # 标记是否已经检查
+    examine = models.BooleanField(default=False)
+    # 审批通过或不通过
+    pass_or_not = models.BooleanField(default=False)
+    # 提交时间
+    submit_time = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return '%s' % self.article_id

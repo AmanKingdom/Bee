@@ -1,0 +1,32 @@
+{% extends "users-window/user-homepage.html" %}
+{% load staticfiles %}
+{% block user_homepage_block_title %}写文章{% endblock %}
+{% block user_homepage_block %}
+    <div class="center-block">
+        {% if message %}
+            {% if message.error %}
+                <p>出错。。。</p>
+            {% elif message.pass %}
+                <p>提交成功！您的文章和别人的相似度为：{{ message.similarity }}</p>
+            {% else %}
+                <p>提交失败。。你的文章和别人的太相似了。。相似度为：{{ message.similarity }}</p>
+            {% endif %}
+        {% endif %}
+        <p><span id="sp">3</span>秒后跳转到您的个人文章列表界面...</p>
+    </div>
+    <script>
+        onload=function () {
+            setInterval(go,1000)
+        };
+        var x=2;
+        function go() {
+
+            if (x>=0){
+                document.getElementById("sp").innerText=x;
+            }else {
+                location.href="{% url 'my-blog-articles' %}";
+            }
+            x--;
+        }
+    </script>
+{% endblock %}

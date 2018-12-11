@@ -73,7 +73,7 @@ class SimilarityJudge:
         :return: datas
         '''
 
-        db = sqlite3.connect('../../bee-database.db')
+        db = sqlite3.connect('bee-database.db')
         cursor = db.cursor()
 
         sql = "SELECT id, article_title, article_content FROM wechat_article "

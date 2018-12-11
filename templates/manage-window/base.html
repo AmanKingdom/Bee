@@ -40,8 +40,12 @@
                     <li><a href="{% url 'crawl-wechat-accounts' %}">爬爬爬</a> </li>
                     <li><a href="{% url 'article-sort-design' %}">设计分类</a></li>
                     <li><a href="{% url 'manage-carousel' %}">管理轮播图</a></li>
+                    <li><a href="{% url 'examine-on-wall' %}">管理上墙文章</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    {% if recommended_request %}
+                        <li><a href="{% url 'examine-on-wall' %}"><font color="red">未看上墙请求：{{ recommended_request }}件</font> </a></li>
+                    {% endif %}
                     {% if user_id %}
                         <li><a href="{% url 'user-information' %}">欢迎您，{{ user_id }}</a></li>
                         <li><a href="{% url 'logout' %}">退出</a></li>

@@ -72,7 +72,7 @@
                                 <tr>
                                     <td>{{ item.id }}</td>
                                     <td><img src="{{ item.cover_img }}" style="width:100%;"/> </td>
-                                    <td>{{ item.article_title }}</td>
+                                    <td><a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ item.article_title }}</a></td>
                                     <td>{{ item.publish_date }}</td>
                                     <td>{{ item.wechat.wechat_name }}</td>
                                     <td>
