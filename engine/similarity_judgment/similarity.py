@@ -77,9 +77,14 @@ class SimilarityJudge:
         cursor = db.cursor()
 
         sql = "SELECT id, article_title, article_content FROM wechat_article "
+        sql1 = "SELECT id, article_title, article_content FROM app_blogarticle"
         cursor.execute(sql)
-        datas = cursor.fetchall()  # 查找所有符合条件的数据
+        wechat_datas = cursor.fetchall()  # 查找所有符合条件的数据
+        cursor.execute(sql1)
+        blog_datas = cursor.fetchall()  # 查找所有符合条件的数据
         db.close()
+
+        datas = wechat_datas + blog_datas
 
         return datas
 
