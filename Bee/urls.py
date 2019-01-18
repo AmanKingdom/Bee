@@ -69,4 +69,6 @@ urlpatterns = [
     url(r'^manage/examine-on-wall/$', examine_on_wall, name='examine-on-wall'),
     url(r'^manage/accept-on-wall/(.*?)/$', accept_on_wall, name='accept-on-wall'),
     url(r'^manage/refuse-on-wall/(.*?)/$', refuse_on_wall, name='refuse-on-wall'),
+
+    url(r'', homepage),  # 这句可以使网址附加字段输错时，都显示为主页
 ]

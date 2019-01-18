@@ -14,16 +14,16 @@ KindEditor.ready(function(K) {
         }
     );
 });
-//
-// KindEditor.ready(function(K) {
-//     window.editor = K.create('#id_cover_img',{
-//         width:'100%',
-//         height:'200px',
-//         minHeight: 100,
-//         uploadJson:'/uploads/',
-//         items:['image'],
-//         themeType : 'simple',
-//         afterBlur:function (){this.sync();}
-//         }
-//     );
-// });
+
+KindEditor.ready(function(K) {
+    window.editor = K.create('#id_cover_img',{
+        width:'100%',
+        height:'200px',
+        minHeight: 100,
+        uploadJson:'/uploads/',
+        items:['image'],
+        themeType : 'simple',
+        afterBlur:function (){this.sync();}
+        }
+    );
+});

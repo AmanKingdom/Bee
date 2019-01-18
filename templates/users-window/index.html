@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <ul class="list-group">
-                                        {% for wechat_article in ten_organzations %}
+                                        {% for wechat_article in ten_organizations %}
                                             <li class="list-group-item">
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -123,7 +123,7 @@
                                             <li class="list-group-item">
                                                 <div class="row">
                                                     <div class="col-md-5 col-sm-5 col-xs-5">
-{#                                                        <img src="{{ blog_article.cover_img. }}" style="width:100%;"/>#}
+                                                        <img src="{{ blog_article.cover_img }}" style="width:100%;"/>
                                                     </div>
                                                     <div class="col-md-7 col-sm-7 col-xs-7">
                                                         <a href="{% url 'public-blog-article-content' blog_article.id %}" target="_blank">{{blog_article.article_title | safe}}</a>
@@ -140,26 +140,58 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">校园热门文章</h3>
+                    {% if on_wall_articles %}
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><font color="#a52a2a">星榜墙</font></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <ul class="list-group">
+                                            {% for on_wall_article in on_wall_articles %}
+                                                <li class="list-group-item">
+                                                    <div class="row">
+                                                        <div class="col-md-5 col-sm-5 col-xs-5">
+                                                            <img src="{{ on_wall_article.cover_img }}" style="width:100%;"/>
+                                                        </div>
+                                                        <div class="col-md-7 col-sm-7 col-xs-7">
+                                                            <a href="{% url 'public-blog-article-content' on_wall_article.id %}" target="_blank">{{on_wall_article.article_title | safe}}</a>
+                                                            <p class="text-right">来自：{{ on_wall_article.author.name }}</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <ul class="list-group">
-                                {% for wechat_article in wechat_articles %}
-                                    <li class="list-group-item">
-                                        <div class="row">
-                                            <div class="col-md-5 col-sm-5 col-xs-5">
-                                                <img src="{{ wechat_article.cover_img }}" style="width:100%;"/>
-                                            </div>
-                                            <div class="col-md-7 col-sm-7 col-xs-7">
-                                                <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
-                                                <p class="text-right">来自：{{ wechat_article.wechat.wechat_name }}</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">校园热门文章</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        {% for wechat_article in wechat_articles %}
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-sm-5 col-xs-5">
+                                                        <img src="{{ wechat_article.cover_img }}" style="width:100%;"/>
+                                                    </div>
+                                                    <div class="col-md-7 col-sm-7 col-xs-7">
+                                                        <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                                        <p class="text-right">来自：{{ wechat_article.wechat.wechat_name }}</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

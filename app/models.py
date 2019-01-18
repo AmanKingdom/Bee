@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 
 # 用户类
 class User(models.Model):
@@ -122,7 +121,7 @@ class BlogArticle(models.Model):
     # 作者
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     # 文章封面图片链接，一个
-    cover_img = models.ImageField(upload_to='static/cover_imgs/%Y/%m/%d/', blank=True, null=True)
+    cover_img = models.TextField()
     # 文章HTML代码
     article_html = models.TextField()
     # 文章图片数量

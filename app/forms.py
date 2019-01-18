@@ -63,7 +63,7 @@ class BlogArticleForm(forms.ModelForm):
         model = BlogArticle
         fields = ['cover_img', 'article_title', 'article_html']
         widgets = {
-            'cover_img': forms.FileInput(attrs={'class': "center-block"}),
+            'cover_img': forms.TextInput(attrs={'class': "form-control"}),
             'article_title': forms.TextInput(attrs={'class': "form-control", 'placeholder': "请输入文章大标题"}),
             'article_html': forms.TextInput(attrs={'class': "form-control"}),
         }

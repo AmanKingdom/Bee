@@ -15,6 +15,7 @@
                 <table class="table" style="table-layout:fixed;word-break:break-all;">
                     <thead>
                     <tr>
+                        <th>请求时间</th>
                         <th>文章标题</th>
                         <th>审核状态</th>
                         <th>上墙状态</th>
@@ -23,6 +24,7 @@
                     </thead>
                     {% for item in need_examine %}
                         <tr>
+                        <td>{{ item.submit_time | date:"Y-m-d H:i:s" }}</td>
                             <td><a href="{% url 'public-blog-article-content' item.article.id %}" target="_blank">标题：{{ item.article.article_title }}</a></td>
                             <td>
                                 {% if item.examine %}
@@ -62,6 +64,7 @@
                 <table class="table" style="table-layout:fixed;word-break:break-all;">
                     <thead>
                     <tr>
+                        <th>请求时间</th>
                         <th>文章标题</th>
                         <th>审核状态</th>
                         <th>上墙状态</th>
@@ -70,6 +73,7 @@
                     </thead>
                     {% for item in already_examine %}
                         <tr>
+                        <td>{{ item.submit_time | date:"Y-m-d H:i:s" }}</td>
                             <td><a href="{% url 'public-blog-article-content' item.article.id %}" target="_blank">{{ item.article.article_title }}</a></td>
                             <td>
                                 {% if item.examine %}

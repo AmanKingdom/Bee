@@ -1,3 +1,4 @@
+gensim
 asn1crypto==0.24.0
 beautifulsoup4==4.6.3
 certifi==2018.11.29

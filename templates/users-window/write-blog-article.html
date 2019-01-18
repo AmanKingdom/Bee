@@ -13,15 +13,6 @@
                         <button class="btn" type="reset">重新填写</button>
                     </p>
                 </div>
-                {% if message %}
-                    {% if message.error %}
-                        <p>出错。。。</p>
-                    {% elif message.pass %}
-                        <p>提交成功！您的文章和别人的相似度为：{{ message.similarity }}</p>
-                    {% else %}
-                        <p>提交失败。。你的文章和别人的太相似了。。相似度为：{{ message.similarity }}</p>
-                    {% endif %}
-                {% endif %}
             </form>
         </div>
     </div>

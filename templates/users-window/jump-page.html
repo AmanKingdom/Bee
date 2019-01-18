@@ -7,9 +7,9 @@
             {% if message.error %}
                 <p>出错。。。</p>
             {% elif message.pass %}
-                <p>提交成功！您的文章和别人的相似度为：{{ message.similarity }}</p>
+                <p>提交成功！您的文章和别人的相似度为：{{ message.similarity }}。</p>
             {% else %}
-                <p>提交失败。。你的文章和别人的太相似了。。相似度为：{{ message.similarity }}</p>
+                <p>提交成功！但你的文章和别人的太相似了，相似度为：{{ message.similarity }}。</p>
             {% endif %}
         {% endif %}
         <p><span id="sp">3</span>秒后跳转到您的个人文章列表界面...</p>

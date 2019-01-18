@@ -1,22 +1,27 @@
-from django.http import HttpResponseRedirect
+import datetime
+
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
+from django.template.loader import get_template
+from django.views.decorators.csrf import csrf_exempt
+
 from app.forms import *
 from app.models import *
 from engine.Wechat_SQLite.search_sqlite import Search
 from engine.Wechat_SQLite.spider_sqlite import *
-
-# 主页
 from engine.similarity_judgment.similarity import SimilarityJudge
 
-
+# 主页
 def homepage(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
+    else:
+        user_id = None
     blog_articles = BlogArticle.objects.all()
     wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')[0:15]
 
     # 十大校园组织的文章
-    ten_organzations = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')[0:13]
+    ten_organizations = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')[0:13]
 
     # 轮播图
     carousel = Carousel.objects.all().order_by('number')
@@ -25,38 +30,51 @@ def homepage(request):
     if len(carousel) is 0:
         carousel = None
 
-    # now = datetime.datetime.now()
-    return render(request, 'users-window/index.html', locals())
+    on_wall_articles = [x.article for x in OnWall.objects.filter(pass_or_not=True)]
+
+    now = datetime.datetime.now()
+
+    return_info = {'user_id': user_id, 'blog_articles': blog_articles, 'wechat_articles': wechat_articles,
+                   'ten_organizations': ten_organizations, 'carousel': carousel, 'carousel_len': carousel_len,
+                   'on_wall_articles': on_wall_articles, 'now': now}
+    html = get_template('users-window/index.html').render(return_info)
+    return HttpResponse(html)
 
 
 # 主页上的公开博客文章列表项点击后跳转的具体内容页
 def show_public_blog_article_content(request, article_id):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
+    else:
+        user_id = None
     blog_article = BlogArticle.objects.get(id=int(article_id))
     BlogArticle.objects.filter(id=int(article_id)).update(browsed_times=blog_article.browsed_times+1)
     blog_article = BlogArticle.objects.get(id=int(article_id))
-    return render(request, 'users-window/public-blog-article-content.html', locals())
+
+    return_info = {'user_id': user_id, 'blog_article': blog_article}
+    html = get_template('users-window/public-blog-article-content.html').render(return_info)
+    return HttpResponse(html)
 
 # 主页上搜索时的接收关键字方法
 def search(request):
     try:
         search_key = request.GET['search-text']
+        if search_key is "":
+            return HttpResponseRedirect('/')
+        else:
+            request.session['search_key'] = search_key
+            return HttpResponseRedirect('/search_result/')
     except:
-        search_key = None
-    if search_key is "":
         return HttpResponseRedirect('/')
-    else:
-        request.session['search_key'] = search_key
-        return HttpResponseRedirect('/search_result/')
 
 # 主页上接收关键字后的搜索方法，并跳转到搜索结果页面
 def search_result(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
+    else:
+        user_id = None
     if 'search_key' in request.session:
         search_text = request.session['search_key']
-        print('正在搜索：', search_text, '……')
 
         search_results = Search(search_text).search_infos()
 
@@ -71,17 +89,28 @@ def search_result(request):
 
             # 打包发送到templates让它自己解压处理
             articles_list = zip(search_results, wechat_name_list, wechat_articles)
+
+            return_info = {'user_id': user_id, 'articles_list': articles_list}
+            html = get_template('users-window/search-result.html').render(return_info)
+            return HttpResponse(html)
+
+        return_info = {'user_id': user_id}
+        html = get_template('users-window/search-result.html').render(return_info)
+        return HttpResponse(html)
     else:
         return HttpResponseRedirect('/')
-    return render(request, 'users-window/search-result.html', locals())
 
 # 展示指定微信文章的具体内容的方法
 def show_wechat_article_content(request, article_id):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
+    else:
+        user_id = None
     wechat_article = WeChatArticle.objects.get(id=int(article_id))
-    return render(request, 'users-window/wechat-article-page.html', locals())
 
+    return_info = {'user_id': user_id, 'wechat_article': wechat_article}
+    html = get_template('users-window/wechat-article-page.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户退出登录的方法
 def logout(request):
@@ -96,7 +125,9 @@ def user_information(request):
         user = User.objects.get(user_id=user_id)
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/user-information.html', locals())
+    return_info = {'user_id': user_id, 'user': user}
+    html = get_template('users-window/user-information.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户登录后才能看到的个人文章列表的显示方法
 def my_blog_articles(request):
@@ -106,7 +137,10 @@ def my_blog_articles(request):
         blog_articles = user.blogarticle_set.all()
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-blog-article.html', locals())
+
+    return_info = {'user_id': user_id, 'user': user, 'blog_articles': blog_articles}
+    html = get_template('users-window/my-blog-article.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户的关注内容的显示方法
 def my_attentions(request):
@@ -114,7 +148,10 @@ def my_attentions(request):
         user_id = request.session['user_id']
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-attentions.html', locals())
+
+    return_info = {'user_id': user_id}
+    html = get_template('users-window/my-attentions.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户的收藏内容的显示方法
 def my_collections(request):
@@ -122,7 +159,9 @@ def my_collections(request):
         user_id = request.session['user_id']
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-collections.html', locals())
+    return_info = {'user_id': user_id}
+    html = get_template('users-window/my-collections.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户的粉丝的显示方法
 def my_fans(request):
@@ -130,11 +169,15 @@ def my_fans(request):
         user_id = request.session['user_id']
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-fans.html', locals())
+    return_info = {'user_id': user_id}
+    html = get_template('users-window/my-fans.html').render(return_info)
+    return HttpResponse(html)
 
 # 查重方法，调用了引擎中的SimilarityJudge
+# error为True时为异常，similarity为相似度数值，pass为是否被系统认为符合原创
 def check_blog_article(content):
     print('接收到文章具体内容content：', content)
+    content = content.replace("\n", "")
     similarity = SimilarityJudge().operation(content, 0.9)
     print('相似度为：', similarity)
     if similarity > 0.7:
@@ -145,25 +188,25 @@ def check_blog_article(content):
         return {'error': True, 'similarity': similarity, 'pass': False}
 
 # 用户登录后的博客文章创作页面的显示方法
+@csrf_exempt
 def write_blog_article(request):
     if 'user_id' in request.session:
         user_id = request.session['user_id']
         article_form = BlogArticleForm()
-        message = None
         if request.method == 'POST':
             print("博客文章提交了,方式为POST。")
 
             article_form = BlogArticleForm(request.POST)
             if article_form.is_valid():
 
-                # cover_img_html = article_form.data.get('cover_img')
-                # cover_img = re.findall('<img src="(.*?)"', cover_img_html, re.S)
-                # print('获取到的封面图路径：', cover_img)
+                cover_img_html = article_form.data.get('cover_img')
+                cover_img = re.findall('<img src="(.*?)"', cover_img_html, re.S)
+                print('获取到的封面图路径：', cover_img)
 
                 article_html = article_form.data.get('article_html')
                 print('博客文章HTML代码：', article_html)
 
-                # 查重反馈
+                # 查重反馈信息
                 message = check_blog_article(article_html)
 
                 # video_amount可以用来标记是否有视频存在，还可以标记有多少个视频
@@ -184,7 +227,7 @@ def write_blog_article(request):
                 article_form.instance.author = User.objects.get(user_id=user_id)
                 article_form.instance.article_content = '暂时为空'
                 article_form.instance.video_amount = video_amount
-                # article_form.instance.cover_img = cover_img[0]
+                article_form.instance.cover_img = cover_img[0]
                 title = article_form.save()
 
                 id = article_form.instance.id
@@ -195,11 +238,14 @@ def write_blog_article(request):
                     for i in range(0, video_amount):
                         article_html = re.sub(pattern='<embed src="/static/media/upload/.*?/>', repl='<iframe src="/static/media/upload/%s></iframe>' % next(embed_labels_attr), string=article_html)
                     BlogArticle.objects.filter(id=id).update(article_html=article_html)
-                # return render(request, 'users-window/write-blog-article.html', locals())
-                return render(request, 'users-window/jump-page.html', locals())
+                return_info = {'user_id': user_id, 'article_form': article_form, 'message': message}
+                html = get_template('users-window/jump-page.html').render(return_info, request)
+                return HttpResponse(html)
+        return_info = {'user_id': user_id, 'article_form': article_form}
+        html = get_template('users-window/write-blog-article.html').render(return_info)
+        return HttpResponse(html)
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/write-blog-article.html', locals())
 
 # 用户登录后用于展示用户个人文章具体内容的方法
 def show_my_blog_article_content(request, article_id):
@@ -208,7 +254,9 @@ def show_my_blog_article_content(request, article_id):
         blog_article = BlogArticle.objects.get(id=int(article_id))
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-blog-article-page.html', locals())
+    return_info = {'user_id': user_id, 'blog_article': blog_article}
+    html = get_template('users-window/my-blog-article-page.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户登录后才能删除用户个人文章的显示方法
 def blog_article_delete(request, article_id):
@@ -228,9 +276,12 @@ def user_homepage(request):
         user_id = request.session['user_id']
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/user-homepage.html', locals())
+    return_info = {'user_id': user_id}
+    html = get_template('users-window/user-homepage.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户的登录界面的方法
+@csrf_exempt
 def login(request):
     request.session['user_id'] = None
     feedback_message = None
@@ -241,7 +292,6 @@ def login(request):
         login_user_form = UserLoginForm(request.POST)
         for u in User.objects.all():
             if login_user_form.data.get('user_id') == u.user_id and login_user_form.data.get('password') == u.password:
-                feedback_message = '登录成功啦'
                 request.session['user_id'] = u.user_id
                 return HttpResponseRedirect('/user-information/')
             elif login_user_form.data.get('user_id') == u.user_id and login_user_form.data.get('password') != u.password:
@@ -250,9 +300,12 @@ def login(request):
             else:
                 feedback_message = '您还没注册吧？点击下方链接注册一下？或者检查一下您的账号是否写对哦'
 
-    return render(request, 'users-window/login.html', locals())
+    return_info = {'user': user, 'feedback_message': feedback_message}
+    html = get_template('users-window/login.html').render(return_info)
+    return HttpResponse(html)
 
 # 用户账户注册界面的显示方法
+@csrf_exempt
 def register(request):
     request.session['user_id'] = None
     register_user = UserRegisterForm()
@@ -262,11 +315,15 @@ def register(request):
             print(register_user.data)
             register_user.save()
             return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/register.html', locals())
+    return_info = {'register_user': register_user}
+    html = get_template('users-window/register.html').render(return_info)
+    return HttpResponse(html)
 
 def forget_password(request):
     request.session['user_id'] = None
-    return render(request, 'users-window/forget-password.html', locals())
+    return_info = {}
+    html = get_template('users-window/forget-password.html').render(return_info)
+    return HttpResponse(html)
 
 # 请求上墙的方法
 def request_on_wall(request, article_id):
@@ -287,12 +344,17 @@ def request_on_wall(request, article_id):
                         message = "该文章已经审核通过，您可以在BEE主页的墙上查看。"
                 else:
                     message = "该文章已经请求过了，请等待管理员审核。"
-                return render(request, 'users-window/my-blog-article.html', locals())
+                return_info = {'user_id': user_id, 'blog_articles': blog_articles, 'message': message}
+                html = get_template('users-window/my-blog-article.html').render(return_info)
+                return HttpResponse(html)
         OnWall.objects.create(article=need_on_wall_article)
         message = "提交申请成功，请耐心等待管理员审核。"
+
+        return_info = {'user_id': user_id, 'blog_articles': blog_articles, 'message': message}
+        html = get_template('users-window/my-blog-article.html').render(return_info)
+        return HttpResponse(html)
     else:
         return HttpResponseRedirect('/login/')
-    return render(request, 'users-window/my-blog-article.html', locals())
 
 
 
@@ -303,13 +365,21 @@ def request_on_wall(request, article_id):
 def manage(request):
     need_examine_articles = OnWall.objects.filter(examine=False)
     recommended_request = len(need_examine_articles)
-    return render(request, 'manage-window/index.html', locals())
+
+    return_info = {'recommended_request': recommended_request}
+    html = get_template('manage-window/index.html').render(return_info)
+    return HttpResponse(html)
 
 # 审核上墙请求方法
 def examine_on_wall(request):
+    recommended_request = len(OnWall.objects.filter(examine=False))
+
     need_examine = OnWall.objects.filter(examine=False)
     already_examine = OnWall.objects.filter(examine=True)
-    return render(request, 'manage-window/examine-on-wall.html', locals())
+
+    return_info = {'need_examine': need_examine, 'already_examine': already_examine, 'recommended_request': recommended_request}
+    html = get_template('manage-window/examine-on-wall.html').render(return_info)
+    return HttpResponse(html)
 
 # 上墙请求通过审核
 def accept_on_wall(request, on_wall_id):
@@ -322,8 +392,8 @@ def refuse_on_wall(request, on_wall_id):
 
 # 后台用户管理的文章分类设计页面的显示方法
 def article_sort_design(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
+    recommended_request = len(OnWall.objects.filter(examine=False))
+
     industry_form = IndustryForm()
     if request.method == 'POST':
         industry_form = IndustryForm(request.POST)
@@ -331,7 +401,10 @@ def article_sort_design(request):
             industry_form.save()
             return HttpResponseRedirect('/manage/article-sort-design/')
     industry_dict = get_industry_dict()
-    return render(request, 'manage-window/article-sort-design.html', locals())
+
+    return_info = {'recommended_request': recommended_request, 'industry_form': industry_form, 'industry_dict': industry_dict}
+    html = get_template('manage-window/article-sort-design.html').render(return_info)
+    return HttpResponse(html)
 
 # 转化数据库中领域表的信息为字典的方法
 def get_industry_dict():
@@ -350,15 +423,18 @@ def sub_industry_delete(request, sub_industry_name):
     return HttpResponseRedirect('/manage/article-sort-design/')
 
 def crawl_articles(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
-    return render(request, 'manage-window/crawl.html', locals())
+    recommended_request = len(OnWall.objects.filter(examine=False))
+
+    return_info = {'recommended_request': recommended_request}
+    html = get_template('manage-window/crawl.html').render(return_info)
+    return HttpResponse(html)
 
 def crawl_wechat_accounts(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
+
+    recommended_request = len(OnWall.objects.filter(examine=False))
+
     wechat_accounts = WechatAccount.objects.all()
-    wechat_ids = []
+    wechat_account_info = None
 
     if request.method == 'POST':
         wechat_id_dict = request.POST
@@ -370,7 +446,11 @@ def crawl_wechat_accounts(request):
 
             wechat_account_info = AccountSpider(wechat_ids).get_account_infos()
             print('爬取成功的公众号为：', wechat_account_info)
-    return render(request, 'manage-window/crawl-wechat-accounts.html', locals())
+
+    return_info = {'recommended_request': recommended_request, 'wechat_accounts':wechat_accounts, 'wechat_account_info':wechat_account_info}
+    html = get_template('manage-window/crawl-wechat-accounts.html').render(return_info)
+    return HttpResponse(html)
+    # return render(request, 'manage-window/crawl-wechat-accounts.html',return_info )
 
 def delete_wechat_account(request, wechat_id):
     # 需要连着头像一起删除，这里[1:]的意思是去掉开头的'/'，这样才能找到对的路径
@@ -391,11 +471,10 @@ def delete_wechat_account(request, wechat_id):
 
 # 这个是爬取文章的根方法
 def crawl_articles(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
+    recommended_request = len(OnWall.objects.filter(examine=False))
 
     accounts = WechatAccount.objects.all()
-    wechat_articles = WeChatArticle.objects.all()
+    message = None
     if request.method == 'POST':
         crawl_accounts = request.POST.getlist('selected_accounts')
         print('接收到要爬取的公众号列表：', crawl_accounts)
@@ -404,9 +483,7 @@ def crawl_articles(request):
     if 'wechat_id' in request.session:
         wechat_id = request.session['wechat_id']
         print('接收到session：wechat_id:', wechat_id)
-        if wechat_id is None:
-            return render(request, 'manage-window/crawl-wechat-articles.html', locals())
-        else:
+        if wechat_id is not None:
             wechat_ids = []
             wechat_ids.append(wechat_id)
             ArticleSpider(wechat_ids).get_infos()
@@ -415,12 +492,12 @@ def crawl_articles(request):
         print('仅打开了爬文章页面。')
 
     wechat_articles = WeChatArticle.objects.all()
-    return render(request, 'manage-window/crawl-wechat-articles.html', locals())
+
+    return_info = {'recommended_request': recommended_request, 'accounts': accounts, 'wechat_articles': wechat_articles, 'message':message}
+    html = get_template('manage-window/crawl-wechat-articles.html').render(return_info)
+    return HttpResponse(html)
 
 def crawl_wechat_articles(request, wechat_id):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
-
     if request.method == 'POST':
         if wechat_id == 'all':
             print('即将爬取库里所有公众号的文章……')
@@ -439,19 +516,22 @@ def delete_wechat_article(request, article_id):
     return HttpResponseRedirect('/manage/show-wechat-articles/')
 
 def show_wechat_articles(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
+    recommended_request = len(OnWall.objects.filter(examine=False))
 
     wechat_articles = WeChatArticle.objects.all()
-    return render(request, 'manage-window/show-wechat-articles.html', locals())
+    return_info = {'recommended_request': recommended_request, 'wechat_articles':wechat_articles}
+    html = get_template('manage-window/show-wechat-articles.html').render(return_info)
+    return HttpResponse(html)
 
 def manage_carousel(request):
-    need_examine_articles = OnWall.objects.filter(examine=False)
-    recommended_request = len(need_examine_articles)
+    recommended_request = len(OnWall.objects.filter(examine=False))
 
     current_carousels = Carousel.objects.all().order_by('number')
     wechat_articles = WeChatArticle.objects.all()
-    return render(request, 'manage-window/manage-carousel.html', locals())
+
+    return_info = {'recommended_request': recommended_request, 'wechat_articles': wechat_articles, 'current_carousels':current_carousels}
+    html = get_template('manage-window/manage-carousel.html').render(return_info)
+    return HttpResponse(html)
 
 def add_wechat_article_to_carousel(request, article_id):
     wechat_article = WeChatArticle.objects.get(id=article_id)
