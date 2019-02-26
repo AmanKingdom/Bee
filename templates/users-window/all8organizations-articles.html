@@ -1,0 +1,237 @@
+﻿﻿<!--all8organizations_articles.html-->
+{% extends "users-window/base.html" %}
+{% load staticfiles %}
+{% block title %}Bee | 莞工八大组织公众文章{% endblock %}
+
+{% block base_body %}
+    <div class="row">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">东莞理工学院学生会</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in dglgxyxsh %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">莞工青年</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in dglgtw %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">莞工自律会</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in dgutzlh %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">社联小肥龙</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in shelianxiaofeilong %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">莞工志愿服务中心</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in zyfwzxdgut %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">莞工青年论坛</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in guanqingluntan %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">DGUT学生艺术团</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in dgut_yishutuan %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="panel-title">莞工学生媒体中心</h5>
+                            </div>
+                            <div class="col-md-4 text-right"><a href="{% url 'more8organizations-articles' %}" target="_blank">更多>></a></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {% for wechat_article in dutsmc %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ wechat_article.cover_img | safe }}" style="width:70px; "/>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="{% url 'wechat-article-content' wechat_article.id %}" target="_blank">{{ wechat_article.article_title }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

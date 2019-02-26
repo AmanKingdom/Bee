@@ -1,7 +1,6 @@
 import datetime
 
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
 from django.template.loader import get_template
 from django.views.decorators.csrf import csrf_exempt
 
@@ -10,6 +9,77 @@ from app.models import *
 from engine.Wechat_SQLite.search_sqlite import Search
 from engine.Wechat_SQLite.spider_sqlite import *
 from engine.similarity_judgment.similarity import SimilarityJudge
+import operator
+
+def eight_organizations_get_one():
+    # 八大校园组织的文章
+    eight_organizations = []
+
+    # 学生会
+    dglgxyxsh = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')
+    if dglgxyxsh:
+        eight_organizations.append(dglgxyxsh[0])
+    # 莞工青年
+    dglgtw = WeChatArticle.objects.filter(wechat='dglgtw').order_by('-publish_date')
+    if dglgtw:
+        eight_organizations.append(dglgtw[0])
+    # 莞工自律会
+    dgutzlh = WeChatArticle.objects.filter(wechat='dgutzlh').order_by('-publish_date')
+    if dgutzlh:
+        eight_organizations.append(dgutzlh[0])
+    # 社联小肥龙
+    shelianxiaofeilong = WeChatArticle.objects.filter(wechat='shelianxiaofeilong').order_by('-publish_date')
+    if shelianxiaofeilong:
+        eight_organizations.append(shelianxiaofeilong[0])
+    # 莞工志愿服务中心
+    zyfwzxdgut = WeChatArticle.objects.filter(wechat='zyfwzxdgut').order_by('-publish_date')
+    if zyfwzxdgut:
+        eight_organizations.append(zyfwzxdgut[0])
+    # 莞工青年论坛
+    guanqingluntan = WeChatArticle.objects.filter(wechat='guanqingluntan').order_by('-publish_date')
+    if guanqingluntan:
+        eight_organizations.append(guanqingluntan[0])
+    # DGUT学生艺术团
+    dgut_yishutuan = WeChatArticle.objects.filter(wechat='dgut_yishutuan').order_by('-publish_date')
+    if dgut_yishutuan:
+        eight_organizations.append(dgut_yishutuan[0])
+    # 莞工学生媒体中心
+    dutsmc = WeChatArticle.objects.filter(wechat='dutsmc').order_by('-publish_date')
+    if dutsmc:
+        eight_organizations.append(dutsmc[0])
+
+    publish_date = operator.attrgetter('publish_date')
+    eight_organizations.sort(key=publish_date)
+
+    return eight_organizations
+
+def more8organizations_articles(request):
+    if 'user_id' in request.session:
+        user_id = request.session['user_id']
+    else:
+        user_id = None
+    # 学生会
+    dglgxyxsh = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')[0:3]
+    # 莞工青年
+    dglgtw = WeChatArticle.objects.filter(wechat='dglgtw').order_by('-publish_date')[0:3]
+    # 莞工自律会
+    dgutzlh = WeChatArticle.objects.filter(wechat='dgutzlh').order_by('-publish_date')[0:3]
+    # 社联小肥龙
+    shelianxiaofeilong = WeChatArticle.objects.filter(wechat='shelianxiaofeilong').order_by('-publish_date')[0:3]
+    # 莞工志愿服务中心
+    zyfwzxdgut = WeChatArticle.objects.filter(wechat='zyfwzxdgut').order_by('-publish_date')[0:3]
+    # 莞工青年论坛
+    guanqingluntan = WeChatArticle.objects.filter(wechat='guanqingluntan').order_by('-publish_date')[0:3]
+    # DGUT学生艺术团
+    dgut_yishutuan = WeChatArticle.objects.filter(wechat='dgut_yishutuan').order_by('-publish_date')[0:3]
+    # 莞工学生媒体中心
+    dutsmc = WeChatArticle.objects.filter(wechat='dutsmc').order_by('-publish_date')[0:3]
+
+    return_info = {'user_id': user_id, 'dglgxyxsh':dglgxyxsh,'dglgtw':dglgtw,'dgutzlh':dgutzlh,'shelianxiaofeilong':shelianxiaofeilong,
+                   'zyfwzxdgut':zyfwzxdgut,'guanqingluntan':guanqingluntan,'dgut_yishutuan':dgut_yishutuan,
+                   'dutsmc':dutsmc,}
+    html = get_template('users-window/all8organizations-articles.html').render(return_info)
+    return HttpResponse(html)
 
 # 主页
 def homepage(request):
@@ -17,11 +87,9 @@ def homepage(request):
         user_id = request.session['user_id']
     else:
         user_id = None
-    blog_articles = BlogArticle.objects.all()
-    wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')[0:15]
 
-    # 十大校园组织的文章
-    ten_organizations = WeChatArticle.objects.filter(wechat='dglgxyxsh').order_by('-publish_date')[0:13]
+    # 八大校园组织的文章
+    eight_organizations = eight_organizations_get_one()
 
     # 轮播图
     carousel = Carousel.objects.all().order_by('number')
@@ -31,13 +99,26 @@ def homepage(request):
         carousel = None
 
     on_wall_articles = [x.article for x in OnWall.objects.filter(pass_or_not=True)]
+    on_wall_articles = on_wall_articles[::-1]
+
+    if len(on_wall_articles) > 3:
+        on_wall_articles = on_wall_articles[0:3]
+    temp_len = 10 - len(on_wall_articles)
+    blog_articles = BlogArticle.objects.all()
+    wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')[0:temp_len]
 
     now = datetime.datetime.now()
 
     return_info = {'user_id': user_id, 'blog_articles': blog_articles, 'wechat_articles': wechat_articles,
-                   'ten_organizations': ten_organizations, 'carousel': carousel, 'carousel_len': carousel_len,
+                   'eight_organizations': eight_organizations, 'carousel': carousel, 'carousel_len': carousel_len,
                    'on_wall_articles': on_wall_articles, 'now': now}
     html = get_template('users-window/index.html').render(return_info)
+    return HttpResponse(html)
+
+def all_wechat_articles(request):
+    wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')
+    return_info = {'wechat_articles': wechat_articles}
+    html = get_template('users-window/all-wechat-articles.html').render(return_info)
     return HttpResponse(html)
 
 
@@ -429,6 +510,7 @@ def crawl_articles(request):
     html = get_template('manage-window/crawl.html').render(return_info)
     return HttpResponse(html)
 
+@csrf_exempt
 def crawl_wechat_accounts(request):
 
     recommended_request = len(OnWall.objects.filter(examine=False))
@@ -470,6 +552,7 @@ def delete_wechat_account(request, wechat_id):
 
 
 # 这个是爬取文章的根方法
+@csrf_exempt
 def crawl_articles(request):
     recommended_request = len(OnWall.objects.filter(examine=False))
 
@@ -497,6 +580,7 @@ def crawl_articles(request):
     html = get_template('manage-window/crawl-wechat-articles.html').render(return_info)
     return HttpResponse(html)
 
+@csrf_exempt
 def crawl_wechat_articles(request, wechat_id):
     if request.method == 'POST':
         if wechat_id == 'all':
@@ -518,7 +602,7 @@ def delete_wechat_article(request, article_id):
 def show_wechat_articles(request):
     recommended_request = len(OnWall.objects.filter(examine=False))
 
-    wechat_articles = WeChatArticle.objects.all()
+    wechat_articles = WeChatArticle.objects.all().order_by('-publish_date')
     return_info = {'recommended_request': recommended_request, 'wechat_articles':wechat_articles}
     html = get_template('manage-window/show-wechat-articles.html').render(return_info)
     return HttpResponse(html)

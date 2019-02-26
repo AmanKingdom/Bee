@@ -45,6 +45,8 @@ urlpatterns = [
     # 个人登录后可见的自己博客文章具体内容页面对应网址
     url(r'^my-blog-article/(\d{0,10})/$', show_my_blog_article_content, name='my-blog-article-content'),
     url(r'^delete-blog-article/(.*?)/$', blog_article_delete, name='delete-blog-article'),
+    url(r'^more8organizations-articles/$', more8organizations_articles, name='more8organizations-articles'),
+    url(r'^all-wechat-articles/$', all_wechat_articles, name='all-wechat-articles'),
 
     path('admin/', admin.site.urls),
 
